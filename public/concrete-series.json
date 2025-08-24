@@ -4,37 +4,43 @@
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
       "name": "Concrete Pendant Light",
-      "description": "Minimalist concrete pendant with industrial appeal"
+      "description": "Minimalist concrete pendant with industrial appeal",
+      "url": "./concrete-pendant-light.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png",
       "name": "Concrete Wall Sconce",
-      "description": "Contemporary wall lighting with raw texture"
+      "description": "Contemporary wall lighting with raw texture",
+      "url": "./concrete-wall-sconce.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/2.png",
       "name": "Concrete Floor Lamp",
-      "description": "Statement floor lamp with bold design"
+      "description": "Statement floor lamp with bold design",
+      "url": "./concrete-floor-lamp.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/2.png",
       "name": "Concrete Table Lamp",
-      "description": "Refined table lighting for modern spaces"
+      "description": "Refined table lighting for modern spaces",
+      "url": "./concrete-table-lamp.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/2.png",
       "name": "Concrete Ceiling Light",
-      "description": "Industrial ceiling fixture with contemporary edge"
+      "description": "Industrial ceiling fixture with contemporary edge",
+      "url": "./concrete-ceiling-light.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/2.png",
       "name": "Concrete Outdoor Light",
-      "description": "Durable outdoor lighting with modern aesthetics"
+      "description": "Durable outdoor lighting with modern aesthetics",
+      "url": "./concrete-outdoor-light.html"
     }
   ]
 }

@@ -108,12 +108,13 @@ The website has a simple 3-page navigation structure:
 4. **Concrete Series** (`concrete-series.html`) - Product showcase for concrete lighting fixtures
 5. **Stone Series** (`stone-series.html`) - Product showcase for stone lighting fixtures
 6. **Architectural Series** (`architectural-series.html`) - Product showcase for technical/architectural lighting fixtures
+7. **Blogs** (`blogs.html`) - Blog articles about lighting design, trends, and industry insights
 
 ### Navbar Structure:
 - **Logo**: Centered, links to homepage
 - **Hamburger Menu**: Left side, opens drawer navigation
 - **Contact Us Button**: Right side, opens email with pre-filled message
-- **Drawer Menu**: Contains 6 navigation links (Home, About, Projects, Concrete Series, Stone Series, Architectural Series)
+- **Drawer Menu**: Contains 7 navigation links (Home, About, Projects, Concrete Series, Stone Series, Architectural Series, Blogs)
 
 ### Navigation Links:
 ```html
@@ -124,6 +125,7 @@ The website has a simple 3-page navigation structure:
   <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html">Concrete Series</a>
   <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html">Stone Series</a>
   <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html">Architectural Series</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="blogs.html">Blogs</a>
 </nav>
 ```
 
@@ -161,6 +163,50 @@ const products = [
   }
 ];
 ```
+
+## Blogs Page
+The website includes a dedicated blogs page with:
+
+### Page Structure:
+- **Navbar**: Consistent with main pages (Home, About, Projects, Blogs)
+- **Hero Image**: 30% page height banner image
+- **Title Section**: "Our Blogs" heading
+- **Content Section**: Descriptive text about the blog content
+- **Blog Grid**: 3 columns on desktop, 2 columns on tablet, 1 column on mobile
+- **Footer**: Consistent across all pages
+
+### Blog Grid Features:
+- **JSON Data**: Blog information loaded from `blogs.json` file
+- **Dynamic Rendering**: Blogs loaded via JavaScript fetch API
+- **Responsive Design**: 3 columns desktop, 2 columns tablet, 1 column mobile
+- **Hover Effects**: Image scale animation on hover
+- **Click Navigation**: Each blog card links to individual blog post
+- **Blog Metadata**: Displays date and read time for each post
+
+### Blog Data Structure:
+```javascript
+// blogs.json
+{
+  "blogs": [
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/blogs/blog-image.jpg",
+      "title": "Blog Title",
+      "excerpt": "Blog excerpt text",
+      "date": "January 15, 2025",
+      "readTime": "5 min read",
+      "url": "./blog-post.html"
+    }
+  ]
+}
+```
+
+### Blog Content Topics:
+- Lighting design trends and innovations
+- Sustainable lighting solutions
+- Commercial lighting design guides
+- LED technology advancements
+- Outdoor lighting essentials
+- Color temperature and lighting psychology
 
 ## Troubleshooting
 - CSS not updating: ensure `npm run dev:css` is running or rebuild with `npm run build:css`.

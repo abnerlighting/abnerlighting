@@ -11,39 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
   <script>
-    // Product data
-    const products = [
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Pendant Light",
-        "description": "Engineered pendant with precision lighting"
-      },
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Wall Sconce",
-        "description": "Performance-focused wall lighting"
-      },
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Floor Lamp",
-        "description": "High-performance floor lighting solution"
-      },
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Table Lamp",
-        "description": "Precision table lighting for modern spaces"
-      },
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Ceiling Light",
-        "description": "Advanced ceiling fixture with superior performance"
-      },
-      {
-        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
-        "name": "Technical Outdoor Light",
-        "description": "Engineered outdoor lighting with premium features"
-      }
-    ];
+    // Product data will be loaded from JSON file
+    let products = [];
 
     // Slugify function
     function slugify(text) {
@@ -82,35 +51,65 @@
 
     window.addEventListener('scroll', handleNavbarScroll);
 
-    // Render products when DOM is loaded
+    // Load products from JSON and render
     document.addEventListener('DOMContentLoaded', function() {
       // Initial call to set correct state
       handleNavbarScroll();
 
-      // Render products
-      const productGrid = document.getElementById('productGrid');
-      if (productGrid) {
-        products.forEach(product => {
-          const productCard = document.createElement('div');
-          productCard.className = 'group cursor-pointer';
-          productCard.onclick = () => {
-            const slug = slugify(product.name);
-            window.location.href = `./${slug}.html`;
-          };
-          
-          productCard.innerHTML = `
-            <div class="aspect-square overflow-hidden rounded-lg shadow-md">
-              <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
-              <p class="mt-2 text-sm text-slate-600">${product.description}</p>
-            </div>
-          `;
-          
-          productGrid.appendChild(productCard);
-        });
+      // Get series from URL parameter or default to architectural-series
+      const urlParams = new URLSearchParams(window.location.search);
+      const series = urlParams.get('series') || 'architectural-series';
+      
+      // Update page title based on series
+      const seriesNames = {
+        'concrete-series': 'Concrete Series',
+        'stone-series': 'Stone Series',
+        'architectural-series': 'Architectural Series'
+      };
+      const seriesName = seriesNames[series] || 'Architectural Series';
+      document.title = `${seriesName} - Abner Lighting`;
+      
+      // Update page heading
+      const pageHeading = document.querySelector('h1');
+      if (pageHeading) {
+        pageHeading.textContent = `Our ${seriesName} Products`;
       }
+      
+      // Load products from JSON file
+      fetch(`./${series}.json`)
+        .then(response => response.json())
+        .then(data => {
+          products = data.products;
+          
+          // Render products
+          const productGrid = document.getElementById('productGrid');
+          if (productGrid) {
+            products.forEach(product => {
+              const productCard = document.createElement('div');
+              productCard.className = 'group cursor-pointer';
+                              productCard.onclick = () => {
+                  window.location.href = product.url;
+                };
+              
+              productCard.innerHTML = `
+                <div class="aspect-square overflow-hidden rounded-lg shadow-md">
+                  <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                       onmouseenter="this.src='${product['hover-image']}'" 
+                       onmouseleave="this.src='${product.image}'" />
+                </div>
+                <div class="mt-4">
+                  <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
+                  <p class="mt-2 text-sm text-slate-600">${product.description}</p>
+                </div>
+              `;
+              
+              productGrid.appendChild(productCard);
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error loading products:', error);
+        });
     });
   </script>
 </head>
@@ -118,26 +117,26 @@
   <!-- Transparent Navbar -->
   <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-4">
-      <div class="relative flex h-16 items-center justify-center">
+      <div class="relative flex h-12 md:h-14 items-center justify-center">
         <!-- Left: hamburger -->
         <button aria-label="Open menu" class="absolute left-0 inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40" onclick="toggleDrawer(true)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:h-7 md:w-7">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5" />
           </svg>
         </button>
         <!-- Center: logo -->
         <a href="index.html" class="inline-flex items-center gap-2">
-          <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 md:h-8" />
+          <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-8 w-auto md:h-10" />
         </a>
         <!-- Right: contact us -->
-        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-0 border px-3 py-1.5 md:px-5 md:py-2 text-sm md:text-base text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
+        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-0 border px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
       </div>
     </div>
   </header>
 
   <!-- Drawer + overlay -->
   <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/40 opacity-0 transition-opacity" onclick="toggleDrawer(false)"></div>
-  <aside id="drawer" class="fixed inset-y-0 left-0 z-50 w-full md:w-1/2 -translate-x-full transform bg-white shadow-xl transition-transform duration-300">
+  <aside id="drawer" class="fixed inset-y-0 left-0 z-50 w-full md:w-80 -translate-x-full transform bg-white shadow-xl transition-transform duration-300">
     <div class="flex h-full flex-col">
       <div class="flex items-center justify-between p-4">
         <span class="text-lg font-semibold">Menu</span>
@@ -154,6 +153,7 @@
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html" onclick="toggleDrawer(false)">Concrete Series</a>
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html" onclick="toggleDrawer(false)">Stone Series</a>
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html" onclick="toggleDrawer(false)">Architectural Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="blogs.html" onclick="toggleDrawer(false)">Blogs</a>
       </nav>
     </div>
   </aside>
@@ -196,29 +196,30 @@
         <h3 class="text-white">Address</h3>
         <div class="mt-4 space-y-6 text-slate-300">
           <div>
-            <p>266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
+            <p class="text-sm">266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
           </div>
           <div>
-            <p>Gala No.6, Ground Floor,<br/>Building No. B-1,<br/>Print World Industrial Complex,<br/>Mankoli Road, Vehele,<br/>Bhiwandi, Thane - 421302</p>
+            <p class="text-sm">Gala No.6, Ground Floor,<br/>Building No. B-1,<br/>Print World Industrial Complex,<br/>Mankoli Road, Vehele,<br/>Bhiwandi, Thane - 421302</p>
           </div>
         </div>
       </div>
       <div>
         <h3 class="text-white">Content</h3>
-        <ul class="mt-4 space-y-3 text-slate-300">
-          <li><a class="hover:underline" href="index.html">Home</a></li>
-          <li><a class="hover:underline" href="about.html">About</a></li>
-          <li><a class="hover:underline" href="projects.html">Projects</a></li>
-          <li><a class="hover:underline" href="concrete-series.html">Concrete Series</a></li>
-          <li><a class="hover:underline" href="stone-series.html">Stone Series</a></li>
-          <li><a class="hover:underline" href="architectural-series.html">Architectural Series</a></li>
-        </ul>
+        <div class="mt-4 space-y-3 text-slate-300">
+          <p class="text-sm"><a class="hover:underline" href="index.html">Home</a></p>
+          <p class="text-sm"><a class="hover:underline" href="about.html">About</a></p>
+          <p class="text-sm"><a class="hover:underline" href="projects.html">Projects</a></p>
+          <p class="text-sm"><a class="hover:underline" href="concrete-series.html">Concrete Series</a></p>
+          <p class="text-sm"><a class="hover:underline" href="stone-series.html">Stone Series</a></p>
+          <p class="text-sm"><a class="hover:underline" href="architectural-series.html">Architectural Series</a></p>
+          <p class="text-sm"><a class="hover:underline" href="blogs.html">Blogs</a></p>
+        </div>
       </div>
       <div>
         <h3 class="text-white">Contact Us</h3>
         <div class="mt-4 space-y-3 text-slate-300">
-          <p><a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">crm@abner.co.in</a></p>
-          <p><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
+          <p class="text-sm"><a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">crm@abner.co.in</a></p>
+          <p class="text-sm"><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
         </div>
         <div class="mt-8 flex space-x-4">
           <a href="https://www.instagram.com/worldofabner/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">

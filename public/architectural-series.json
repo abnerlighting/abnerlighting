@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/blanca/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/blanca/2.png",
+      "name": "Technical Pendant Light",
+      "description": "Engineered pendant with precision lighting",
+      "url": "./technical-pendant-light.html"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/cairo/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/cairo/2.png",
+      "name": "Technical Wall Sconce",
+      "description": "Performance-focused wall lighting",
+      "url": "./technical-wall-sconce.html"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/casa/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/casa/2.png",
+      "name": "Technical Floor Lamp",
+      "description": "High-performance floor lighting solution",
+      "url": "./technical-floor-lamp.html"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/curvy/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/curvy/2.png",
+      "name": "Technical Table Lamp",
+      "description": "Precision table lighting for modern spaces",
+      "url": "./technical-table-lamp.html"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/disc/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/disc/2.png",
+      "name": "Technical Ceiling Light",
+      "description": "Advanced ceiling fixture with superior performance",
+      "url": "./technical-ceiling-light.html"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/veno-ud/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/wall-lights/veno-ud/2.png",
+      "name": "Technical Outdoor Light",
+      "description": "Engineered outdoor lighting with premium features",
+      "url": "./technical-outdoor-light.html"
+    }
+  ]
+}
