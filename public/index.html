@@ -59,7 +59,7 @@
           <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 md:h-8" />
         </a>
         <!-- Right: contact us -->
-        <a href="#contact" class="absolute right-0 border px-3 py-1.5 md:px-5 md:py-2 text-sm md:text-base text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
+        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-0 border px-3 py-1.5 md:px-5 md:py-2 text-sm md:text-base text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
       </div>
     </div>
   </header>
@@ -78,7 +78,7 @@
       </div>
       <nav class="grid gap-2 p-4 text-slate-700">
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#home" onclick="toggleDrawer(false)">Home</a>
-        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#about" onclick="toggleDrawer(false)">We're Abner</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="about.html" onclick="toggleDrawer(false)">About</a>
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#choose" onclick="toggleDrawer(false)">Why Choose Us</a>
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#explore" onclick="toggleDrawer(false)">Explore by Collection</a>
         <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#numbers" onclick="toggleDrawer(false)">We've Abner in Numbers</a>
@@ -230,15 +230,17 @@
 
     <!-- We're Abner -->
     <section id="about" class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <div>
+      <div class="space-y-8">
+        <div class="text-center">
           <h2 class="tracking-tight">We're Abner</h2>
-          <p class="mt-4 text-slate-600">We make lights that do their job and look good doing it.</p>
-          <p class="mt-3 text-slate-600">No over-the-top designs, no gimmicks. Just clean, well-built lighting that architects and CPs can rely on.
-          <p class="mt-3 text-slate-600">We care about the small things: how a step is lit, how a wall feels under soft light, how a space comes together</p>
         </div>
-        <div class="order-first md:order-last">
+        <div class="mx-auto max-w-4xl">
           <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
+        </div>
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="mt-4 text-slate-600">We make lights that do their job and look good doing it.</p>
+          <p class="mt-3 text-slate-600">No over-the-top designs, no gimmicks. Just clean, well-built lighting that architects and CPs can rely on.</p>
+          <p class="mt-3 text-slate-600">We care about the small things: how a step is lit, how a wall feels under soft light, how a space comes together</p>
         </div>
       </div>
     </section>
@@ -394,10 +396,10 @@
 
   <!-- Footer -->
   <footer id="contact" class="bg-black py-16 text-white">
-    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
       <div>
-        <h3 class="text-lg font-semibold text-white">Address</h3>
-        <div class="mt-3 space-y-4 text-slate-300">
+        <h3 class="text-white">Address</h3>
+        <div class="mt-4 space-y-6 text-slate-300">
           <div>
             <p>266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
           </div>
@@ -407,40 +409,36 @@
         </div>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-white">Content</h3>
-        <ul class="mt-3 space-y-2 text-slate-300">
+        <h3 class="text-white">Content</h3>
+        <ul class="mt-4 space-y-3 text-slate-300">
           <li><a class="hover:underline" href="#home">Home</a></li>
           <li><a class="hover:underline" href="#about">About</a></li>
           <li><a class="hover:underline" href="#explore">Projects</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-white">Contact Us</h3>
-        <div class="mt-3 space-y-2 text-slate-300">
-          <p><a href="mailto:crm@abner.co.in" class="hover:underline">crm@abner.co.in</a></p>
+        <h3 class="text-white">Contact Us</h3>
+        <div class="mt-4 space-y-3 text-slate-300">
+          <p><a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">crm@abner.co.in</a></p>
           <p><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
         </div>
-        <div class="mt-6 flex space-x-4">
+        <div class="mt-8 flex space-x-4">
           <a href="https://www.instagram.com/worldofabner/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
-            <img src="https://ik.imagekit.io/abnerlighting/branding/icons8-instagram-500.png" alt="Instagram" class="h-8 w-8" />
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+            </svg>
           </a>
           <a href="https://www.linkedin.com/company/abnerlights/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
-            <img src="https://ik.imagekit.io/abnerlighting/branding/icons8-linkedin-384.png" alt="LinkedIn" class="h-8 w-8" />
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
           </a>
         </div>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-white">Send Message</h3>
-        <form class="mt-3 space-y-3">
-          <input class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Your email" type="email" />
-          <textarea class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Message" rows="3"></textarea>
-          <button type="button" class="rounded-md bg-white px-4 py-2 font-medium text-black hover:bg-slate-200">Send</button>
-        </form>
       </div>
     </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="border-t border-slate-700 mt-12 pt-8">
-        <div class="text-center text-sm text-slate-400">© 2025 Abner Lighting. All rights reserved.</div>
+        <div class="text-center subtitle text-slate-400">© 2025 Abner Lighting. All rights reserved.</div>
       </div>
     </div>
   </footer>

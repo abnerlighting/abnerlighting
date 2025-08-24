@@ -5,9 +5,11 @@
   "scripts": {
     "build": "npm run build:css && npm run copy:assets",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "npm run copy:assets && npm run dev:css",
     "dev:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
     "copy:assets": "cp -r public/* dist/",
-    "preview": "npx serve dist"
+    "preview": "npx serve dist",
+    "start": "npm run dev"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0-alpha.25"
