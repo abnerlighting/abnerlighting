@@ -91,6 +91,13 @@ Append transforms after the base path using `tr:`. Common examples:
 - [ ] `npm run build:css` run and `public/styles.css` present.
 - [ ] Lighthouse basics checked (performance/accessibility best effort for static page).
 
+## Background Colors
+The project uses specific background colors throughout:
+
+- **Gray**: `#f0f0f0` - Used for section backgrounds (e.g., "We've Abner in Numbers", "Testimonials")
+- **Black**: `#000000` - Used for footer background
+- **Blue**: `#013f88` - Used for "Why Choose Us" section background
+
 ## Troubleshooting
 - CSS not updating: ensure `npm run dev:css` is running or rebuild with `npm run build:css`.
 - Icons/clipart not loading: confirm the ImageKit URL exists and is public; try removing transforms to debug.

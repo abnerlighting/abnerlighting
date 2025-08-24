@@ -393,33 +393,56 @@
   </main>
 
   <!-- Footer -->
-  <footer id="contact" class="bg-slate-900 py-16 text-slate-200">
-    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+  <footer id="contact" class="bg-black py-16 text-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
       <div>
         <h3 class="text-lg font-semibold text-white">Address</h3>
-        <p class="mt-3 text-slate-300">123 Abner Street<br/>Metropolis, NY 10001</p>
+        <div class="mt-3 space-y-4 text-slate-300">
+          <div>
+            <p>266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
+          </div>
+          <div>
+            <p>Gala No.6, Ground Floor,<br/>Building No. B-1,<br/>Print World Industrial Complex,<br/>Mankoli Road, Vehele,<br/>Bhiwandi, Thane - 421302</p>
+          </div>
+        </div>
       </div>
       <div>
         <h3 class="text-lg font-semibold text-white">Content</h3>
         <ul class="mt-3 space-y-2 text-slate-300">
-          <li><a class="hover:underline" href="#about">We're Abner</a></li>
-          <li><a class="hover:underline" href="#choose">Why Choose Us</a></li>
-          <li><a class="hover:underline" href="#explore">Collections</a></li>
-          <li><a class="hover:underline" href="#partners">Partners</a></li>
-          <li><a class="hover:underline" href="#testimonials">Testimonials</a></li>
+          <li><a class="hover:underline" href="#home">Home</a></li>
+          <li><a class="hover:underline" href="#about">About</a></li>
+          <li><a class="hover:underline" href="#explore">Projects</a></li>
         </ul>
       </div>
       <div>
         <h3 class="text-lg font-semibold text-white">Contact Us</h3>
+        <div class="mt-3 space-y-2 text-slate-300">
+          <p><a href="mailto:crm@abner.co.in" class="hover:underline">crm@abner.co.in</a></p>
+          <p><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
+        </div>
+        <div class="mt-6 flex space-x-4">
+          <a href="https://www.instagram.com/worldofabner/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
+            <img src="https://ik.imagekit.io/abnerlighting/branding/icons8-instagram-500.png" alt="Instagram" class="h-8 w-8" />
+          </a>
+          <a href="https://www.linkedin.com/company/abnerlights/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
+            <img src="https://ik.imagekit.io/abnerlighting/branding/icons8-linkedin-384.png" alt="LinkedIn" class="h-8 w-8" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Send Message</h3>
         <form class="mt-3 space-y-3">
           <input class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Your email" type="email" />
           <textarea class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Message" rows="3"></textarea>
-          <button type="button" class="rounded-md bg-white px-4 py-2 font-medium text-slate-900 hover:bg-slate-200">Send</button>
+          <button type="button" class="rounded-md bg-white px-4 py-2 font-medium text-black hover:bg-slate-200">Send</button>
         </form>
       </div>
     </div>
-    <div class="mt-12 text-center text-sm text-slate-400">© <span id="year"></span> Abner Lighting. All rights reserved.</div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-slate-700 mt-12 pt-8">
+        <div class="text-center text-sm text-slate-400">© 2025 Abner Lighting. All rights reserved.</div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
