@@ -46,12 +46,12 @@
 <body class="min-h-full bg-white text-slate-900">
   <!-- Transparent Navbar -->
   <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-4">
-      <div class="relative flex h-12 md:h-14 items-center justify-center">
+    <div class="mx-auto">
+      <div class="relative flex h-16 md:h-20 items-center justify-center">
         <!-- Left: hamburger -->
-        <button aria-label="Open menu" class="absolute left-0 inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40" onclick="toggleDrawer(true)">
+        <button aria-label="Open menu" class="absolute left-4 sm:left-6 lg:left-4 inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40" onclick="toggleDrawer(true)">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:h-7 md:w-7">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h29.7M3.75 12h29.7" />
           </svg>
         </button>
         <!-- Center: logo -->
@@ -59,7 +59,7 @@
           <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-8 w-auto md:h-10" />
         </a>
         <!-- Right: contact us -->
-        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-0 border px-2 py-1 md:px-4 md:py-1.5 text-xs md:text-sm text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
+        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-4 sm:right-6 lg:right-4 border px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-medium text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
       </div>
     </div>
   </header>
@@ -234,7 +234,7 @@
           <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
         </div>
         <div class="order-1 md:order-2">
-          <h2 class="tracking-tight">We're Abner</h2>
+          <h2 class="tracking-tight text-4xl md:text-5xl font-bold">We're Abner</h2>
           <p class="mt-6 text-slate-600">We make lights that do their job and look good doing it.</p>
           <p class="mt-4 text-slate-600">No over-the-top designs, no gimmicks. Just clean, well-built lighting that architects and CPs can rely on.</p>
           <p class="mt-4 text-slate-600">We care about the small things: how a step is lit, how a wall feels under soft light, how a space comes together</p>
@@ -250,13 +250,13 @@
           <!-- card 1 -->
           <div class="text-center">
             <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/1.png" alt="European Style" class="h-32 w-32 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold text-white mb-2">High-End European Style,<br>Local Pricing</h3>
+            <h3 class="text-lg font-semibold text-white mb-2">High-End European Style,<br>Local Pricing</h3>
             <p class="text-white/80">EU-standard finishes, made affordable without compromise.</p>
           </div>
           <!-- card 2 -->
           <div class="text-center">
             <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/3.png" alt="Fast Delivery" class="h-32 w-32 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold text-white mb-2">Fastest Delivery,<br>OTIF Promise</h3>
+            <h3 class="text-lg font-semibold text-white mb-2">Fastest Delivery,<br>OTIF Promise</h3>
             <p class="text-white/80">On-time. In-full. Every time.<br>No excuses.</p>
           </div>
           <!-- card 3 -->
@@ -311,7 +311,7 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <h2>Abner in Numbers</h2>
-          <div class="w-24 h-0.5 bg-slate-300 mx-auto mt-4"></div>
+          <div class="w-48 h-0.5 bg-black mx-auto mt-4"></div>
         </div>
         <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div class="rounded-xl bg-white p-8 text-center shadow-sm">
@@ -334,7 +334,7 @@
     <!-- Industry partners 4x2 on desktop, 2x4 on mobile -->
     <section id="partners" class="py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-  <h2>Our Industry Partners</h2>
+  <h2 class="text-center">Our Industry Partners</h2>
         <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
           <!-- 8 logos in outlined squares -->
           <div class="aspect-square border-2 border-slate-200 rounded-lg flex items-center justify-center p-2">
@@ -368,7 +368,7 @@
     <!-- Testimonials carousel (3) -->
     <section id="testimonials" class="bg-slate-50 py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2>Testimonials</h2>
+        <h2 class="text-center">Testimonials</h2>
         <div class="carousel mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
           <!-- three cards -->
           <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
@@ -382,7 +382,7 @@
             <div class="text-xs text-slate-400">Principle Designer, Brainwave Designs</div>
           </div>
           <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
-            <p class="text-slate-700">"Team Abner has fantastically represented the highest levels of customer service we have experienced. Studio Pomegranate appreciates the best quality products that Abner brings to cater the clients and we are happy to be associated with Abner Lighting for most of our marquee projects."</p>
+            <p class="text-slate-700">"Team Abner has fantastically represented the highest levels of customer service we have experienced."</p>
             <div class="mt-4 text-sm text-slate-500">— Mr. Pranav</div>
             <div class="text-xs text-slate-400">Principal Designer, Studio Pomegranate</div>
           </div>

@@ -1,12 +1,20 @@
 {
   "blogs": [
     {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
+      "title": "Why Concrete Series Lights Are Revolutionizing Modern Interior Design",
+      "excerpt": "Discover how Abner Lighting's Concrete Series is transforming modern interior design with its unique blend of industrial aesthetics and contemporary elegance.",
+      "date": "January 20, 2025",
+      "readTime": "8 min read",
+      "url": "./concrete-series-blog.html"
+    },
+    {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/lighting-design-trends-2025.jpg",
       "title": "Lighting Design Trends for 2025",
       "excerpt": "Discover the latest trends in architectural lighting design that will dominate 2025, from sustainable solutions to smart lighting integration.",
       "date": "January 15, 2025",
       "readTime": "5 min read",
-      "url": "./lighting-design-trends-2025.html"
+      "url": "./concrete-series-blog.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/sustainable-lighting-solutions.jpg",
@@ -14,7 +22,7 @@
       "excerpt": "Explore eco-friendly lighting options that combine energy efficiency with stunning aesthetics for contemporary residential spaces.",
       "date": "January 10, 2025",
       "readTime": "7 min read",
-      "url": "./sustainable-lighting-solutions.html"
+      "url": "./concrete-series-blog.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/commercial-lighting-guide.jpg",
@@ -22,7 +30,7 @@
       "excerpt": "Learn essential principles and best practices for designing effective lighting systems in commercial and retail environments.",
       "date": "January 8, 2025",
       "readTime": "8 min read",
-      "url": "./commercial-lighting-guide.html"
+      "url": "./concrete-series-blog.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/led-technology-advancements.jpg",
@@ -30,7 +38,7 @@
       "excerpt": "Stay updated with the newest developments in LED technology and how they're revolutionizing the lighting industry.",
       "date": "January 5, 2025",
       "readTime": "6 min read",
-      "url": "./led-technology-advancements.html"
+      "url": "./concrete-series-blog.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/outdoor-lighting-essentials.jpg",
@@ -38,7 +46,7 @@
       "excerpt": "Master the art of outdoor lighting design with practical tips for creating beautiful, functional exterior lighting schemes.",
       "date": "January 3, 2025",
       "readTime": "4 min read",
-      "url": "./outdoor-lighting-essentials.html"
+      "url": "./concrete-series-blog.html"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/blogs/color-temperature-guide.jpg",
@@ -46,14 +54,6 @@
       "excerpt": "A comprehensive guide to color temperature and how it affects mood, productivity, and overall ambiance in different spaces.",
       "date": "December 30, 2024",
       "readTime": "5 min read",
-      "url": "./color-temperature-guide.html"
-    },
-    {
-      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
-      "title": "Why Concrete Series Lights Are Revolutionizing Modern Interior Design",
-      "excerpt": "Discover how Abner Lighting's Concrete Series is transforming modern interior design with its unique blend of industrial aesthetics and contemporary elegance.",
-      "date": "January 20, 2025",
-      "readTime": "8 min read",
       "url": "./concrete-series-blog.html"
     }
   ]
