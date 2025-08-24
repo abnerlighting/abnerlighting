@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/blanca/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/blanca/2.png",
+      "name": "Stone Pendant Light",
+      "description": "Elegant stone pendant with natural texture"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/cairo/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/cairo/2.png",
+      "name": "Stone Wall Sconce",
+      "description": "Sophisticated wall lighting with stone finish"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/casa/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/casa/2.png",
+      "name": "Stone Floor Lamp",
+      "description": "Premium floor lamp with stone base"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/curvy/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/curvy/2.png",
+      "name": "Stone Table Lamp",
+      "description": "Refined table lighting with stone accents"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/disc/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/disc/2.png",
+      "name": "Stone Ceiling Light",
+      "description": "Luxurious ceiling fixture with stone elements"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/veno-ud/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/veno-ud/2.png",
+      "name": "Stone Outdoor Light",
+      "description": "Durable outdoor lighting with stone design"
+    }
+  ]
+}

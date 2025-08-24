@@ -18,10 +18,11 @@
 // https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/1.png
 // https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/1.png
 // https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png
+//ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png?updatedAt=1756031766048
 
     const products = [
       {
-        "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
+        "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
         "name": "Concrete Pendant Light",
         "description": "Minimalist concrete pendant with industrial appeal"
       },
@@ -79,6 +80,7 @@
     // Navbar scroll behavior
     function handleNavbarScroll() {
       const navbar = document.getElementById('navbar');
+      if (!navbar) return; // Guard so it doesn't crash if called early
       if (window.scrollY > 50) {
         navbar.classList.add('bg-black/90', 'backdrop-blur');
       } else {
@@ -87,11 +89,13 @@
     }
 
     window.addEventListener('scroll', handleNavbarScroll);
-    // Initial call to set correct state
-    handleNavbarScroll();
 
     // Render products when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
+      // Initial call to set correct state
+      handleNavbarScroll();
+
+      // Render products
       const productGrid = document.getElementById('productGrid');
       if (productGrid) {
         products.forEach(product => {

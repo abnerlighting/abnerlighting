@@ -72,6 +72,7 @@
     // Navbar scroll behavior
     function handleNavbarScroll() {
       const navbar = document.getElementById('navbar');
+      if (!navbar) return; // Guard so it doesn't crash if called early
       if (window.scrollY > 50) {
         navbar.classList.add('bg-black/90', 'backdrop-blur');
       } else {
@@ -80,19 +81,16 @@
     }
 
     window.addEventListener('scroll', handleNavbarScroll);
-    // Initial call to set correct state
-    handleNavbarScroll();
 
     // Render products when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM loaded, rendering products...');
+      // Initial call to set correct state
+      handleNavbarScroll();
+
+      // Render products
       const productGrid = document.getElementById('productGrid');
-      console.log('Product grid element:', productGrid);
-      console.log('Products array:', products);
-      
       if (productGrid) {
-        products.forEach((product, index) => {
-          console.log(`Creating product ${index + 1}:`, product.name);
+        products.forEach(product => {
           const productCard = document.createElement('div');
           productCard.className = 'group cursor-pointer';
           productCard.onclick = () => {
@@ -101,8 +99,8 @@
           };
           
           productCard.innerHTML = `
-            <div class="aspect-square overflow-hidden rounded-lg shadow-md bg-slate-100">
-              <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'h-full w-full flex items-center justify-center text-slate-400\\'><span class=\\'text-sm\\'>Product Image</span></div>';" />
+            <div class="aspect-square overflow-hidden rounded-lg shadow-md">
+              <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="mt-4">
               <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
@@ -111,11 +109,7 @@
           `;
           
           productGrid.appendChild(productCard);
-          console.log(`Product ${index + 1} added to grid`);
         });
-        console.log('All products rendered successfully');
-      } else {
-        console.error('Product grid element not found!');
       }
     });
   </script>
@@ -247,38 +241,6 @@
     </div>
   </footer>
   
-  <script>
-    // Fallback script to ensure products are rendered
-    setTimeout(function() {
-      console.log('Fallback script running...');
-      const productGrid = document.getElementById('productGrid');
-      if (productGrid && productGrid.children.length === 0) {
-        console.log('Product grid is empty, rendering products...');
-        if (typeof products !== 'undefined') {
-          products.forEach((product, index) => {
-            console.log(`Creating product ${index + 1}:`, product.name);
-            const productCard = document.createElement('div');
-            productCard.className = 'group cursor-pointer';
-            productCard.onclick = () => {
-              const slug = slugify(product.name);
-              window.location.href = `./${slug}.html`;
-            };
-            
-            productCard.innerHTML = `
-              <div class="aspect-square overflow-hidden rounded-lg shadow-md bg-slate-100">
-                <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'h-full w-full flex items-center justify-center text-slate-400\\'><span class=\\'text-sm\\'>Product Image</span></div>';" />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
-              <p class="mt-2 text-sm text-slate-600">${product.description}</p>
-            </div>
-          `;
-          
-          productGrid.appendChild(productCard);
-        });
-      }
-    }
-  }, 1000);
-  </script>
+
 </body>
 </html>

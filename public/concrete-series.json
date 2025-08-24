@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
+      "name": "Concrete Pendant Light",
+      "description": "Minimalist concrete pendant with industrial appeal"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png",
+      "name": "Concrete Wall Sconce",
+      "description": "Contemporary wall lighting with raw texture"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/2.png",
+      "name": "Concrete Floor Lamp",
+      "description": "Statement floor lamp with bold design"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/2.png",
+      "name": "Concrete Table Lamp",
+      "description": "Refined table lighting for modern spaces"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/2.png",
+      "name": "Concrete Ceiling Light",
+      "description": "Industrial ceiling fixture with contemporary edge"
+    },
+    {
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/2.png",
+      "name": "Concrete Outdoor Light",
+      "description": "Durable outdoor lighting with modern aesthetics"
+    }
+  ]
+}
