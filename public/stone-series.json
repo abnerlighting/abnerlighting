@@ -1,46 +1,64 @@
 {
   "products": [
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/blanca/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/blanca/2.png",
-      "name": "Stone Pendant Light",
-      "description": "Elegant stone pendant with natural texture",
-      "url": "./stone-pendant-light.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/1.png",
+      "name": "Perl Family Pendant Lamp",
+      "description": "A graceful alabaster pendant lamp that brings timeless elegance to interiors.",
+      "full-description": "The Perl Family Pendant Lamp is crafted from natural alabaster, offering soft diffused light and timeless elegance for modern or classic interiors.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/cairo/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/cairo/2.png",
-      "name": "Stone Wall Sconce",
-      "description": "Sophisticated wall lighting with stone finish",
-      "url": "./stone-wall-sconce.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/2.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/2.png",
+      "name": "Pandav Family Pendant Lamp",
+      "description": "An alabaster pendant lamp designed to create warmth and sophistication.",
+      "full-description": "The Pandav Family Pendant Lamp, made from exquisite alabaster, provides warm illumination and refined presence, enhancing contemporary and traditional spaces alike.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/casa/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/casa/2.png",
-      "name": "Stone Floor Lamp",
-      "description": "Premium floor lamp with stone base",
-      "url": "./stone-floor-lamp.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/3.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/3.png",
+      "name": "Alder Family Pendant Lamp",
+      "description": "An alabaster pendant lamp offering soft illumination with natural charm.",
+      "full-description": "The Alder Family Pendant Lamp showcases alabaster’s natural beauty, delivering soft, diffused light to enrich living and hospitality environments.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/curvy/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/curvy/2.png",
-      "name": "Stone Table Lamp",
-      "description": "Refined table lighting with stone accents",
-      "url": "./stone-table-lamp.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/4.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/4.png",
+      "name": "Sunrise Table Lamp",
+      "description": "An alabaster table lamp that radiates gentle light with timeless style.",
+      "full-description": "The Sunrise Table Lamp, carved from alabaster, creates a warm ambient glow that highlights the elegance of natural stone in a versatile table format.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/disc/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/disc/2.png",
-      "name": "Stone Ceiling Light",
-      "description": "Luxurious ceiling fixture with stone elements",
-      "url": "./stone-ceiling-light.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/5.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/5.png",
+      "name": "Jade Table Lamp",
+      "description": "A refined alabaster table lamp blending sculptural form with subtle light.",
+      "full-description": "The Jade Table Lamp combines alabaster craftsmanship with sculptural presence, delivering soft ambient lighting ideal for side tables and consoles.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/veno-ud/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/wall-lights/veno-ud/2.png",
-      "name": "Stone Outdoor Light",
-      "description": "Durable outdoor lighting with stone design",
-      "url": "./stone-outdoor-light.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/6.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/6.png",
+      "name": "Maple Family Pendant Lamp",
+      "description": "An alabaster pendant lamp that combines natural texture with modern appeal.",
+      "full-description": "The Maple Family Pendant Lamp, sculpted from alabaster, adds natural stone beauty to ceilings while casting a soft, warm light for inviting spaces.",
+      "url": "#",
+      "material": "Alabaster",
+      "finish": "Textured"
     }
   ]
 }

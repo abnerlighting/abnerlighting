@@ -16,9 +16,9 @@
     function handleNavbarScroll() {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
-        navbar.classList.add('bg-black/90', 'backdrop-blur');
+        navbar.classList.add('bg-black/40', 'backdrop-blur');
       } else {
-        navbar.classList.remove('bg-black/90', 'backdrop-blur');
+        navbar.classList.remove('bg-black/40', 'backdrop-blur');
       }
     }
     window.addEventListener('scroll', handleNavbarScroll);
@@ -88,7 +88,7 @@
 <!-- Header -->
 <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
   <div class="mx-auto">
-    <div class="relative flex h-12 md:h-20 items-center justify-center">
+    <div class="relative flex h-16 md:h-20 items-center justify-center">
       <!-- DESKTOP/TABLET: hamburger (left) -->
       <button aria-label="Open menu"
               id="btnDesktopHamburger"
@@ -101,7 +101,7 @@
 
       <!-- DESKTOP/TABLET: centered logo -->
       <a href="index.html" class="hidden sm:inline-flex absolute left-1/2 -translate-x-1/2 items-center gap-2 p-2">
-        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-8 md:h-10 w-auto" />
+        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 md:h-8 w-auto" />
       </a>
 
       <!-- DESKTOP/TABLET: contact (right) -->
@@ -110,8 +110,8 @@
          style="border-color:rgba(255,255,255,.8)">Contact Us</a>
 
       <!-- MOBILE: logo (left) -->
-      <a href="index.html" class="sm:hidden inline-flex absolute left-2 items-center gap-2 p-2">
-        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 w-auto" />
+      <a href="index.html" class="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 px-2 py-4">
+        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-7 w-auto" />
       </a>
 
       <!-- MOBILE: hamburger (right) -->
@@ -164,15 +164,34 @@
 
     <!-- About Us Section -->
     <section class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <div class="order-2 md:order-1">
-          <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
+      <div class="grid gap-10 lg:grid-cols-2 items-stretch">
+        <!-- Desktop/Tablet Image column -->
+        <div class="order-2 lg:order-1 relative overflow-hidden rounded-xl shadow min-h-0 hidden lg:block">
+          <img
+            src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg"
+            alt="About image"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
-        <div class="order-1 md:order-2">
-          <h2 class="tracking-tight">About Us</h2>
-          <p class="mt-6 text-slate-600">Founded in 2015, Lightworx—the force behind the Abner brand—specializes in high-impact, precision-engineered lighting solutions. We blend cutting-edge technology with timeless aesthetics to illuminate spaces with intention and artistry.</p>
-          <p class="mt-4 text-slate-600">At Abner, we believe lighting is more than function—it's emotion, mood, and experience. Every project we touch reflects our commitment to sustainability, craftsmanship, and performance. From retail showrooms to luxury residences, we design lighting that transforms architecture into atmosphere.</p>
-          <p class="mt-4 text-slate-600">Join us in redefining the future of lighting—where every beam is deliberate, and every detail matters.</p>
+        
+        <!-- Text column -->
+        <div class="order-1 lg:order-2 flex flex-col justify-center">
+          <h2 class="text-center lg:text-left font-bold text-4xl">About Us</h2>
+          
+          <!-- Mobile Image (hidden on desktop/tablet) -->
+          <div class="mt-6 lg:hidden">
+            <img
+              src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg"
+              alt="About image"
+              class="w-full aspect-[4/3] rounded-xl object-cover shadow"
+            />
+          </div>
+          
+          <div class="mt-6 space-y-4 text-slate-600">
+            <p>Founded in 2015, Lightworx—the force behind the Abner brand—specializes in high-impact, precision-engineered lighting solutions. We blend cutting-edge technology with timeless aesthetics to illuminate spaces with intention and artistry.</p>
+            <p>At Abner, we believe lighting is more than function—it's emotion, mood, and experience. Every project we touch reflects our commitment to sustainability, craftsmanship, and performance. From retail showrooms to luxury residences, we design lighting that transforms architecture into atmosphere.</p>
+            <p>Join us in redefining the future of lighting—where every beam is deliberate, and every detail matters.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -181,22 +200,44 @@
     <section class="bg-slate-50 py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h2 class="text-slate-600 text-2xl md:text-3xl tracking-widest">GLOBAL VISION. LOCAL CRAFT.</h2>
+          <h2 class="text-center font-bold text-4xl">
+            <span class="block md:inline">GLOBAL VISION.</span>
+            <span class="block md:inline">LOCAL CRAFT.</span>
+          </h2>
         </div>
       </div>
     </section>
 
     <!-- Second About Section -->
     <section class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <div class="order-1 md:order-1">
-          <h2 class="tracking-tight">Our Mission</h2>
-          <p class="mt-6 text-slate-600">Rooted in Indian expertise and inspired by European design, Abner stands at the crossroads of global sensibility and local understanding. Our mission: to deliver performance-driven, beautiful lighting tailored to Indian lifestyles and climates.</p>
-          <p class="mt-4 text-slate-600">Whether it's a bespoke residential chandelier or high-precision commercial lighting, our studio and manufacturing units deliver with exactitude and agility.</p>
-          <p class="mt-4 text-slate-600">From concept to execution, we create lighting solutions that speak the language of design, innovation, and refined craftsmanship.</p>
+      <div class="grid gap-10 lg:grid-cols-2 items-stretch">
+        <!-- Desktop/Tablet Image column -->
+        <div class="order-2 lg:order-1 relative overflow-hidden rounded-xl shadow min-h-0 hidden lg:block">
+          <img
+            src="https://ik.imagekit.io/abnerlighting/branding/our-mission.jpg"
+            alt="About image"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
-        <div class="order-2 md:order-2">
-          <img src="https://ik.imagekit.io/abnerlighting/branding/founder.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
+        
+        <!-- Text column -->
+        <div class="order-1 lg:order-2 flex flex-col justify-center">
+          <h2 class="text-center lg:text-left font-bold text-4xl">Our Mission</h2>
+          
+          <!-- Mobile Image (hidden on desktop/tablet) -->
+          <div class="mt-6 lg:hidden">
+            <img
+              src="https://ik.imagekit.io/abnerlighting/branding/our-mission.jpg"
+              alt="About image"
+              class="w-full aspect-[4/3] rounded-xl object-cover shadow"
+            />
+          </div>
+          
+          <div class="mt-6 space-y-4 text-slate-600">
+            <p>Rooted in Indian expertise and inspired by European design, Abner stands at the crossroads of global sensibility and local understanding. Our mission: to deliver performance-driven, beautiful lighting tailored to Indian lifestyles and climates.</p>
+            <p>Whether it's a bespoke residential chandelier or high-precision commercial lighting, our studio and manufacturing units deliver with exactitude and agility.</p>
+            <p>From concept to execution, we create lighting solutions that speak the language of design, innovation, and refined craftsmanship.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -205,7 +246,7 @@
     <section class="bg-slate-50 py-10">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
-            <h2 class="text-slate-900 text-2xl md:text-3xl tracking-widest">CHRONOSCAPE</h2>
+            <h2 class="text-center font-bold text-4xl">CHRONOSCAPE</h2>
             <p class="text-slate-500 mt-2 text-sm md:text-base">A brief history of Abner</p>
           </div>
       
@@ -378,26 +419,48 @@
 
     <!-- Founder's Desk Section -->
     <section class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <div class="order-2 md:order-1">
-          <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="Founder's Desk" class="aspect-video w-full rounded-xl object-cover shadow" />
+      <div class="grid gap-10 lg:grid-cols-2 items-stretch">
+        <!-- Desktop/Tablet Image column -->
+        <div class="order-2 lg:order-1 relative overflow-hidden rounded-xl shadow min-h-0 hidden lg:block">
+          <img
+            src="https://ik.imagekit.io/abnerlighting/branding/founder.jpg"
+            alt="Founder's Desk"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
-        <div class="order-1 md:order-2">
-          <h2 class="tracking-tight">FOUNDER'S DESK</h2>
+    
+        <!-- Text column -->
+        <div class="order-1 lg:order-2 flex flex-col justify-center">
+          <h2 class="text-center lg:text-left font-bold text-4xl">FOUNDER'S DESK</h2>
+          
+          <!-- Mobile Image (hidden on desktop/tablet) -->
+          <div class="mt-6 lg:hidden">
+            <img
+              src="https://ik.imagekit.io/abnerlighting/branding/founder.jpg"
+              alt="Founder's Desk"
+              class="w-full aspect-[4/3] rounded-xl object-cover shadow"
+            />
+          </div>
+          
           <blockquote class="mt-6 text-lg italic text-slate-600">
             "Lighting isn't just brightness—it's how we shape the feeling of a space."
           </blockquote>
-          <p class="mt-6 text-slate-600">Shashank Nayak founded Abner in 2015 to meet the growing demand for well-crafted architectural lighting in India. With a focus on technical precision and design integrity, his first breakthrough came via the JW Marriott, Juhu.</p>
-          <p class="mt-4 text-slate-600">Today, Abner partners with brands like Orra, Bluestone, and Stone Ex, delivering adaptable, innovative lighting with an unwavering commitment to quality.</p>
+          <p class="mt-6 text-slate-600">
+            Shashank Nayak founded Abner in 2015 to meet the growing demand for well-crafted architectural lighting in India. With a focus on technical precision and design integrity, his first breakthrough came via the JW Marriott, Juhu.
+          </p>
+          <p class="mt-4 text-slate-600">
+            Today, Abner partners with brands like Orra, Bluestone, and Stone Ex, delivering adaptable, innovative lighting with an unwavering commitment to quality.
+          </p>
         </div>
       </div>
     </section>
+    
 
     <!-- Company Infrastructure Section -->
     <section class="bg-slate-50 py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-slate-900 text-2xl md:text-3xl tracking-widest">COMPANY INFRASTRUCTURE</h2>
+          <h2 class="text-center font-bold text-4xl">COMPANY INFRASTRUCTURE</h2>
           <p class="text-slate-600 mt-4 text-base md:text-lg">Abner's core team of 70+ professionals works across design, engineering, and client strategy.</p>
         </div>
         

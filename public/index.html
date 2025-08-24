@@ -16,9 +16,9 @@
     function handleNavbarScroll() {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
-        navbar.classList.add('bg-black/90', 'backdrop-blur');
+        navbar.classList.add('bg-black/40', 'backdrop-blur');
       } else {
-        navbar.classList.remove('bg-black/90', 'backdrop-blur');
+        navbar.classList.remove('bg-black/40', 'backdrop-blur');
       }
     }
     window.addEventListener('scroll', handleNavbarScroll);
@@ -38,10 +38,14 @@
       // Anchor to correct side
       if (isMobile()) {
         drawer.classList.add('right-0');
-        if (!wasOpen) drawer.classList.add('translate-x-full');     // closed (right)
+        if (!wasOpen) {
+          drawer.classList.add('translate-x-full');     // closed (right)
+        }
       } else {
         drawer.classList.add('left-0');
-        if (!wasOpen) drawer.classList.add('-translate-x-full');    // closed (left)
+        if (!wasOpen) {
+          drawer.classList.add('-translate-x-full');    // closed (left)
+        }
       }
     }
 
@@ -80,15 +84,17 @@
     // Keep side correct on resize (preserves open state)
     window.addEventListener('resize', setDrawerSide);
 
-    // Init
-    setDrawerSide();
+    // Init - ensure drawer starts closed
+    document.addEventListener('DOMContentLoaded', function() {
+      setDrawerSide();
+    });
   </script>
 </head>
 <body class="min-h-full bg-white text-slate-900">
 <!-- Header -->
 <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
   <div class="mx-auto">
-    <div class="relative flex h-12 md:h-20 items-center justify-center">
+    <div class="relative flex h-16 md:h-20 items-center justify-center">
       <!-- DESKTOP/TABLET: hamburger (left) -->
       <button aria-label="Open menu"
               id="btnDesktopHamburger"
@@ -101,7 +107,7 @@
 
       <!-- DESKTOP/TABLET: centered logo -->
       <a href="index.html" class="hidden sm:inline-flex absolute left-1/2 -translate-x-1/2 items-center gap-2 p-2">
-        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-8 md:h-10 w-auto" />
+        <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 md:h-8 w-auto" />
       </a>
 
       <!-- DESKTOP/TABLET: contact (right) -->
@@ -110,7 +116,7 @@
          style="border-color:rgba(255,255,255,.8)">Contact Us</a>
 
       <!-- MOBILE: logo (left) -->
-      <a href="index.html" class="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 p-2">
+      <a href="index.html" class="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 px-2 py-4">
         <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-7 w-auto" />
       </a>
 
@@ -132,7 +138,7 @@
 
 <!-- Drawer -->
 <aside id="drawer"
-       class="fixed inset-y-0 z-50 w-full md:w-80 transform bg-white shadow-xl transition-transform duration-300 left-0 -translate-x-full"
+       class="fixed inset-y-0 z-50 w-full md:w-80 transform bg-white shadow-xl transition-transform duration-300 -translate-x-full"
        aria-hidden="true">
   <div class="flex h-full flex-col">
     <div class="flex items-center justify-between p-4">
@@ -382,7 +388,7 @@
     <section id="numbers" class="bg-slate-50 py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h2>Abner in Numbers</h2>
+          <h2 class="text-center text-4xl">Abner in Numbers</h2>
           <div class="w-72 h-0.5 bg-black mx-auto mt-4"></div>
         </div>
         <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -407,7 +413,6 @@
     <section id="partners" class="py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
         <h2 class="text-center text-4xl">Our Industry Partners</h2>
-        <div class="w-80 h-0.5 bg-black mx-auto mt-4"></div>
         <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
           <!-- 8 logos in outlined squares -->
           <div class="aspect-square border-2 border-slate-200 rounded-lg flex items-center justify-center p-2">
@@ -441,23 +446,29 @@
     <!-- Testimonials carousel (3) -->
     <section id="testimonials" class="bg-slate-50 py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-center text-4xl">Testimonials</h2>
+        <h2 class="text-center text-4xl font-bold">Testimonials</h2>
         <div class="carousel mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
           <!-- three cards -->
-          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
-            <p class="text-slate-700">"Thank you, Abner team, for your good quality products and on-time delivery that helped us complete our project within time."</p>
-            <div class="mt-4 text-sm text-slate-500">— Mr Ketan Dave</div>
-            <div class="text-xs text-slate-400">Director, Illumination Genesis</div>
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%] flex flex-col h-48">
+            <p class="text-slate-700 flex-grow">"Thank you, Abner team, for your good quality products and on-time delivery that helped us complete our project within time."</p>
+            <div class="mt-auto">
+              <div class="text-sm text-slate-500">— Mr Ketan Dave</div>
+              <div class="text-xs text-slate-400">Director, Illumination Genesis</div>
+            </div>
           </div>
-          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
-            <p class="text-slate-700">"Abner's exceptional customer service and high-quality lighting fixtures exceeded my expectations. Highly recommend!"</p>
-            <div class="mt-4 text-sm text-slate-500">— Mr Sushant Surve</div>
-            <div class="text-xs text-slate-400">Principle Designer, Brainwave Designs</div>
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%] flex flex-col h-48">
+            <p class="text-slate-700 flex-grow">"Abner's exceptional customer service and high-quality lighting fixtures exceeded my expectations. Highly recommend!"</p>
+            <div class="mt-auto">
+              <div class="text-sm text-slate-500">— Mr Sushant Surve</div>
+              <div class="text-xs text-slate-400">Principle Designer, Brainwave Designs</div>
+            </div>
           </div>
-          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
-            <p class="text-slate-700">"Team Abner has fantastically represented the highest levels of customer service we have experienced."</p>
-            <div class="mt-4 text-sm text-slate-500">— Mr. Pranav</div>
-            <div class="text-xs text-slate-400">Principal Designer, Studio Pomegranate</div>
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%] flex flex-col h-48">
+            <p class="text-slate-700 flex-grow">"Team Abner has fantastically represented the highest levels of customer service we have experienced."</p>
+            <div class="mt-auto">
+              <div class="text-sm text-slate-500">— Mr. Pranav</div>
+              <div class="text-xs text-slate-400">Principal Designer, Studio Pomegranate</div>
+            </div>
           </div>
         </div>
       </div>

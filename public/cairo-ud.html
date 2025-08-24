@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Concrete Series - Abner Lighting</title>
+  <title>Cairo UD - Abner Lighting</title>
   
   <!-- Google Fonts: Jost -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +12,8 @@
   <link rel="stylesheet" href="./styles.css" />
   <script src="./whatsapp-button.js" defer></script>
   <script>
-    // Product data will be loaded from JSON file
-    let products = [];
-
-    // Slugify function
-    function slugify(text) {
-      return text.toLowerCase()
-        .replace(/[^\w ]+/g, '')
-        .replace(/ +/g, '-');
-    }
+    // Product data
+    let productData = null;
 
     // Simple drawer logic without frameworks
     function toggleDrawer(force) {
@@ -42,7 +35,7 @@
     // Navbar scroll behavior
     function handleNavbarScroll() {
       const navbar = document.getElementById('navbar');
-      if (!navbar) return; // Guard so it doesn't crash if called early
+      if (!navbar) return;
       if (window.scrollY > 50) {
         navbar.classList.add('bg-black/40', 'backdrop-blur');
       } else {
@@ -52,71 +45,171 @@
 
     window.addEventListener('scroll', handleNavbarScroll);
 
-    // Load products from JSON and render
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initial call to set correct state
-      handleNavbarScroll();
-
-      // Get series from URL parameter or default to concrete-series
-      const urlParams = new URLSearchParams(window.location.search);
-      const series = urlParams.get('series') || 'concrete-series';
-      
-      // Update page title based on series
-      const seriesNames = {
-        'concrete-series': 'Concrete Series',
-        'stone-series': 'Stone Series',
-        'architectural-series': 'Architectural Series'
-      };
-      const seriesName = seriesNames[series] || 'Concrete Series';
-      document.title = `${seriesName} - Abner Lighting`;
-      
-      // Update page heading
-      const pageHeading = document.querySelector('h1');
-      if (pageHeading) {
-        pageHeading.textContent = `Our ${seriesName} Products`;
+    // Handle window resize for thumbnail count
+    let currentThumbnailCount = 0;
+    function updateThumbnails() {
+      if (productData && productData.images) {
+        const isMobile = window.innerWidth < 1024;
+        const maxThumbnails = isMobile ? 4 : productData.images.length;
+        
+        if (maxThumbnails !== currentThumbnailCount) {
+          currentThumbnailCount = maxThumbnails;
+          renderProductData();
+        }
       }
+    }
+    
+    window.addEventListener('resize', updateThumbnails);
+
+    // Load product data and render
+    document.addEventListener('DOMContentLoaded', function() {
+      handleNavbarScroll();
       
-      // Load products from JSON file
-      fetch(`./${series}.json`)
+      // Load product data from JSON
+      fetch('./concrete-series.json')
         .then(response => response.json())
         .then(data => {
-          products = data.products;
-          
-          // Render products
-          const productGrid = document.getElementById('productGrid');
-          if (productGrid) {
-            products.forEach(product => {
-              const productCard = document.createElement('div');
-              productCard.className = 'group cursor-pointer';
-                              productCard.onclick = () => {
-                  window.location.href = product.url;
-                };
-              
-              productCard.innerHTML = `
-                <div class="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                       onmouseenter="this.src='${product['hover-image']}'" 
-                       onmouseleave="this.src='${product.image}'" />
-                </div>
-                <div class="mt-4">
-                  <h3 class="text-lg font-semibold text-slate-900">${product.name.toUpperCase()}</h3>
-                  <p class="mt-2 text-sm text-slate-600">${product.description}</p>
-                </div>
-              `;
-              
-              productGrid.appendChild(productCard);
-            });
+          // Find Cairo UD product
+          const cairoProduct = data.products.find(product => product.name === 'Cairo UD');
+          if (cairoProduct) {
+            productData = cairoProduct;
+            renderProductData();
           }
         })
         .catch(error => {
-          console.error('Error loading products:', error);
+          console.error('Error loading product data:', error);
         });
     });
+
+    function renderProductData() {
+      if (!productData) return;
+
+      // Update description
+      const descriptionElement = document.querySelector('.product-description');
+      if (descriptionElement) {
+        descriptionElement.textContent = productData['full-description'];
+      }
+
+      // Update images
+      if (productData.images && productData.images.length > 0) {
+        const mainImage = document.getElementById('mainImage');
+        if (mainImage) {
+          mainImage.src = productData.images[0];
+        }
+
+        // Update thumbnails
+        const thumbnailContainer = document.querySelector('.thumbnail-grid');
+        if (thumbnailContainer) {
+          thumbnailContainer.innerHTML = '';
+          const isMobile = window.innerWidth < 1024;
+          const maxThumbnails = isMobile ? 4 : productData.images.length;
+          
+          productData.images.slice(0, maxThumbnails).forEach((image, index) => {
+            const thumbnail = document.createElement('div');
+            thumbnail.className = 'aspect-square overflow-hidden rounded-lg shadow cursor-pointer';
+            thumbnail.onclick = () => changeMainImage(image);
+            thumbnail.innerHTML = `
+              <img src="${image}" alt="Cairo UD - View ${index + 1}" class="h-full w-full object-cover" />
+            `;
+            thumbnailContainer.appendChild(thumbnail);
+          });
+          currentThumbnailCount = maxThumbnails;
+        }
+      }
+
+      // Render dimensions table
+      renderDimensionsTable();
+    }
+
+    function renderDimensionsTable() {
+      const dimensionsContainer = document.getElementById('dimensionsContainer');
+      if (!dimensionsContainer || !productData) return;
+
+      if (Array.isArray(productData.dimensions)) {
+        // Multiple dimensions (array)
+        dimensionsContainer.innerHTML = '';
+        productData.dimensions.forEach((dimension, index) => {
+          const tableDiv = document.createElement('div');
+          tableDiv.className = 'mb-6';
+          
+          const title = dimension.size ? `Dimensions for ${dimension.size}` : `Dimensions ${index + 1}`;
+          
+          tableDiv.innerHTML = `
+            <h4 class="text-lg font-semibold text-slate-900 mb-3">${title}</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-slate-200">
+                    <th class="text-left py-2 font-semibold text-slate-900">Specification</th>
+                    <th class="text-left py-2 font-semibold text-slate-900">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${Object.entries(dimension).map(([key, value]) => {
+                    if (key === 'size') return '';
+                    return `
+                      <tr class="border-b border-slate-100">
+                        <td class="py-2 text-slate-600">${key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                        <td class="py-2 font-medium">${value}</td>
+                      </tr>
+                    `;
+                  }).join('')}
+                  <tr class="border-b border-slate-100">
+                    <td class="py-2 text-slate-600">Material</td>
+                    <td class="py-2 font-medium">${productData.material}</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 text-slate-600">Finish</td>
+                    <td class="py-2 font-medium">${productData.finish}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          `;
+          dimensionsContainer.appendChild(tableDiv);
+        });
+      } else if (productData.dimensions) {
+        // Single dimensions object
+        dimensionsContainer.innerHTML = `
+          <h3 class="text-xl font-semibold text-slate-900 mb-4">Dimensions</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-slate-200">
+                  <th class="text-left py-2 font-semibold text-slate-900">Specification</th>
+                  <th class="text-left py-2 font-semibold text-slate-900">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${Object.entries(productData.dimensions).map(([key, value]) => `
+                  <tr class="border-b border-slate-100">
+                    <td class="py-2 text-slate-600">${key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                    <td class="py-2 font-medium">${value}</td>
+                  </tr>
+                `).join('')}
+                <tr class="border-b border-slate-100">
+                  <td class="py-2 text-slate-600">Material</td>
+                  <td class="py-2 font-medium">${productData.material}</td>
+                </tr>
+                <tr>
+                  <td class="py-2 text-slate-600">Finish</td>
+                  <td class="py-2 font-medium">${productData.finish}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    }
+
+    function changeMainImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
   </script>
 </head>
 <body class="min-h-full bg-white text-slate-900">
 <!-- Header -->
-<header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-black">
   <div class="mx-auto">
     <div class="relative flex h-16 md:h-20 items-center justify-center">
       <!-- DESKTOP/TABLET: hamburger (left) -->
@@ -185,33 +278,95 @@
     </div>
   </aside>
 
-  <main class="relative">
-    <!-- Hero Image -->
-    <section class="relative h-[30vh] w-full overflow-hidden">
-      <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Concrete Series" class="absolute inset-0 h-full w-full object-cover" />
-      <div class="absolute inset-0 bg-black/30"></div>
-    </section>
-
-    <!-- Title Section -->
+  <main class="relative pt-16 md:pt-20">
+    <!-- Product Section -->
     <section class="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Our Concrete Series Products</h1>
-      </div>
-    </section>
-
-    <!-- Content Section -->
-    <section class="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-5xl text-center">
-        <p class="text-lg text-slate-600 leading-relaxed">
-          Abner Lighting's Concrete Series combines minimalist design with industrial strength, creating lighting that's as stylish as it is durable. Perfect for both indoor and outdoor spaces, these fixtures seamlessly enhance modern and luxurious homes with their raw textures and contemporary appeal. Built to outlast trends, the Concrete Series offers superior quality, bold design, and a refined edge that sets it apart from standard residential lighting.
-        </p>
-      </div>
-    </section>
-
-    <!-- Product Grid -->
-    <section class="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-      <div id="productGrid" class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <!-- Products will be dynamically inserted here -->
+      <div class="grid gap-10 lg:grid-cols-2 items-start">
+        
+        <!-- Left Side: Product Images -->
+        <div class="space-y-6 lg:max-h-screen lg:overflow-y-auto lg:pr-4">
+          <!-- Mobile Product Title (hidden on desktop) -->
+          <div class="lg:hidden">
+            <h1 class="text-4xl font-bold text-slate-900 mb-4">CAIRO UD</h1>
+          </div>
+          
+          <!-- Main Image -->
+          <div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src="https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png" 
+              alt="Cairo UD - Main View" 
+              class="h-full w-full object-cover"
+              id="mainImage"
+            />
+          </div>
+          
+          <!-- Thumbnail Images -->
+          <div class="thumbnail-grid grid grid-cols-2 gap-4">
+            <div class="aspect-square overflow-hidden rounded-lg shadow cursor-pointer" onclick="changeMainImage('https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png')">
+              <img 
+                src="https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png" 
+                alt="Cairo UD - View 1" 
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg shadow cursor-pointer" onclick="changeMainImage('https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png')">
+              <img 
+                src="https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png" 
+                alt="Cairo UD - View 2" 
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Product Details -->
+        <div class="space-y-8 lg:sticky lg:top-20">
+          <!-- Product Name -->
+          <div>
+            <h1 class="hidden lg:block text-4xl md:text-5xl font-bold text-slate-900">CAIRO UD</h1>
+            <p class="mt-4 text-lg text-slate-600 product-description">Cairo UD is a circular wall light designed for outdoor applications to enhance wall surfaces with its up-down lighting feature.</p>
+          </div>
+          
+          <!-- Why Choose Us Section -->
+          <div class="bg-black p-6 rounded-xl">
+            <div class="grid grid-cols-3 gap-4">
+              <!-- Feature 1 -->
+              <div class="text-center">
+                <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/1.png" alt="European Style" class="h-16 w-16 mx-auto mb-2" />
+                <h4 class="text-sm font-semibold text-white">High-End European Style, Local Pricing</h4>
+              </div>
+              <!-- Feature 2 -->
+              <div class="text-center">
+                <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/3.png" alt="Fast Delivery" class="h-16 w-16 mx-auto mb-2" />
+                <h4 class="text-sm font-semibold text-white">Fastest Delivery, OTIF Promise</h4>
+              </div>
+              <!-- Feature 3 -->
+              <div class="text-center">
+                <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/2.png" alt="Service That Lasts" class="h-16 w-16 mx-auto mb-2" />
+                <h4 class="text-sm font-semibold text-white">Service That Lasts, Guaranteed for Decades</h4>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Dimension Table -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div id="dimensionsContainer">
+              <!-- Dimensions will be loaded dynamically from JSON -->
+            </div>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="space-y-4">
+            <a href="mailto:crm@abner.co.in?subject=Inquiry for Cairo UD&body=Hello Abner,%0D%0A%0D%0AI am interested in the Cairo UD wall light.%0D%0A%0D%0APlease provide more information about pricing, availability, and specifications.%0D%0A%0D%0ABest regards,"
+               class="block w-full bg-slate-900 text-white text-center py-4 px-6 rounded-xl font-semibold hover:bg-slate-800 transition-colors">
+              Contact Us
+            </a>
+            <a href="concrete-series.html"
+               class="block w-full bg-white border-2 border-slate-900 text-slate-900 text-center py-4 px-6 rounded-xl font-semibold hover:bg-slate-50 transition-colors">
+              View Concrete Series
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -271,7 +426,11 @@
       </div>
     </div>
   </footer>
-  
 
+  <script>
+    function changeMainImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
 </body>
 </html>

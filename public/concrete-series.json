@@ -1,46 +1,153 @@
 {
   "products": [
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
-      "name": "Concrete Pendant Light",
-      "description": "Minimalist concrete pendant with industrial appeal",
-      "url": "./concrete-pendant-light.html"
+      "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
+      "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png",
+      "name": "Blanca",
+      "description": "Blanca offers an elegant modern design that accentuates any wall with refined style.",
+      "full-description": "An elegant modern design to accentuate any wall, Blanca offers a perfect blend of style and refinement.",
+      "url": "./blanca.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/blanca/2.png"
+      ],
+      "dimensions": {
+        "width": "130mm",
+        "length": "150mm",
+        "height": "165mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png",
-      "name": "Concrete Wall Sconce",
-      "description": "Contemporary wall lighting with raw texture",
-      "url": "./concrete-wall-sconce.html"
+      "name": "Cairo UD",
+      "description": "Cairo UD is a circular outdoor wall light with up-down illumination to enrich surfaces.",
+      "full-description": "Cairo UD is a circular wall light designed for outdoor applications to enhance wall surfaces with its up-down lighting feature.",
+      "url": "./cairo-ud.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/cairo/2.png"
+      ],
+      "dimensions": {
+        "length": "137mm",
+        "height": "142mm",
+        "width": "160mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/2.png",
-      "name": "Concrete Floor Lamp",
-      "description": "Statement floor lamp with bold design",
-      "url": "./concrete-floor-lamp.html"
+      "name": "Casa",
+      "description": "Casa brings an elegant modern design that enhances walls with timeless sophistication.",
+      "full-description": "An elegant modern design to accentuate any wall, Casa offers a perfect blend of style and refinement.",
+      "url": "./casa.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/2.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/casa/3.png"
+      ],
+      "dimensions": {
+        "width": "130mm",
+        "length": "150mm",
+        "height": "85mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/2.png",
-      "name": "Concrete Table Lamp",
-      "description": "Refined table lighting for modern spaces",
-      "url": "./concrete-table-lamp.html"
+      "name": "Curvy UD",
+      "description": "Curvy UD is a curved outdoor wall light delivering stylish up-down illumination.",
+      "full-description": "Curvy UD is a curved wall light designed for outdoor environments to enhance wall surfaces with its up-down lighting capability.",
+      "url": "./curvy-ud.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/curvy/2.png"
+      ],
+      "dimensions": {
+        "length": "142mm",
+        "height": "110mm",
+        "width": "190mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/2.png",
-      "name": "Concrete Ceiling Light",
-      "description": "Industrial ceiling fixture with contemporary edge",
-      "url": "./concrete-ceiling-light.html"
+      "name": "Disc",
+      "description": "Disc is an outdoor wall fixture casting soft indirect light with no frontal glare.",
+      "full-description": "Disc is crafted for outdoor use, designed to accentuate wall surfaces with indirect illumination. This fixture produces a soft, accentuating indirect light effect on walls with no frontal glare as the light source is discreetly embedded at the back.",
+      "url": "./disc.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/2.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/3.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/4.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/5.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/6.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/7.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/8.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/9.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/10.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/11.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/12.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/13.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/14.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/15.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/16.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/17.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/18.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/disc/19.png"
+      ],
+      "dimensions": [
+        {
+          "size": "Large",
+          "diameter": "285mm",
+          "thickness": "95mm"
+        },
+        {
+          "size": "Small",
+          "diameter": "200mm",
+          "thickness": "70mm"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
     },
     {
       "image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png",
       "hover-image": "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/2.png",
-      "name": "Concrete Outdoor Light",
-      "description": "Durable outdoor lighting with modern aesthetics",
-      "url": "./concrete-outdoor-light.html"
+      "name": "Veno UD",
+      "description": "Veno UD features dual adjustable beams for versatile and striking outdoor wall lighting.",
+      "full-description": "Veno UD has adjustable beam angles on both sides which provide versatility to suit speciﬁc lighting requirements. A wall light designed for outdoor applications, ideal for enhancing wall surface aesthetics.",
+      "url": "./veno-ud.html",
+      "images": [
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/1.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/2.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/3.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/4.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/5.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/6.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/7.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/8.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/9.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/10.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/11.png",
+        "https://ik.imagekit.io/abnerlighting/products/concrete-series/wall-lights/veno-ud/12.png"
+      ],
+      "dimensions": {
+        "length": "120mm",
+        "width": "120mm",
+        "height": "120mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
     }
   ]
 }
