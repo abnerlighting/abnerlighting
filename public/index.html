@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abner Lighting</title>
+  
+  <!-- Google Fonts: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    // Simple drawer logic without frameworks
+    function toggleDrawer(force) {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      const isOpen = drawer.classList.contains('translate-x-0');
+      const shouldOpen = force === true || (!isOpen && force !== false);
+      drawer.classList.toggle('-translate-x-full', !shouldOpen);
+      drawer.classList.toggle('translate-x-0', shouldOpen);
+      overlay.classList.toggle('hidden', !shouldOpen);
+      overlay.classList.toggle('opacity-0', !shouldOpen);
+      overlay.classList.toggle('opacity-100', shouldOpen);
+      document.body.classList.toggle('overflow-hidden', shouldOpen);
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleDrawer(false);
+    });
+  </script>
+</head>
+<body class="min-h-full bg-white text-slate-900">
+  <!-- Transparent Navbar -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-white/70 to-transparent backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-center">
+        <!-- Left: hamburger -->
+        <button aria-label="Open menu" class="absolute left-0 inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-white/60 focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="toggleDrawer(true)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+        <!-- Center: logo -->
+        <a href="#" class="inline-flex items-center gap-2 font-semibold">
+          <span class="tracking-wide subtitle">ABNER</span>
+        </a>
+        <!-- Right: contact us -->
+        <a href="#contact" class="absolute right-0 rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer + overlay -->
+  <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/40 opacity-0 transition-opacity" onclick="toggleDrawer(false)"></div>
+  <aside id="drawer" class="fixed inset-y-0 left-0 z-50 w-full md:w-1/2 -translate-x-full transform bg-white shadow-xl transition-transform duration-300">
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between p-4">
+        <span class="text-lg font-semibold">Menu</span>
+        <button aria-label="Close menu" class="rounded-md p-2 hover:bg-slate-100" onclick="toggleDrawer(false)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="grid gap-2 p-4 text-slate-700">
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#home" onclick="toggleDrawer(false)">Home</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#about" onclick="toggleDrawer(false)">We’re Abner</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#choose" onclick="toggleDrawer(false)">Why Choose Us</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#explore" onclick="toggleDrawer(false)">Explore by Collection</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#numbers" onclick="toggleDrawer(false)">We’ve Abner in Numbers</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#partners" onclick="toggleDrawer(false)">Industry Partners</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#testimonials" onclick="toggleDrawer(false)">Testimonials</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="#contact" onclick="toggleDrawer(false)">Contact</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="relative">
+    <!-- Full-viewport carousel (auto-advance every 4s) -->
+    <section id="home" class="relative h-screen w-full overflow-hidden">
+      <!-- Arrows -->
+      <button id="prevSlide" aria-label="Previous slide" class="absolute left-4 md:left-8 top-1/2 z-20 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/80 text-slate-900 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-slate-400">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 19.5-7.5-7.5 7.5-7.5" />
+        </svg>
+      </button>
+      <button id="nextSlide" aria-label="Next slide" class="absolute right-4 md:right-8 top-1/2 z-20 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/80 text-slate-900 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-slate-400">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
+      <div id="heroTrack" class="flex h-full w-max will-change-transform" style="transform: translateX(0);">
+        <!-- Concrete Series -->
+        <article class="relative h-full w-screen flex-shrink-0">
+          <picture>
+            <source media="(min-width: 768px)" srcset="https://ik.imagekit.io/abnerlighting/concrete-series/banner-desktop.jpg?tr=f-auto,q-auto" />
+            <img src="https://ik.imagekit.io/abnerlighting/concrete-series/banner-mobile.jpg?tr=f-auto,q-auto" alt="Concrete Series banner" class="absolute inset-0 h-full w-full object-cover" />
+          </picture>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative z-10 flex h-full items-center">
+            <div class="w-full px-14 md:px-28 text-white">
+              <div class="max-w-3xl text-left">
+                <div class="subtitle opacity-90">Exquisite Collection</div>
+                <h2>Concrete Series</h2>
+                <a href="concrete" class="mt-4 inline-block border px-5 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/70" style="background-color:transparent;border-color:rgba(255,255,255,.8)">Explore</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Stone Series -->
+        <article class="relative h-full w-screen flex-shrink-0">
+          <picture>
+            <source media="(min-width: 768px)" srcset="https://ik.imagekit.io/abnerlighting/stone-series/banner-desktop.jpg?tr=f-auto,q-auto" />
+            <img src="https://ik.imagekit.io/abnerlighting/stone-series/banner-mobile.jpg?tr=f-auto,q-auto" alt="Stone Series banner" class="absolute inset-0 h-full w-full object-cover" />
+          </picture>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative z-10 flex h-full items-center">
+            <div class="w-full px-14 md:px-28 text-white">
+              <div class="max-w-3xl text-left">
+                <div class="subtitle opacity-90">Exquisite Collection</div>
+                <h2>Stone Series</h2>
+                <a href="stone/" class="mt-4 inline-block border px-5 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/70" style="background-color:transparent;border-color:rgba(255,255,255,.8)">Explore</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Architectural Series -->
+        <article class="relative h-full w-screen flex-shrink-0">
+          <picture>
+            <source media="(min-width: 768px)" srcset="https://ik.imagekit.io/abnerlighting/architectural-series/banner-desktop.jpg?tr=f-auto,q-auto" />
+            <img src="https://ik.imagekit.io/abnerlighting/architectural-series/banner-mobile.jpg?tr=f-auto,q-auto" alt="Architectural Series banner" class="absolute inset-0 h-full w-full object-cover" />
+          </picture>
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="relative z-10 flex h-full items-center">
+            <div class="w-full px-14 md:px-28 text-white">
+              <div class="max-w-3xl text-left">
+                <div class="subtitle opacity-90">Exquisite Collection</div>
+                <h2>Architectural Series</h2>
+                <a href="architecture/" class="mt-4 inline-block border px-5 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/70" style="background-color:transparent;border-color:rgba(255,255,255,.8)">Explore</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- Dots -->
+      <div id="heroDots" class="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 flex items-center gap-2"></div>
+      <script>
+        (function() {
+          const track = document.getElementById('heroTrack');
+          if (!track) return;
+          const slides = Array.from(track.children);
+          const prevBtn = document.getElementById('prevSlide');
+          const nextBtn = document.getElementById('nextSlide');
+          const dotsWrap = document.getElementById('heroDots');
+          let dots = [];
+          let index = 0;
+          const intervalMs = 4000;
+          const durationMs = 600;
+          function applyTransform(smooth) {
+            track.style.transition = smooth ? `transform ${durationMs}ms ease` : 'none';
+            track.style.transform = `translateX(-${index * 100}vw)`;
+          }
+          function updateDots() {
+            if (!dots.length) return;
+            dots.forEach((d, i) => {
+              const active = i === index;
+              d.classList.toggle('bg-white', active);
+              d.classList.toggle('bg-white/60', !active);
+              d.classList.toggle('h-3', active);
+              d.classList.toggle('w-3', active);
+              d.classList.toggle('h-2.5', !active);
+              d.classList.toggle('w-2.5', !active);
+            });
+          }
+          function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            applyTransform(true);
+            updateDots();
+          }
+          function advance() { goTo(index + 1); }
+          function retreat() { goTo(index - 1); }
+          // Init
+          applyTransform(false);
+          // Build dots
+          if (dotsWrap) {
+            dotsWrap.innerHTML = '';
+            slides.forEach((_, i) => {
+              const b = document.createElement('button');
+              b.type = 'button';
+              b.className = 'h-2.5 w-2.5 rounded-full bg-white/60 hover:bg-white transition focus:outline-none focus:ring-2 focus:ring-white/70';
+              b.setAttribute('aria-label', `Go to slide ${i + 1}`);
+              b.addEventListener('click', () => { goTo(i); resetTimer(); });
+              dotsWrap.appendChild(b);
+            });
+            dots = Array.from(dotsWrap.children);
+            updateDots();
+          }
+
+          let timer = setInterval(advance, intervalMs);
+          function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(advance, intervalMs);
+          }
+          // Arrow handlers
+          prevBtn && prevBtn.addEventListener('click', () => { retreat(); resetTimer(); });
+          nextBtn && nextBtn.addEventListener('click', () => { advance(); resetTimer(); });
+          // Pause on hover for desktop
+          track.addEventListener('mouseenter', () => { clearInterval(timer); });
+          track.addEventListener('mouseleave', () => { timer = setInterval(advance, intervalMs); });
+          // Adjust on resize
+          window.addEventListener('resize', () => applyTransform(false));
+        })();
+      </script>
+    </section>
+
+    <!-- We're Abner -->
+    <section id="about" class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <h2 class="tracking-tight">We’re Abner</h2>
+          <p class="mt-4 text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.</p>
+          <p class="mt-3 text-slate-600">Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+        </div>
+        <div class="order-first md:order-last">
+          <img src="https://images.unsplash.com/photo-1496124015131-6e17fcf9b3f9?q=80&w=1974&auto=format&fit=crop" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section id="choose" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <h2>Why Choose Us</h2>
+        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- card 1 -->
+          <div class="rounded-xl bg-white p-6 shadow-sm">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg" alt="Quality" class="h-16 w-16" />
+            <h3 class="mt-4 text-xl font-semibold">Premium Quality</h3>
+            <p class="mt-2 text-slate-600">High-grade materials and strict QC for lasting performance.</p>
+          </div>
+          <!-- card 2 -->
+          <div class="rounded-xl bg-white p-6 shadow-sm">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4bb.svg" alt="Innovation" class="h-16 w-16" />
+            <h3 class="mt-4 text-xl font-semibold">Innovation</h3>
+            <p class="mt-2 text-slate-600">We bring the latest tech to practical lighting solutions.</p>
+          </div>
+          <!-- card 3 -->
+          <div class="rounded-xl bg-white p-6 shadow-sm">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4e6.svg" alt="Service" class="h-16 w-16" />
+            <h3 class="mt-4 text-xl font-semibold">Reliable Service</h3>
+            <p class="mt-2 text-slate-600">Fast support and on-time delivery you can count on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore by collection -->
+    <section id="explore" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold">Explore by Collection</h2>
+        <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <!-- Left: Concrete big -->
+          <a class="group relative block h-80 overflow-hidden rounded-2xl md:h-[520px]" href="#">
+            <img class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1504148455329-547f92f80dfe?q=80&w=1974&auto=format&fit=crop" alt="Concrete" />
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3>Concrete</h3>
+              <p class="opacity-90">Rugged, modern, minimal.</p>
+            </div>
+          </a>
+          <!-- Right: split into top/bottom -->
+          <div class="grid gap-4">
+            <a class="group relative block h-40 overflow-hidden rounded-2xl sm:h-60 md:h-[250px]" href="#">
+              <img class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1974&auto=format&fit=crop" alt="Stone" />
+              <div class="absolute inset-0 bg-black/25"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3>Stone</h3>
+                <p class="opacity-90">Organic textures and depth.</p>
+              </div>
+            </a>
+            <a class="group relative block h-40 overflow-hidden rounded-2xl sm:h-60 md:h-[250px]" href="#">
+              <img class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2069&auto=format&fit=crop" alt="Technical" />
+              <div class="absolute inset-0 bg-black/25"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3>Technical</h3>
+                <p class="opacity-90">Engineered for performance.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We’ve Abner in Numbers -->
+    <section id="numbers" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <h2>We’ve Abner in Numbers</h2>
+        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl bg-white p-8 text-center shadow-sm">
+            <div class="font-normal" style="font-size:48px;line-height:1.2">250+</div>
+            <div class="mt-2 text-slate-600">Projects Completed</div>
+          </div>
+          <div class="rounded-xl bg-white p-8 text-center shadow-sm">
+            <div class="font-normal" style="font-size:48px;line-height:1.2">120</div>
+            <div class="mt-2 text-slate-600">Partners</div>
+          </div>
+          <div class="rounded-xl bg-white p-8 text-center shadow-sm">
+            <div class="font-normal" style="font-size:48px;line-height:1.2">15</div>
+            <div class="mt-2 text-slate-600">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry partners 4x2 on desktop, 2x4 on mobile -->
+    <section id="partners" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <h2>Our Industry Partners</h2>
+        <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+          <!-- 8 logos -->
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+1" alt="Partner 1" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+2" alt="Partner 2" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+3" alt="Partner 3" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+4" alt="Partner 4" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+5" alt="Partner 5" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+6" alt="Partner 6" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+7" alt="Partner 7" />
+          <img class="h-12 w-full object-contain grayscale" src="https://dummyimage.com/160x48/ddd/000.png&text=Logo+8" alt="Partner 8" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials carousel (3) -->
+    <section id="testimonials" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <h2>Testimonials</h2>
+        <div class="carousel mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+          <!-- three cards -->
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
+            <p class="text-slate-700">“Abner transformed our retail spaces with stunning, energy-efficient lighting.”</p>
+            <div class="mt-4 text-sm text-slate-500">— Jordan, Retail Director</div>
+          </div>
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
+            <p class="text-slate-700">“Reliable delivery and excellent customer support throughout our project.”</p>
+            <div class="mt-4 text-sm text-slate-500">— Casey, Project Manager</div>
+          </div>
+          <div class="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%]">
+            <p class="text-slate-700">“Innovative designs that elevated our brand experience.”</p>
+            <div class="mt-4 text-sm text-slate-500">— Taylor, Architect</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-slate-900 py-16 text-slate-200">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+      <div>
+        <h3 class="text-lg font-semibold text-white">Address</h3>
+        <p class="mt-3 text-slate-300">123 Abner Street<br/>Metropolis, NY 10001</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Content</h3>
+        <ul class="mt-3 space-y-2 text-slate-300">
+          <li><a class="hover:underline" href="#about">We’re Abner</a></li>
+          <li><a class="hover:underline" href="#choose">Why Choose Us</a></li>
+          <li><a class="hover:underline" href="#explore">Collections</a></li>
+          <li><a class="hover:underline" href="#partners">Partners</a></li>
+          <li><a class="hover:underline" href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-white">Contact Us</h3>
+        <form class="mt-3 space-y-3">
+          <input class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Your email" type="email" />
+          <textarea class="w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 placeholder-slate-400 focus:border-slate-500 focus:outline-none" placeholder="Message" rows="3"></textarea>
+          <button type="button" class="rounded-md bg-white px-4 py-2 font-medium text-slate-900 hover:bg-slate-200">Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-sm text-slate-400">© <span id="year"></span> Abner Lighting. All rights reserved.</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>

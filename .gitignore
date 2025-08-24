@@ -1,0 +1,48 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Editor/IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Builds / caches
+coverage/
+dist/
+build/
+.cache/
+.parcel-cache/
+.tmp/
+tmp/
+.sass-cache/
+.pnp*
+.pnp/
+
+# Framework-specific (safe defaults)
+.next/
+out/
+.vercel/
+.netlify/
+.turbo/
+
+# Tailwind output (generated)
+public/styles.css
+public/styles.css.map

@@ -1,0 +1,13 @@
+{
+  "name": "abnerlighting.com",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css",
+    "dev:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css -w",
+    "build": "npm run build:css"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
