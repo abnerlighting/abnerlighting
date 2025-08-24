@@ -98,6 +98,70 @@ The project uses specific background colors throughout:
 - **Black**: `#000000` - Used for footer background
 - **Blue**: `#013f88` - Used for "Why Choose Us" section background
 
+## Navigation
+The website has a simple 3-page navigation structure:
+
+### Pages:
+1. **Home** (`index.html`) - Main landing page with carousel, about section, and product collections
+2. **About** (`about.html`) - Company information, timeline, and founder's desk
+3. **Projects** (`projects.html`) - Showcase of restaurant, workspace, and jewellery store projects
+4. **Concrete Series** (`concrete-series.html`) - Product showcase for concrete lighting fixtures
+5. **Stone Series** (`stone-series.html`) - Product showcase for stone lighting fixtures
+6. **Architectural Series** (`architectural-series.html`) - Product showcase for technical/architectural lighting fixtures
+
+### Navbar Structure:
+- **Logo**: Centered, links to homepage
+- **Hamburger Menu**: Left side, opens drawer navigation
+- **Contact Us Button**: Right side, opens email with pre-filled message
+- **Drawer Menu**: Contains 6 navigation links (Home, About, Projects, Concrete Series, Stone Series, Architectural Series)
+
+### Navigation Links:
+```html
+<nav class="grid gap-2 p-4 text-slate-700">
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="index.html">Home</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="about.html">About</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="projects.html">Projects</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html">Concrete Series</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html">Stone Series</a>
+  <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html">Architectural Series</a>
+</nav>
+```
+
+## Product Series Pages
+The website includes three dedicated product series pages, each with:
+
+### Page Structure:
+- **Navbar**: Consistent with main pages (Home, About, Projects)
+- **Hero Image**: 30% page height banner image
+- **Title Section**: Series-specific product title
+- **Content Section**: Descriptive text about the series
+- **Product Grid**: 3 columns on desktop, 1 column on mobile
+- **Footer**: Consistent across all pages
+
+### Product Grid Features:
+- **JSON Data**: Product information defined at the top of each page
+- **Dynamic Rendering**: Products loaded via JavaScript
+- **Responsive Design**: 3 columns desktop, 1 column mobile
+- **Hover Effects**: Image scale animation on hover
+- **Click Navigation**: Each product card links to individual product page
+- **Slugify Function**: Converts product names to URL-friendly slugs
+
+### Series Content:
+1. **Concrete Series**: Industrial strength, minimalist design, raw textures
+2. **Stone Series**: Natural stone elegance, premium design, timeless appeal
+3. **Architectural Series**: Technical precision, superior quality, modern aesthetics
+
+### Product Data Structure:
+```javascript
+const products = [
+  {
+    "image": "https://ik.imagekit.io/abnerlighting/series-name/product1.jpg",
+    "name": "Product Name",
+    "description": "Product description"
+  }
+];
+```
+
 ## Troubleshooting
 - CSS not updating: ensure `npm run dev:css` is running or rebuild with `npm run build:css`.
 - Icons/clipart not loading: confirm the ImageKit URL exists and is public; try removing transforms to debug.

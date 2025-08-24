@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Architectural Series - Abner Lighting</title>
+  
+  <!-- Google Fonts: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    // Product data
+    const products = [
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Pendant Light",
+        "description": "Engineered pendant with precision lighting"
+      },
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Wall Sconce",
+        "description": "Performance-focused wall lighting"
+      },
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Floor Lamp",
+        "description": "High-performance floor lighting solution"
+      },
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Table Lamp",
+        "description": "Precision table lighting for modern spaces"
+      },
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Ceiling Light",
+        "description": "Advanced ceiling fixture with superior performance"
+      },
+      {
+        "image": "https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg",
+        "name": "Technical Outdoor Light",
+        "description": "Engineered outdoor lighting with premium features"
+      }
+    ];
+
+    // Slugify function
+    function slugify(text) {
+      return text.toLowerCase()
+        .replace(/[^\w ]+/g, '')
+        .replace(/ +/g, '-');
+    }
+
+    // Simple drawer logic without frameworks
+    function toggleDrawer(force) {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      const isOpen = drawer.classList.contains('translate-x-0');
+      const shouldOpen = force === true || (!isOpen && force !== false);
+      drawer.classList.toggle('-translate-x-full', !shouldOpen);
+      drawer.classList.toggle('translate-x-0', shouldOpen);
+      overlay.classList.toggle('hidden', !shouldOpen);
+      overlay.classList.toggle('opacity-0', !shouldOpen);
+      overlay.classList.toggle('opacity-100', shouldOpen);
+      document.body.classList.toggle('overflow-hidden', shouldOpen);
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleDrawer(false);
+    });
+
+    // Navbar scroll behavior
+    function handleNavbarScroll() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-black/90', 'backdrop-blur');
+      } else {
+        navbar.classList.remove('bg-black/90', 'backdrop-blur');
+      }
+    }
+
+    window.addEventListener('scroll', handleNavbarScroll);
+    // Initial call to set correct state
+    handleNavbarScroll();
+
+    // Render products when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, rendering products...');
+      const productGrid = document.getElementById('productGrid');
+      console.log('Product grid element:', productGrid);
+      console.log('Products array:', products);
+      
+      if (productGrid) {
+        products.forEach((product, index) => {
+          console.log(`Creating product ${index + 1}:`, product.name);
+          const productCard = document.createElement('div');
+          productCard.className = 'group cursor-pointer';
+          productCard.onclick = () => {
+            const slug = slugify(product.name);
+            window.location.href = `./${slug}.html`;
+          };
+          
+          productCard.innerHTML = `
+            <div class="aspect-square overflow-hidden rounded-lg shadow-md bg-slate-100">
+              <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'h-full w-full flex items-center justify-center text-slate-400\\'><span class=\\'text-sm\\'>Product Image</span></div>';" />
+            </div>
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
+              <p class="mt-2 text-sm text-slate-600">${product.description}</p>
+            </div>
+          `;
+          
+          productGrid.appendChild(productCard);
+          console.log(`Product ${index + 1} added to grid`);
+        });
+        console.log('All products rendered successfully');
+      } else {
+        console.error('Product grid element not found!');
+      }
+    });
+  </script>
+</head>
+<body class="min-h-full bg-white text-slate-900">
+  <!-- Transparent Navbar -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-4">
+      <div class="relative flex h-16 items-center justify-center">
+        <!-- Left: hamburger -->
+        <button aria-label="Open menu" class="absolute left-0 inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40" onclick="toggleDrawer(true)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5" />
+          </svg>
+        </button>
+        <!-- Center: logo -->
+        <a href="index.html" class="inline-flex items-center gap-2">
+          <img src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" alt="Abner Lighting" class="h-6 md:h-8" />
+        </a>
+        <!-- Right: contact us -->
+        <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="absolute right-0 border px-3 py-1.5 md:px-5 md:py-2 text-sm md:text-base text-white hover:bg-white hover:text-slate-900 transition-colors" style="border-color:rgba(255,255,255,.8)">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer + overlay -->
+  <div id="overlay" class="fixed inset-0 z-40 hidden bg-black/40 opacity-0 transition-opacity" onclick="toggleDrawer(false)"></div>
+  <aside id="drawer" class="fixed inset-y-0 left-0 z-50 w-full md:w-1/2 -translate-x-full transform bg-white shadow-xl transition-transform duration-300">
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between p-4">
+        <span class="text-lg font-semibold">Menu</span>
+        <button aria-label="Close menu" class="rounded-md p-2 hover:bg-slate-100" onclick="toggleDrawer(false)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="grid gap-2 p-4 text-slate-700">
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="index.html" onclick="toggleDrawer(false)">Home</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="about.html" onclick="toggleDrawer(false)">About</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="projects.html" onclick="toggleDrawer(false)">Projects</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html" onclick="toggleDrawer(false)">Concrete Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html" onclick="toggleDrawer(false)">Stone Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html" onclick="toggleDrawer(false)">Architectural Series</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="relative">
+    <!-- Hero Image -->
+    <section class="relative h-[30vh] w-full overflow-hidden">
+      <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Architectural Series" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-black/30"></div>
+    </section>
+
+    <!-- Title Section -->
+    <section class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Our Architectural Series Products</h1>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Premium residency lights can be used both indoors and outdoors and are often designed to complement the aesthetic of modern and luxurious homes. These lights are typically more expensive than standard residential lighting options but offer superior quality and design features.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div id="productGrid" class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-black py-16 text-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+      <div>
+        <h3 class="text-white">Address</h3>
+        <div class="mt-4 space-y-6 text-slate-300">
+          <div>
+            <p>266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
+          </div>
+          <div>
+            <p>Gala No.6, Ground Floor,<br/>Building No. B-1,<br/>Print World Industrial Complex,<br/>Mankoli Road, Vehele,<br/>Bhiwandi, Thane - 421302</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white">Content</h3>
+        <ul class="mt-4 space-y-3 text-slate-300">
+          <li><a class="hover:underline" href="index.html">Home</a></li>
+          <li><a class="hover:underline" href="about.html">About</a></li>
+          <li><a class="hover:underline" href="projects.html">Projects</a></li>
+          <li><a class="hover:underline" href="concrete-series.html">Concrete Series</a></li>
+          <li><a class="hover:underline" href="stone-series.html">Stone Series</a></li>
+          <li><a class="hover:underline" href="architectural-series.html">Architectural Series</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white">Contact Us</h3>
+        <div class="mt-4 space-y-3 text-slate-300">
+          <p><a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">crm@abner.co.in</a></p>
+          <p><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
+        </div>
+        <div class="mt-8 flex space-x-4">
+          <a href="https://www.instagram.com/worldofabner/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/abnerlights/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-slate-700 mt-12 pt-8">
+        <div class="text-center subtitle text-slate-400">© 2025 Abner Lighting. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Fallback script to ensure products are rendered
+    setTimeout(function() {
+      console.log('Fallback script running...');
+      const productGrid = document.getElementById('productGrid');
+      if (productGrid && productGrid.children.length === 0) {
+        console.log('Product grid is empty, rendering products...');
+        if (typeof products !== 'undefined') {
+          products.forEach((product, index) => {
+            console.log(`Creating product ${index + 1}:`, product.name);
+            const productCard = document.createElement('div');
+            productCard.className = 'group cursor-pointer';
+            productCard.onclick = () => {
+              const slug = slugify(product.name);
+              window.location.href = `./${slug}.html`;
+            };
+            
+            productCard.innerHTML = `
+              <div class="aspect-square overflow-hidden rounded-lg shadow-md bg-slate-100">
+                <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'h-full w-full flex items-center justify-center text-slate-400\\'><span class=\\'text-sm\\'>Product Image</span></div>';" />
+            </div>
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold text-slate-900">${product.name}</h3>
+              <p class="mt-2 text-sm text-slate-600">${product.description}</p>
+            </div>
+          `;
+          
+          productGrid.appendChild(productCard);
+        });
+      }
+    }
+  }, 1000);
+  </script>
+</body>
+</html>
