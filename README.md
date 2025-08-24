@@ -1,29 +1,85 @@
-# Abner Lighting - Static Homepage
+# Abner Lighting Website
 
-Plain HTML + Tailwind CSS v4 homepage.
+A modern, responsive website for Abner Lighting built with HTML, Tailwind CSS, and vanilla JavaScript.
 
-## Develop
+## 🚀 Deployment on Cloudflare Pages
 
-- Build CSS once:
+### Prerequisites
+- A Cloudflare account
+- Git repository with your code
 
-```sh
+### Deployment Steps
+
+1. **Push your code to GitHub/GitLab**
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Deploy to Cloudflare Pages**
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+   - Navigate to "Pages" in the sidebar
+   - Click "Create a project"
+   - Choose "Connect to Git"
+   - Select your repository
+   - Configure build settings:
+     - **Build command**: `npm run build`
+     - **Build output directory**: `dist`
+     - **Root directory**: `/` (leave empty)
+   - Click "Save and Deploy"
+
+### Build Configuration
+- **Framework preset**: None
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Environment variables**: None required
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Build CSS
 npm run build:css
-```
 
-- Watch CSS during edits:
-
-```sh
+# Watch CSS changes
 npm run dev:css
+
+# Preview build
+npm run preview
 ```
 
-Open `public/index.html` in your browser (or use a simple static server).
+## 📁 Project Structure
+```
+abnerlighting.com/
+├── dist/           # Build output (deployed to Cloudflare)
+├── public/         # Static assets
+│   └── index.html  # Main HTML file
+├── src/
+│   └── styles.css  # Tailwind CSS source
+├── package.json    # Dependencies and scripts
+└── wrangler.toml   # Cloudflare configuration
+```
 
-## Structure
+## 🛠️ Technologies Used
+- **HTML5** - Semantic markup
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **Vanilla JavaScript** - Interactive features
+- **Cloudflare Pages** - Static site hosting
 
-- `public/index.html` — homepage
-- `src/styles.css` — Tailwind entry (compiled to `public/styles.css`)
+## 📝 Features
+- Responsive design
+- Hero carousel with auto-advance
+- Mobile-friendly navigation drawer
+- Smooth scroll behavior
+- Optimized images via ImageKit
+- SEO-friendly structure
 
-## Notes
+## 🔧 Customization
+- Update content in `public/index.html`
+- Modify styles in `src/styles.css`
+- Add images to ImageKit with the base path: `https://ik.imagekit.io/abnerlighting/`
 
-- Drawer menu: full-screen on mobile, left half on desktop.
-- Hero carousel: full viewport (width/height), horizontal scroll with snap.
+## 📞 Support
+For deployment issues, refer to [Cloudflare Pages documentation](https://developers.cloudflare.com/pages/).

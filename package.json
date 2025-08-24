@@ -1,13 +1,15 @@
 {
   "name": "abnerlighting.com",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Abner Lighting website",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css",
-    "dev:css": "tailwindcss -i ./src/styles.css -o ./public/styles.css -w",
-    "build": "npm run build:css"
+    "build": "npm run build:css && npm run copy:assets",
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
+    "dev:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+    "copy:assets": "cp -r public/* dist/",
+    "preview": "npx serve dist"
   },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "tailwindcss": "^4.1.12"
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0-alpha.25"
   }
 }
