@@ -64,6 +64,41 @@
 
     window.addEventListener('scroll', handleNavbarScroll);
 
+    // Toast notification function
+    function showToast(message) {
+      // Remove existing toast if any
+      const existingToast = document.getElementById('toast');
+      if (existingToast) {
+        existingToast.remove();
+      }
+
+      // Create toast element
+      const toast = document.createElement('div');
+      toast.id = 'toast';
+      toast.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-black text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300 opacity-0';
+      toast.textContent = message;
+      
+      // Add to body
+      document.body.appendChild(toast);
+      
+      // Show toast
+      setTimeout(() => {
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+      }, 100);
+      
+      // Hide toast after 3 seconds
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+        setTimeout(() => {
+          if (toast.parentNode) {
+            toast.remove();
+          }
+        }, 300);
+      }, 3000);
+    }
+
     // Load products from JSON and render
     document.addEventListener('DOMContentLoaded', function() {
       // Initial call to set correct state
@@ -100,9 +135,13 @@
             products.forEach(product => {
               const productCard = document.createElement('div');
               productCard.className = 'group cursor-pointer';
-                              productCard.onclick = () => {
+              productCard.onclick = () => {
+                if (product.url === '#') {
+                  showToast('Contact us to know more details');
+                } else {
                   window.location.href = product.url;
-                };
+                }
+              };
               
               productCard.innerHTML = `
                 <div class="aspect-square overflow-hidden rounded-lg shadow-md">
