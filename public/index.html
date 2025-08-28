@@ -11,6 +11,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
   <script src="./whatsapp-button.js" defer></script>
+  <style>
+    /* Sine Wave Animation Styles */
+    .sine-wave-container {
+      position: relative;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .sine-wave-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e40af;
+      white-space: nowrap;
+      transform-origin: center;
+      display: inline-block;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .sine-wave-container {
+        height: 200px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .sine-wave-container {
+        height: 150px;
+      }
+    }
+  </style>
+  
+  <!-- SVG Filter for Sine Wave Distortion -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <filter id="sine-wave-filter">
+        <feDisplacementMap in="SourceGraphic" scale="20">
+          <animate attributeName="scale" 
+                   values="0;20;0" 
+                   dur="3s" 
+                   repeatCount="indefinite"/>
+        </feDisplacementMap>
+      </filter>
+    </defs>
+  </svg>
+  
   <script>
     // NAVBAR SCROLL EFFECT
     function handleNavbarScroll() {
@@ -111,9 +159,9 @@
       </a>
 
       <!-- DESKTOP/TABLET: contact (right) -->
-      <a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards,"
-         class="hidden sm:block absolute right-4 sm:right-6 border px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-base font-medium text-white hover:bg-white hover:text-slate-900 transition-colors"
-         style="border-color:rgba(255,255,255,.8)">Contact Us</a>
+              <a href="contact.html"
+           class="hidden sm:block absolute right-4 sm:right-6 border px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-base font-medium text-white hover:bg-white hover:text-slate-900 transition-colors"
+           style="border-color:rgba(255,255,255,.8)">Contact Us</a>
 
       <!-- MOBILE: logo (left) -->
       <a href="index.html" class="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 px-2 py-4">
@@ -149,15 +197,16 @@
         </svg>
       </button>
     </div>
-    <nav class="grid gap-2 p-4 text-slate-700">
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="index.html" onclick="toggleDrawer(false)">Home</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="about.html" onclick="toggleDrawer(false)">About</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="projects.html" onclick="toggleDrawer(false)">Projects</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html" onclick="toggleDrawer(false)">Concrete Series</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html" onclick="toggleDrawer(false)">Stone Series</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html" onclick="toggleDrawer(false)">Architectural Series</a>
-      <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="blogs.html" onclick="toggleDrawer(false)">Blogs</a>
-    </nav>
+          <nav class="grid gap-2 p-4 text-slate-700">
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="index.html" onclick="toggleDrawer(false)">Home</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="about.html" onclick="toggleDrawer(false)">About</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="projects.html" onclick="toggleDrawer(false)">Projects</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="concrete-series.html" onclick="toggleDrawer(false)">Concrete Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="stone-series.html" onclick="toggleDrawer(false)">Stone Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="architectural-series.html" onclick="toggleDrawer(false)">Architectural Series</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="blogs.html" onclick="toggleDrawer(false)">Blogs</a>
+        <a class="rounded-lg px-4 py-3 hover:bg-slate-100" href="contact.html" onclick="toggleDrawer(false)">Contact Us</a>
+      </nav>
   </div>
 </aside>
 
@@ -308,15 +357,24 @@
           <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
         </div>
         <div class="order-1 md:order-2">
-          <h2 class="tracking-tight text-4xl lg:text-7xl md:text-6xl sm:text-5xl font-bold text-center md:text-left">We're Abner</h2>
+          <h2 class="tracking-tight text-4xl lg:text-7xl md:text-6xl sm:text-5xl font-bold text-center md:text-left">We're sAbner</h2>
           <!-- Mobile/Tablet image (visible only on mobile/tablet, hidden on desktop) -->
           <div class="mt-6 block md:hidden">
             <img src="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg" alt="About image" class="aspect-video w-full rounded-xl object-cover shadow" />
           </div>
           <p class="mt-6 text-slate-600 lg:text-lg">We make lights that do their job and look good doing it.</p>
-          <p class="mt-4 text-slate-600 lg:text-lg">No over-the-top designs, no gimmicks. Just clean, well-built lighting that architects and Channel Partners can rely on.</p>
+          <p class="mt-4 text-slate-600 lg:text-lg">No over-the-top designs, no gimmicks. Just clean, well-built lighting that Architects, Interior Designers and our Channel Partners can rely on.</p>
           <p class="mt-4 text-slate-600 lg:text-lg">We care about the small things: how a step is lit, how a wall feels under soft light, how a space comes together</p>
         </div>
+      </div>
+    </section>
+
+        <!-- Text with Lines Section -->
+    <section class="py-8 bg-gradient-to-r from-blue-50 to-indigo-50 w-full">
+      <div class="mx-auto max-w-4xl px-2">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-gray-800 tracking-widest uppercase text-center whitespace-nowrap overflow-hidden" style="line-height:1.1;">
+          NO ONE CUSTOMISES LIGHT LIKE WE DO.
+        </h2>
       </div>
     </section>
 
@@ -340,7 +398,7 @@
           <!-- card 3 -->
           <div class="text-center sm:col-span-2 sm:mx-auto sm:max-w-sm lg:col-span-1 lg:max-w-none">
             <img src="https://ik.imagekit.io/abnerlighting/why-choose-us/2.png" alt="Service That Lasts" class="h-32 w-32 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold text-white mb-2">Service That Lasts,<br>Guaranteed for Decades</h3>
+            <h3 class="text-xl font-semibold text-white mb-2">Service That Lasts,<br>Easy Returns</h3>
             <p class="text-white/80 text-sm">Guaranteed support and serviceability<br>for up-to 10 years.</p>
           </div>
         </div>
@@ -393,26 +451,29 @@
         </div>
         <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div class="rounded-xl bg-white p-8 text-center shadow-sm">
-            <div class="font-normal" style="font-size:48px;line-height:1.2">10+</div>
+            <div class="font-normal" style="font-size:56px;line-height:1.2; min-width: 110px; display: inline-block;">10+</div>
             <div class="mt-2 text-slate-600">Years of Lighting</div>
           </div>
           <div class="rounded-xl bg-white p-8 text-center shadow-sm">
-            <div class="font-normal" style="font-size:48px;line-height:1.2">695+</div>
-            <div class="mt-2 text-slate-600">Our Projects</div>
+            <div class="font-normal" style="font-size:56px;line-height:1.2; min-width: 110px; display: inline-block;">500+</div>
+            <div class="mt-2 text-slate-600">Projects Delivered</div>
           </div>
-          <div class="rounded-xl bg-white p-8 text-center shadow-sm sm:col-span-2 sm:mx-auto sm:max-w-sm lg:col-span-1 lg:max-w-none">
-            <div class="font-normal" style="font-size:48px;line-height:1.2">500+</div>
-            <div class="mt-2 text-slate-600">End Customer</div>
+          <div class="rounded-xl bg-white p-8 text-center shadow-sm">
+            <div class="font-normal" style="font-size:56px;line-height:1.2; min-width: 110px; display: inline-block;">1000+</div>
+            <div class="mt-2 text-slate-600">Happy Customers</div>
           </div>
+
         </div>
       </div>
     </section>
 
-
-    <!-- Industry partners 4x2 on desktop, 2x4 on mobile -->
     <section id="partners" class="py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
-        <h2 class="text-center text-4xl">Our Industry Partners</h2>
+        <h2 class="text-center text-4xl">Some of our Marquee Clients</h2>
+        <div class="w-116 h-0.5 bg-black mx-auto mt-4"></div>
+        <p class="mt-4 text-center text-lg text-slate-700 max-w-7xl mx-auto">
+          At Abner, we are privileged to work with visionary organizations that share our commitment to advancing lighting solutions.<br> While we've partnered with many, here are a few of our esteemed clients who have trusted us on this journey:
+        </p>
         <div class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
           <!-- 8 logos in outlined squares -->
           <div class="aspect-square border-2 border-slate-200 rounded-lg flex items-center justify-center p-2">
@@ -475,6 +536,8 @@
     </section>
   </main>
 
+
+
   <!-- Footer -->
   <footer id="contact" class="bg-black py-10 text-white">
     <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
@@ -489,22 +552,23 @@
           </div>
         </div>
       </div>
-      <div class="text-center">
-        <h3 class="text-white text-2xl">Content</h3>
-        <div class="mt-4 space-y-3 text-slate-300">
-          <p class="text-sm"><a class="hover:underline" href="index.html">Home</a></p>
-          <p class="text-sm"><a class="hover:underline" href="about.html">About</a></p>
-          <p class="text-sm"><a class="hover:underline" href="projects.html">Projects</a></p>
-          <p class="text-sm"><a class="hover:underline" href="concrete-series.html">Concrete Series</a></p>
-          <p class="text-sm"><a class="hover:underline" href="stone-series.html">Stone Series</a></p>
-          <p class="text-sm"><a class="hover:underline" href="architectural-series.html">Architectural Series</a></p>
-          <p class="text-sm"><a class="hover:underline" href="blogs.html">Blogs</a></p>
+              <div class="text-center">
+          <h3 class="text-white text-2xl">Content</h3>
+          <div class="mt-4 space-y-3 text-slate-300">
+            <p class="text-sm"><a class="hover:underline" href="index.html">Home</a></p>
+            <p class="text-sm"><a class="hover:underline" href="about.html">About</a></p>
+            <p class="text-sm"><a class="hover:underline" href="projects.html">Projects</a></p>
+            <p class="text-sm"><a class="hover:underline" href="concrete-series.html">Concrete Series</a></p>
+            <p class="text-sm"><a class="hover:underline" href="stone-series.html">Stone Series</a></p>
+            <p class="text-sm"><a class="hover:underline" href="architectural-series.html">Architectural Series</a></p>
+            <p class="text-sm"><a class="hover:underline" href="blogs.html">Blogs</a></p>
+            <p class="text-sm"><a class="hover:underline" href="contact.html">Contact Us</a></p>
+          </div>
         </div>
-      </div>
       <div class="text-center">
         <h3 class="text-white text-2xl">Contact Us</h3>
         <div class="mt-4 space-y-3 text-slate-300">
-          <p class="text-sm"><a href="mailto:crm@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">crm@abner.co.in</a></p>
+          <p class="text-sm"><a href="mailto:info@abner.co.in?subject=Inquiry from Website&body=Hello Abner,%0D%0A%0D%0AI saw your website and wanted to know about your lighting solutions.%0D%0A%0D%0APlease provide more information about your products and services.%0D%0A%0D%0ABest regards," class="hover:underline">info@abner.co.in</a></p>
           <p class="text-sm"><a href="tel:+918291296000" class="hover:underline">+91 8291296000</a></p>
         </div>
         <div class="mt-6">

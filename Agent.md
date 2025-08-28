@@ -78,7 +78,7 @@ Append transforms after the base path using `tr:`. Common examples:
 - Navbar: transparent, logo centered, Contact button on right, hamburger on left.
 - Drawer: opens from left; full-screen on mobile, half-width (`md:w-1/2`) on desktop.
 - Carousels: pure CSS horizontal scroll with `scroll-snap` (no JS autoplay by default).
-- Sections: "We’re Abner", "Why choose us", "Explore by collection", "Numbers", "Industry partners", "Testimonials", and footer.
+- Sections: "We're Abner", "Why choose us", "Explore by collection", "Numbers", "Industry partners", "Testimonials", and footer.
 
 ## Conventions
 - Keep HTML semantic (use headings in order, meaningful landmarks).
