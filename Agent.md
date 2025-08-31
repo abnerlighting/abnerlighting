@@ -1,10 +1,45 @@
 # Agent Guide
 
-This repo is a plain HTML + Tailwind CSS (v4) static site. It contains a single homepage with a transparent navbar, left-side drawer, full-viewport hero carousel, content sections, and a footer.
+This repo is a static website created using React, with public/*.html files serving as the approved design files from the client. It contains a single homepage with a transparent navbar, left-side drawer, full-viewport hero carousel, content sections, and a footer.
+
 
 ## Tech stack
 - HTML (no framework)
 - Tailwind CSS v4 via `@tailwindcss/cli`
+
+## React Product Structure
+
+### Components
+
+- **HeroCarousel**: Renders a responsive hero image carousel with links to product series pages. No props required.
+- **AboutSection**: "We're Abner" intro with image and text. No props required.
+- **CustomTextSection**: Centered bold text section for brand messaging. No props required.
+- **WhyChooseUsSection**: Three feature cards highlighting brand USPs. No props required.
+- **ExploreCollectionSection**: Grid of collection links (Concrete, Stone, Technical). No props required.
+- **AbnerNumbersSection**: Stats cards (years, projects, customers). No props required.
+- **PartnersSection**: Grid of marquee client logos. No props required.
+- **TestimonialsSection**: Carousel of client testimonials. No props required.
+- **HeroBanner**: Full-width banner image with overlay. Props: `image`, `alt`, `height` (optional).
+- **ContentSection**: Two-column section with image and rich text. Props: `title`, `content`, `image`, `imageAlt`, `imageOrder`, `children`.
+- **GlobalVisionSection**: "Global Vision. Local Craft." heading. No props required.
+- **TimelineSection**: Company history timeline. No props required.
+- **FoundersDeskSection**: Founder’s message and image. No props required.
+- **TeamGridSection**: 2x2 grid of team images. No props required.
+- **ProjectSection**: Project highlight with image and description. Props: `number`, `title`, `description`, `image`, `imageAlt`, `imageFirst`.
+- **ProductGrid**: Grid of product cards; navigates to detail page or shows toast. Props: `products`, `uppercaseNames`, `onProductClick`.
+- **Toast**: Temporary notification popup. Props: `message`, `isVisible`, `onClose`.
+- **ContactForm**: Contact form with validation and submission. No props required.
+- **ContactMap**: Google Map with partner locations. Props: `partners`.
+
+### Pages and Their Structure
+
+- **Home**: `HeroCarousel`, `AboutSection`, `CustomTextSection`, `WhyChooseUsSection`, `ExploreCollectionSection`, `AbnerNumbersSection`, `PartnersSection`, `TestimonialsSection`
+- **About**: `HeroBanner`, `ContentSection` (About Us), `GlobalVisionSection`, `ContentSection` (Mission & Vision), `TimelineSection`, `FoundersDeskSection`, `TeamGridSection`
+- **Projects**: `HeroBanner`, three `ProjectSection` components for different project types
+- **ConcreteSeries / StoneSeries / ArchitecturalSeries**: `HeroBanner`, title/content sections, `ProductGrid` (with products loaded from JSON)
+- **Blogs**: Blog hero, category filter, blog grid, newsletter section
+- **BlogPost**: Blog content rendered from markdown, metadata, navigation
+- **Contact**: `ContactForm`, `ContactMap`, partner list
 
 ## Google Fonts
 - Primary font: Jost (Regular 400)
@@ -78,7 +113,7 @@ Append transforms after the base path using `tr:`. Common examples:
 - Navbar: transparent, logo centered, Contact button on right, hamburger on left.
 - Drawer: opens from left; full-screen on mobile, half-width (`md:w-1/2`) on desktop.
 - Carousels: pure CSS horizontal scroll with `scroll-snap` (no JS autoplay by default).
-- Sections: "We’re Abner", "Why choose us", "Explore by collection", "Numbers", "Industry partners", "Testimonials", and footer.
+- Sections: "We're Abner", "Why choose us", "Explore by collection", "Numbers", "Industry partners", "Testimonials", and footer.
 
 ## Conventions
 - Keep HTML semantic (use headings in order, meaningful landmarks).

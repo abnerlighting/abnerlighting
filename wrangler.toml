@@ -3,3 +3,28 @@ compatibility_date = "2024-01-01"
 
 [build]
 command = "npm run build"
+output_directory = "dist"
+
+[env.production]
+name = "abnerlighting-website"
+
+[env.production.build]
+command = "npm run build"
+output_directory = "dist"
+
+[env.production.routes]
+- pattern = "/*"
+  script = ""
+
+[env.production.headers]
+- pattern = "/*"
+  headers = [
+    "X-Frame-Options: DENY",
+    "X-Content-Type-Options: nosniff",
+    "Referrer-Policy: strict-origin-when-cross-origin"
+  ]
+
+[env.production.redirects]
+- from = "/index.html"
+  to = "/"
+  status = 301
