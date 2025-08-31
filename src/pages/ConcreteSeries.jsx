@@ -1,21 +1,10 @@
 import { useState } from 'react'
-import Toast from '../components/Toast'
+import { Link } from 'react-router-dom'
 import useProducts from '../hooks/useProducts'
 
 const ConcreteSeries = () => {
   const { products, loading, error } = useProducts('concrete-series')
-  const [toastMessage, setToastMessage] = useState('')
-  const [isToastVisible, setIsToastVisible] = useState(false)
   const [hoveredProduct, setHoveredProduct] = useState(null)
-
-  const handleProductClick = (product) => {
-    setToastMessage(product.toastMessage || 'Contact us to know more details')
-    setIsToastVisible(true)
-  }
-
-  const closeToast = () => {
-    setIsToastVisible(false)
-  }
 
   if (error) {
     return (
@@ -68,22 +57,10 @@ const ConcreteSeries = () => {
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {products.map((product, index) => (
-              <div 
+              <Link 
                 key={index}
+                to={`/product/${product.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="group cursor-pointer"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleProductClick(product)
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    handleProductClick(product)
-                  }
-                }}
                 onMouseEnter={() => setHoveredProduct(index)}
                 onMouseLeave={() => setHoveredProduct(null)}
               >
@@ -98,18 +75,12 @@ const ConcreteSeries = () => {
                   <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
                   <p className="mt-2 text-sm text-slate-600">{product.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
       )}
 
-      {/* Toast */}
-      <Toast 
-        message={toastMessage} 
-        isVisible={isToastVisible} 
-        onClose={closeToast} 
-      />
     </main>
   )
 }
