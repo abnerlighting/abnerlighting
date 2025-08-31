@@ -10,6 +10,8 @@ import ArchitecturalSeries from './pages/ArchitecturalSeries'
 import Blogs from './pages/Blogs'
 import BlogPost from './pages/BlogPost'
 import ProductDetail from './pages/ProductDetail'
+import ConcreteSeriesBlog from './pages/ConcreteSeriesBlog'
+import ProjectBlog from './pages/ProjectBlog'
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<BlogPost />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/concrete-series-blog.html" element={<ConcreteSeriesBlog />} />
+          <Route path="/projects/:slug" element={<ProjectBlog />} />
         </Routes>
       </Layout>
     </Router>
