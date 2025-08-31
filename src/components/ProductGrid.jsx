@@ -34,11 +34,13 @@ const NavigableProductCard = ({ product, index, hoveredProduct, setHoveredProduc
       onMouseEnter={() => setHoveredProduct(index)}
       onMouseLeave={() => setHoveredProduct(null)}
     >
-      <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+      <div className="aspect-square overflow-hidden rounded-lg shadow-md bg-gray-100">
         <img 
           src={hoveredProduct === index ? product['hover-image'] : product.image} 
           alt={product.name} 
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="mt-4">
@@ -79,11 +81,13 @@ const ToastProductCard = ({ product, index, hoveredProduct, setHoveredProduct, u
       onMouseEnter={() => setHoveredProduct(index)}
       onMouseLeave={() => setHoveredProduct(null)}
     >
-      <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+      <div className="aspect-square overflow-hidden rounded-lg shadow-md bg-gray-100">
         <img 
           src={hoveredProduct === index ? product['hover-image'] : product.image} 
           alt={product.name} 
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="mt-4">

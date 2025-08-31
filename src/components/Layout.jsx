@@ -59,10 +59,6 @@ const Layout = ({ children }) => {
         { name: 'Stone Series', href: '/stone-series' },
         { name: 'Architectural Series', href: '/architectural-series' },
         { name: 'Concrete Series', href: '/concrete-series' },
-        { name: 'Wall Lights', href: '/concrete-series/wall-lights' },
-        { name: 'Floor Lights', href: '/concrete-series/floor-lights' },
-        { name: 'Path Lights', href: '/concrete-series/path-lights' },
-        { name: 'Step Lights', href: '/concrete-series/step-lights' },
       ]
     },
     { name: 'Projects', href: '/projects' },

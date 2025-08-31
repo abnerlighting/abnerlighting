@@ -141,11 +141,13 @@ const ProductDetail = () => {
             </div>
             
             {/* Main Image */}
-            <div className="aspect-square overflow-hidden rounded-xl shadow-lg">
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg bg-gray-100">
               <img 
                 src={product.images && product.images.length > 0 ? product.images[selectedImage] : product.image} 
                 alt={`${product.name} - Main View`} 
                 className="h-full w-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
             
@@ -162,6 +164,8 @@ const ProductDetail = () => {
                       src={image} 
                       alt={`${product.name} - View ${index + 1}`} 
                       className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
@@ -193,6 +197,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/natural_concrete.png" 
                       alt="Natural Concrete" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Natural Concrete</p>
                   </div>
@@ -201,6 +207,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/travertine.png" 
                       alt="Travertine" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Travertine</p>
                   </div>
@@ -209,6 +217,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/stone_pattern.png" 
                       alt="Stone Pattern" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Stone Pattern</p>
                   </div>
@@ -224,6 +234,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/black_granite.png" 
                       alt="Black Granite" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Black Granite</p>
                   </div>
@@ -232,6 +244,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/black_sandstone.png" 
                       alt="Black Sandstone" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Black Sandstone</p>
                   </div>
@@ -240,6 +254,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/red_granite.png" 
                       alt="Red Granite" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Red Granite</p>
                   </div>
@@ -248,6 +264,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/yellow_granite.png" 
                       alt="Yellow Granite" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">Yellow Granite</p>
                   </div>
@@ -256,6 +274,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/white_sandstone.png" 
                       alt="White Sandstone" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">White Sandstone</p>
                   </div>
@@ -264,6 +284,8 @@ const ProductDetail = () => {
                       src="/assets/products/concrete-series/shades/white_granite.png" 
                       alt="White Granite" 
                       className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover border-2 border-gray-200"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <p className="text-sm font-medium text-slate-700">White Granite</p>
                   </div>
