@@ -76,12 +76,45 @@ const ContactForm = () => {
     setIsSubmitting(true)
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Option 1: Formspree (recommended for static sites)
+      const response = await fetch('https://formspree.io/f/xnnbvnor', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          profession: formData.profession,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitSuccess(true)
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          profession: '',
+          message: ''
+        })
+        setTimeout(() => setSubmitSuccess(false), 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
       
-      // Create mailto link
+      // Option 2: Keep mailto as fallback (uncomment if you prefer)
+      // const mailtoUrl = `mailto:info@abnerlighting.com?subject=Contact Form - ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProfession: ${formData.profession}%0D%0AMessage: ${formData.message}`
+      // window.open(mailtoUrl, '_blank')
+      
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Fallback to mailto if Formspree fails
       const mailtoUrl = `mailto:info@abnerlighting.com?subject=Contact Form - ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProfession: ${formData.profession}%0D%0AMessage: ${formData.message}`
-      
       window.open(mailtoUrl, '_blank')
       
       setSubmitSuccess(true)
@@ -93,10 +126,7 @@ const ContactForm = () => {
         profession: '',
         message: ''
       })
-      
       setTimeout(() => setSubmitSuccess(false), 5000)
-    } catch (error) {
-      console.error('Error submitting form:', error)
     } finally {
       setIsSubmitting(false)
     }
