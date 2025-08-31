@@ -38,9 +38,10 @@ Use these exact settings:
 
 ## Configuration Files Added
 
-### `wrangler.toml`
-- Build configuration for Cloudflare Pages
-- Security headers and redirects
+### Build Configuration
+- No wrangler.toml needed for Cloudflare Pages
+- Uses Vite build system automatically
+- Security headers via `public/_headers`
 
 ### `public/_redirects`
 - Handles React Router client-side routing
