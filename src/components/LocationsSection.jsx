@@ -128,7 +128,7 @@ export default function LocationsSection() {
       </div>
 
       {/* MAP */}
-      <div className="w-full rounded-xl overflow-hidden border border-slate-200 shadow-lg">
+      <div className="w-full rounded-xl overflow-hidden border border-slate-200 shadow-lg relative z-10">
         {/* fixed height is essential for Leaflet */}
         <div
           ref={mapEl}

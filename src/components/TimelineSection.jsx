@@ -41,8 +41,8 @@ const TimelineSection = () => {
         </div>
     
         <div className="relative">
-          {/* center line - positioned to not extend below last item */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-px bg-slate-300" style={{ top: '2rem', bottom: '2rem' }}></div>
+          {/* center line: full height so it reaches the last (2025) item */}
+          <div className="pointer-events-none hidden md:block absolute left-1/2 -translate-x-1/2 top-8 bottom-0 w-px bg-slate-300" />
     
           <div className="space-y-6">
             {timelineData.map((item, index) => (

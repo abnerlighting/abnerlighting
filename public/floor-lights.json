@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "image": "/assets/products/concrete-series/floor_lights/jumo/1.png",
+      "hover-image": "/assets/products/concrete-series/floor_lights/jumo/2.png",
+      "name": "Jumo",
+      "description": "Jumo floor light offers elegant ground-level illumination with modern concrete aesthetics.",
+      "full-description": "Jumo is designed for ground-level lighting applications, providing elegant illumination while maintaining the distinctive concrete aesthetic. Perfect for pathway lighting and architectural accentuation.",
+      "url": "./jumo.html",
+      "images": [
+        "/assets/products/concrete-series/floor_lights/jumo/1.png",
+        "/assets/products/concrete-series/floor_lights/jumo/2.png",
+        "/assets/products/concrete-series/floor_lights/jumo/3.png"
+      ],
+      "dimensions": {
+        "width": "150mm",
+        "length": "150mm",
+        "height": "200mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/floor_lights/kawa/1.png",
+      "hover-image": "/assets/products/concrete-series/floor_lights/kawa/2.png",
+      "name": "Kawa",
+      "description": "Kawa floor light delivers sophisticated ground illumination with contemporary design.",
+      "full-description": "Kawa floor light combines contemporary design with practical ground-level illumination. Its concrete construction ensures durability while providing elegant lighting for outdoor spaces.",
+      "url": "./kawa.html",
+      "images": [
+        "/assets/products/concrete-series/floor_lights/kawa/1.png",
+        "/assets/products/concrete-series/floor_lights/kawa/2.png"
+      ],
+      "dimensions": {
+        "width": "180mm",
+        "length": "180mm",
+        "height": "250mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/floor_lights/osaka/1.png",
+      "hover-image": "/assets/products/concrete-series/floor_lights/osaka/2.png",
+      "name": "Osaka",
+      "description": "Osaka floor light provides refined ground-level lighting with architectural elegance.",
+      "full-description": "Osaka floor light offers architectural elegance for ground-level illumination. Its design seamlessly integrates with outdoor landscapes while providing essential pathway lighting.",
+      "url": "./osaka.html",
+      "images": [
+        "/assets/products/concrete-series/floor_lights/osaka/1.png",
+        "/assets/products/concrete-series/floor_lights/osaka/2.png"
+      ],
+      "dimensions": {
+        "width": "160mm",
+        "length": "160mm",
+        "height": "220mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/floor_lights/saki/1.png",
+      "hover-image": "/assets/products/concrete-series/floor_lights/saki/2.png",
+      "name": "Saki",
+      "description": "Saki floor light offers modern ground illumination with sophisticated concrete design.",
+      "full-description": "Saki floor light represents modern ground-level lighting with sophisticated concrete design. Perfect for contemporary outdoor spaces requiring elegant illumination.",
+      "url": "./saki.html",
+      "images": [
+        "/assets/products/concrete-series/floor_lights/saki/1.png",
+        "/assets/products/concrete-series/floor_lights/saki/2.png"
+      ],
+      "dimensions": {
+        "width": "140mm",
+        "length": "140mm",
+        "height": "180mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/floor_lights/sumo/1.png",
+      "hover-image": "/assets/products/concrete-series/floor_lights/sumo/2.png",
+      "name": "Sumo",
+      "description": "Sumo floor light delivers powerful ground illumination with robust concrete construction.",
+      "full-description": "Sumo floor light provides powerful ground-level illumination with robust concrete construction. Designed for areas requiring substantial lighting output while maintaining aesthetic appeal.",
+      "url": "./sumo.html",
+      "images": [
+        "/assets/products/concrete-series/floor_lights/sumo/1.png"
+      ],
+      "dimensions": {
+        "width": "200mm",
+        "length": "200mm",
+        "height": "280mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    }
+  ]
+}

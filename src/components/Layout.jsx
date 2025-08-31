@@ -59,6 +59,10 @@ const Layout = ({ children }) => {
         { name: 'Stone Series', href: '/stone-series' },
         { name: 'Architectural Series', href: '/architectural-series' },
         { name: 'Concrete Series', href: '/concrete-series' },
+        { name: 'Wall Lights', href: '/concrete-series/wall-lights' },
+        { name: 'Floor Lights', href: '/concrete-series/floor-lights' },
+        { name: 'Path Lights', href: '/concrete-series/path-lights' },
+        { name: 'Step Lights', href: '/concrete-series/step-lights' },
       ]
     },
     { name: 'Projects', href: '/projects' },
@@ -71,7 +75,7 @@ const Layout = ({ children }) => {
       {/* Header */}
       <header 
         id="navbar" 
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        className={`fixed inset-x-0 top-0 z-[9999] transition-all duration-300 ${
           isScrolled ? 'bg-black/40 backdrop-blur' : ''
         }`}
       >

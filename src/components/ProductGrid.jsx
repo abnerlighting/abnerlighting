@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Card component for products with valid URLs (navigation)
-const NavigableProductCard = ({ product, index, hoveredProduct, setHoveredProduct, uppercaseNames }) => {
+const NavigableProductCard = ({ product, index, hoveredProduct, setHoveredProduct, uppercaseNames, routePrefix = '/product' }) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
     console.log('Navigating to product:', product.name, 'URL:', product.url)
     try {
       const productName = product.url.replace('./', '').replace('.html', '')
-      navigate(`/product/${productName}`)
+      navigate(`${routePrefix}/${productName}`)
     } catch (error) {
       console.log('Navigation failed:', error)
     }
@@ -97,7 +97,7 @@ const ToastProductCard = ({ product, index, hoveredProduct, setHoveredProduct, u
   )
 }
 
-const ProductGrid = ({ products, uppercaseNames = true, onProductClick }) => {
+const ProductGrid = ({ products, uppercaseNames = true, onProductClick, routePrefix = '/product' }) => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
   console.log('ProductGrid rendering with products:', products.map(p => ({ name: p.name, url: p.url })))
@@ -119,6 +119,7 @@ const ProductGrid = ({ products, uppercaseNames = true, onProductClick }) => {
                 hoveredProduct={hoveredProduct}
                 setHoveredProduct={setHoveredProduct}
                 uppercaseNames={uppercaseNames}
+                routePrefix={routePrefix}
               />
             )
           } else {

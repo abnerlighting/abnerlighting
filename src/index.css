@@ -72,4 +72,17 @@
       height: 150px;
     }
   }
+  
+  /* Leaflet map z-index fixes */
+  .leaflet-container {
+    z-index: 1 !important;
+  }
+  
+  .leaflet-popup {
+    z-index: 1000 !important;
+  }
+  
+  .leaflet-control {
+    z-index: 1000 !important;
+  }
 }

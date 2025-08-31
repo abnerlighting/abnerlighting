@@ -1,0 +1,251 @@
+{
+  "products": [
+    {
+      "image": "/assets/products/concrete-series/path_lights/dublin-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/dublin-l/2.png",
+      "name": "Dublin L",
+      "description": "Dublin L path light provides large-scale pathway illumination with elegant concrete design.",
+      "full-description": "Dublin L is designed for large-scale pathway lighting applications, offering substantial illumination while maintaining the distinctive concrete aesthetic. Perfect for main walkways and architectural accentuation.",
+      "url": "./dublin-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/dublin-l/1.png",
+        "/assets/products/concrete-series/path_lights/dublin-l/2.png"
+      ],
+      "dimensions": {
+        "width": "200mm",
+        "length": "200mm",
+        "height": "300mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/dublin-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/dublin-s/2.png",
+      "name": "Dublin S",
+      "description": "Dublin S path light offers compact pathway illumination with refined concrete aesthetics.",
+      "full-description": "Dublin S provides compact pathway lighting with refined concrete aesthetics. Ideal for smaller walkways and intimate outdoor spaces requiring elegant illumination.",
+      "url": "./dublin-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/dublin-s/1.png",
+        "/assets/products/concrete-series/path_lights/dublin-s/2.png"
+      ],
+      "dimensions": {
+        "width": "150mm",
+        "length": "150mm",
+        "height": "250mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/kyoto-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/kyoto-l/2.png",
+      "name": "Kyoto L",
+      "description": "Kyoto L path light delivers large-scale pathway illumination with sophisticated design.",
+      "full-description": "Kyoto L offers large-scale pathway illumination with sophisticated design. Perfect for main thoroughfares and areas requiring substantial lighting output.",
+      "url": "./kyoto-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/kyoto-l/1.png",
+        "/assets/products/concrete-series/path_lights/kyoto-l/2.png"
+      ],
+      "dimensions": {
+        "width": "220mm",
+        "length": "220mm",
+        "height": "320mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/kyoto-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/kyoto-s/2.png",
+      "name": "Kyoto S",
+      "description": "Kyoto S path light provides compact pathway illumination with elegant concrete design.",
+      "full-description": "Kyoto S offers compact pathway illumination with elegant concrete design. Ideal for smaller pathways and intimate outdoor spaces.",
+      "url": "./kyoto-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/kyoto-s/1.png",
+        "/assets/products/concrete-series/path_lights/kyoto-s/2.png"
+      ],
+      "dimensions": {
+        "width": "160mm",
+        "length": "160mm",
+        "height": "260mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/leon-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/leon-l/2.png",
+      "name": "Leon L",
+      "description": "Leon L path light offers large-scale pathway illumination with modern concrete aesthetics.",
+      "full-description": "Leon L provides large-scale pathway illumination with modern concrete aesthetics. Designed for main walkways requiring substantial lighting output.",
+      "url": "./leon-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/leon-l/1.png",
+        "/assets/products/concrete-series/path_lights/leon-l/2.png"
+      ],
+      "dimensions": {
+        "width": "210mm",
+        "length": "210mm",
+        "height": "310mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/leon-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/leon-s/2.png",
+      "name": "Leon S",
+      "description": "Leon S path light delivers compact pathway illumination with refined design.",
+      "full-description": "Leon S offers compact pathway illumination with refined design. Perfect for smaller pathways and intimate outdoor spaces.",
+      "url": "./leon-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/leon-s/1.png",
+        "/assets/products/concrete-series/path_lights/leon-s/2.png"
+      ],
+      "dimensions": {
+        "width": "170mm",
+        "length": "170mm",
+        "height": "270mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/mushroom-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/mushroom-l/2.png",
+      "name": "Mushroom L",
+      "description": "Mushroom L path light provides large-scale pathway illumination with distinctive mushroom design.",
+      "full-description": "Mushroom L offers large-scale pathway illumination with its distinctive mushroom design. Perfect for main walkways requiring substantial lighting output.",
+      "url": "./mushroom-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/mushroom-l/1.png",
+        "/assets/products/concrete-series/path_lights/mushroom-l/2.png"
+      ],
+      "dimensions": {
+        "width": "250mm",
+        "length": "250mm",
+        "height": "350mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/mushroom-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/mushroom-s/2.png",
+      "name": "Mushroom S",
+      "description": "Mushroom S path light offers compact pathway illumination with elegant mushroom design.",
+      "full-description": "Mushroom S provides compact pathway illumination with elegant mushroom design. Ideal for smaller pathways and intimate outdoor spaces.",
+      "url": "./mushroom-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/mushroom-s/1.png",
+        "/assets/products/concrete-series/path_lights/mushroom-s/2.png"
+      ],
+      "dimensions": {
+        "width": "180mm",
+        "length": "180mm",
+        "height": "280mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/paris-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/paris-l/2.png",
+      "name": "Paris L",
+      "description": "Paris L path light delivers large-scale pathway illumination with sophisticated design.",
+      "full-description": "Paris L offers large-scale pathway illumination with sophisticated design. Perfect for main walkways and areas requiring substantial lighting output.",
+      "url": "./paris-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/paris-l/1.png",
+        "/assets/products/concrete-series/path_lights/paris-l/2.png"
+      ],
+      "dimensions": {
+        "width": "230mm",
+        "length": "230mm",
+        "height": "330mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/paris-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/paris-s/2.png",
+      "name": "Paris S",
+      "description": "Paris S path light provides compact pathway illumination with elegant design.",
+      "full-description": "Paris S offers compact pathway illumination with elegant design. Ideal for smaller pathways and intimate outdoor spaces.",
+      "url": "./paris-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/paris-s/1.png",
+        "/assets/products/concrete-series/path_lights/paris-s/2.png"
+      ],
+      "dimensions": {
+        "width": "190mm",
+        "length": "190mm",
+        "height": "290mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/tokyo-l/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/tokyo-l/2.png",
+      "name": "Tokyo L",
+      "description": "Tokyo L path light offers large-scale pathway illumination with modern design.",
+      "full-description": "Tokyo L provides large-scale pathway illumination with modern design. Perfect for main walkways requiring substantial lighting output.",
+      "url": "./tokyo-l.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/tokyo-l/1.png",
+        "/assets/products/concrete-series/path_lights/tokyo-l/2.png"
+      ],
+      "dimensions": {
+        "width": "240mm",
+        "length": "240mm",
+        "height": "340mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/tokyo-m/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/tokyo-m/2.png",
+      "name": "Tokyo M",
+      "description": "Tokyo M path light delivers medium-scale pathway illumination with balanced design.",
+      "full-description": "Tokyo M offers medium-scale pathway illumination with balanced design. Perfect for medium-sized walkways requiring moderate lighting output.",
+      "url": "./tokyo-m.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/tokyo-m/1.png",
+        "/assets/products/concrete-series/path_lights/tokyo-m/2.png"
+      ],
+      "dimensions": {
+        "width": "200mm",
+        "length": "200mm",
+        "height": "300mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/path_lights/tokyo-s/1.png",
+      "hover-image": "/assets/products/concrete-series/path_lights/tokyo-s/2.png",
+      "name": "Tokyo S",
+      "description": "Tokyo S path light provides compact pathway illumination with elegant design.",
+      "full-description": "Tokyo S offers compact pathway illumination with elegant design. Ideal for smaller pathways and intimate outdoor spaces.",
+      "url": "./tokyo-s.html",
+      "images": [
+        "/assets/products/concrete-series/path_lights/tokyo-s/1.png",
+        "/assets/products/concrete-series/path_lights/tokyo-s/2.png"
+      ],
+      "dimensions": {
+        "width": "170mm",
+        "length": "170mm",
+        "height": "270mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    }
+  ]
+}

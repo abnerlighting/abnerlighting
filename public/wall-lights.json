@@ -1,0 +1,257 @@
+{
+  "products": [
+    {
+      "image": "/assets/products/concrete-series/wall_lights/blanca/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/blanca/2.png",
+      "name": "Blanca",
+      "description": "Blanca offers an elegant modern design that accentuates any wall with refined style.",
+      "full-description": "An elegant modern design to accentuate any wall, Blanca offers a perfect blend of style and refinement.",
+      "url": "./blanca.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/blanca/1.png",
+        "/assets/products/concrete-series/wall_lights/blanca/2.png",
+        "/assets/products/concrete-series/wall_lights/blanca/3.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "10W",
+          "CRI": ">80",
+          "Beam Angle": "Diffused",
+          "CCT": "3000K",
+          "Lumens": "840lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Single Side"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "W 130mm x H 165mm",
+          "Weight": "2.36 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "SMD LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/cairo/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/cairo/2.png",
+      "name": "Cairo-UD",
+      "description": "Cairo UD is a circular outdoor wall light with up-down illumination to enrich surfaces.",
+      "full-description": "Cairo UD is a circular wall light designed for outdoor applications to enhance wall surfaces with its up-down lighting feature.",
+      "url": "./cairo-ud.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/cairo/1.png",
+        "/assets/products/concrete-series/wall_lights/cairo/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "2 x 5W",
+          "CRI": ">80",
+          "Beam Angle": "Flood",
+          "CCT": "3000K",
+          "Lumens": "Up-370lm + Down-370lm / Total - 740lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Double Side"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "W 160mm x H 142mm",
+          "Weight": "1.7 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "COB LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/casa/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/casa/2.png",
+      "name": "Casa",
+      "description": "Casa brings an elegant modern design that enhances walls with timeless sophistication.",
+      "full-description": "An elegant modern design to accentuate any wall, Casa offers a perfect blend of style and refinement.",
+      "url": "./casa.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/casa/1.png",
+        "/assets/products/concrete-series/wall_lights/casa/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "10W",
+          "CRI": ">80",
+          "Beam Angle": "Diffused",
+          "CCT": "3000K",
+          "Lumens": "840lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Single Side"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "W 130mm x H 85mm",
+          "Weight": "2.1 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "SMD LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/curvy_ud/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/curvy_ud/2.png",
+      "name": "Curvy-UD",
+      "description": "Curvy UD is a curved outdoor wall light delivering stylish up-down illumination.",
+      "full-description": "Curvy UD is a curved wall light designed for outdoor environments to enhance wall surfaces with its up-down lighting capability.",
+      "url": "./curvy-ud.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/curvy_ud/1.png",
+        "/assets/products/concrete-series/wall_lights/curvy_ud/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "2 x 5W",
+          "CRI": ">80",
+          "Beam Angle": "Wide Flood",
+          "CCT": "3000K",
+          "Lumens": "Up-370lm + Down-370lm / Total - 740lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Double Side"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "W 190mm x H 110mm",
+          "Weight": "1.88 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "COB LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/disc-l/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/disc-l/2.png",
+      "name": "Disc-L",
+      "description": "Disc L is an outdoor wall fixture casting soft indirect light with no frontal glare.",
+      "full-description": "Disc L is crafted for outdoor use, designed to accentuate wall surfaces with indirect illumination. This fixture produces a soft, accentuating indirect light effect on walls with no frontal glare as the light source is discreetly embedded at the back.",
+      "url": "./disc-l.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/disc-l/1.png",
+        "/assets/products/concrete-series/wall_lights/disc-l/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "12W",
+          "CRI": ">80",
+          "Beam Angle": "Diffused",
+          "CCT": "3000K",
+          "Lumens": "960lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Circular"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "Dia 285mm x 95mm",
+          "Weight": "2.4 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "SMD LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/disc-s/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/disc-s/2.png",
+      "name": "Disc-S",
+      "description": "Disc S is a compact outdoor wall fixture casting soft indirect light with no frontal glare.",
+      "full-description": "Disc S is crafted for outdoor use, designed to accentuate wall surfaces with indirect illumination. This compact fixture produces a soft, accentuating indirect light effect on walls with no frontal glare as the light source is discreetly embedded at the back.",
+      "url": "./disc-s.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/disc-s/1.png",
+        "/assets/products/concrete-series/wall_lights/disc-s/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "6W",
+          "CRI": ">80",
+          "Beam Angle": "Diffused",
+          "CCT": "3000K",
+          "Lumens": "480lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Circular"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "Dia 200mm x 70mm",
+          "Weight": "1.2 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "SMD LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/wall_lights/veno_ud/1.png",
+      "hover-image": "/assets/products/concrete-series/wall_lights/veno_ud/2.png",
+      "name": "Veno-UD",
+      "description": "Veno UD is an outdoor wall light with adjustable angle up-down illumination.",
+      "full-description": "Veno UD is designed for outdoor applications with adjustable angle up-down illumination to enhance wall surfaces with versatile lighting options.",
+      "url": "./veno-ud.html",
+      "images": [
+        "/assets/products/concrete-series/wall_lights/veno_ud/1.png",
+        "/assets/products/concrete-series/wall_lights/veno_ud/2.png"
+      ],
+      "dimensions": [
+        {
+          "type": "technical",
+          "Wattage": "2 x 5W",
+          "CRI": ">80",
+          "Beam Angle": "Adjustable Angle",
+          "CCT": "3000K",
+          "Lumens": "Up-414lm + Down-414lm / Total - 828lm",
+          "Voltage": "220-240V 50Hz",
+          "Light Orientation": "Double Side"
+        },
+        {
+          "type": "general",
+          "Environment": "Outdoor",
+          "Mounting": "Surface Wall Mount",
+          "Dimensions": "W 120mm x H 120mm",
+          "Weight": "1.7 Kg",
+          "Material": "Concrete / Aluminium Die Cast",
+          "LED": "COB LED - 3 Step",
+          "IP rating": "IP-65"
+        }
+      ],
+      "material": "Concrete",
+      "finish": "Textured"
+    }
+  ]
+}

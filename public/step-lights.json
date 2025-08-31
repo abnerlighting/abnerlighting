@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "image": "/assets/products/concrete-series/step_lights/squid_a/1.png",
+      "hover-image": "/assets/products/concrete-series/step_lights/squid_a/2.png",
+      "name": "Squid A",
+      "description": "Squid A step light provides elegant stair illumination with modern concrete design.",
+      "full-description": "Squid A step light is designed for stair illumination with modern concrete design. Perfect for enhancing stair safety while maintaining aesthetic appeal in outdoor and indoor applications.",
+      "url": "./squid_a.html",
+      "images": [
+        "/assets/products/concrete-series/step_lights/squid_a/1.png",
+        "/assets/products/concrete-series/step_lights/squid_a/2.png",
+        "/assets/products/concrete-series/step_lights/squid_a
+      ],
+      "dimensions": {
+        "width": "120mm",
+        "length": "120mm",
+        "height": "80mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/step_lights/squid_b/1.png",
+      "hover-image": "/assets/products/concrete-series/step_lights/squid_b/2.png",
+      "name": "Squid B",
+      "description": "Squid B step light delivers sophisticated stair illumination with refined design.",
+      "full-description": "Squid B step light offers sophisticated stair illumination with refined design. Ideal for stair applications requiring elegant lighting solutions.",
+      "url": "./squid_b.html",
+      "images": [
+        "/assets/products/concrete-series/step_lights/squid_b/1.png",
+        "/assets/products/concrete-series/step_lights/squid_b/2.png",
+        "/assets/products/concrete-series/step_lights/squid_b
+      ],
+      "dimensions": {
+        "width": "140mm",
+        "length": "140mm",
+        "height": "90mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    },
+    {
+      "image": "/assets/products/concrete-series/step_lights/squid_c/1.png",
+      "hover-image": "/assets/products/concrete-series/step_lights/squid_c/2.png",
+      "name": "Squid C",
+      "description": "Squid C step light provides comprehensive stair illumination with modern aesthetics.",
+      "full-description": "Squid C step light offers comprehensive stair illumination with modern aesthetics. Perfect for stair applications requiring substantial lighting output.",
+      "url": "./squid_c.html",
+      "images": [
+        "/assets/products/concrete-series/step_lights/squid_c/1.png",
+        "/assets/products/concrete-series/step_lights/squid_c/2.png",
+        "/assets/products/concrete-series/step_lights/squid_c
+      ],
+      "dimensions": {
+        "width": "160mm",
+        "length": "160mm",
+        "height": "100mm"
+      },
+      "material": "Concrete",
+      "finish": "Textured"
+    }
+  ]
+}
