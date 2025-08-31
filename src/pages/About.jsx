@@ -39,7 +39,7 @@ const About = () => {
         <p className="mb-4">To deliver performance-driven, beautiful lighting tailored to Indian lifestyles and climates.</p>
         <div>
           <h3 className="text-center lg:text-left font-bold text-4xl text-slate-900 mb-2">Our Vision</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+          <p>To be India's most trusted architectural lighting brand—blending European design with Indian expertise to elevate everyday spaces.</p>
         </div>
       </ContentSection>
 

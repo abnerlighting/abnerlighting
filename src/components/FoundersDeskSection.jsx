@@ -3,7 +3,7 @@ const FoundersDeskSection = () => {
     <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-2 items-stretch">
         {/* Desktop/Tablet Image column */}
-        <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl shadow min-h-0 hidden lg:block">
+        <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl shadow min-h-0 hidden lg:block aspect-[4/3]">
           <img
             src="https://ik.imagekit.io/abnerlighting/branding/founder.jpg"
             alt="Founder's Desk"
