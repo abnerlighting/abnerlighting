@@ -12,7 +12,6 @@ const Home = () => {
     <div>
       <HeroCarousel />
       <AboutSection />
-      <CustomTextSection />
       <WhyChooseUsSection />
       <ExploreCollectionSection />
       <AbnerNumbersSection />

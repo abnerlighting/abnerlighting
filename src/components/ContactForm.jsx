@@ -6,8 +6,7 @@ const ContactForm = () => {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
-    projectType: '',
+    profession: '',
     message: ''
   })
 
@@ -49,6 +48,18 @@ const ContactForm = () => {
 
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required'
+    } else if (!/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Please enter a valid phone number'
+    }
+
+    if (!formData.profession.trim()) {
+      newErrors.profession = 'Please select your profession'
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long'
     }
 
     setErrors(newErrors)
@@ -69,7 +80,7 @@ const ContactForm = () => {
       await new Promise(resolve => setTimeout(resolve, 1000))
       
       // Create mailto link
-      const mailtoUrl = `mailto:info@abnerlighting.com?subject=Contact Form - ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACompany: ${formData.company}%0D%0AProject Type: ${formData.projectType}%0D%0AMessage: ${formData.message}`
+      const mailtoUrl = `mailto:info@abnerlighting.com?subject=Contact Form - ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AProfession: ${formData.profession}%0D%0AMessage: ${formData.message}`
       
       window.open(mailtoUrl, '_blank')
       
@@ -79,8 +90,7 @@ const ContactForm = () => {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
-        projectType: '',
+        profession: '',
         message: ''
       })
       
@@ -94,11 +104,8 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-        <p className="text-gray-600">
-          Get in touch with us for your lighting needs. We're here to help you find the perfect lighting solution.
-        </p>
+      <div className="mb-2">
+        <h1 className="text-3xl font-bold mb-3">Contact Us</h1>
       </div>
 
       {submitSuccess && (
@@ -191,45 +198,44 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-            Company
+          <label htmlFor="profession" className="block text-sm font-medium text-gray-700 mb-2">
+            I am a *
           </label>
-          <input
-            type="text"
-            id="company"
-            value={formData.company}
-            onChange={(e) => handleInputChange('company', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            placeholder="Enter your company name"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-            Project Type
-          </label>
-          <input
-            type="text"
-            id="projectType"
-            value={formData.projectType}
-            onChange={(e) => handleInputChange('projectType', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-            placeholder="Residential, Commercial, etc."
-          />
+          <select
+            id="profession"
+            value={formData.profession}
+            onChange={(e) => handleInputChange('profession', e.target.value)}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              errors.profession ? 'border-red-500' : 'border-gray-300'
+            }`}
+          >
+            <option value="">Select your profession</option>
+            <option value="Architect">Architect</option>
+            <option value="Channel Partner">Channel Partner</option>
+            <option value="Lighting Consultant">Lighting Consultant</option>
+          </select>
+          {errors.profession && (
+            <p className="mt-1 text-sm text-red-600">{errors.profession}</p>
+          )}
         </div>
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-            Message
+            Message *
           </label>
           <textarea
             id="message"
             value={formData.message}
             onChange={(e) => handleInputChange('message', e.target.value)}
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              errors.message ? 'border-red-500' : 'border-gray-300'
+            }`}
             placeholder="Tell us about your project"
           />
+          {errors.message && (
+            <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+          )}
         </div>
 
         <button

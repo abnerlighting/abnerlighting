@@ -1,70 +1,59 @@
-import HeroBanner from '../components/HeroBanner'
-import ProductGrid from '../components/ProductGrid'
+import { useState } from 'react'
+import Toast from '../components/Toast'
 import useProducts from '../hooks/useProducts'
 
 const ConcreteSeries = () => {
   const { products, loading, error } = useProducts('concrete-series')
+  const [toastMessage, setToastMessage] = useState('')
+  const [isToastVisible, setIsToastVisible] = useState(false)
+  const [hoveredProduct, setHoveredProduct] = useState(null)
+
+  const handleProductClick = (product) => {
+    setToastMessage(product.toastMessage || 'Contact us to know more details')
+    setIsToastVisible(true)
+  }
+
+  const closeToast = () => {
+    setIsToastVisible(false)
+  }
 
   if (error) {
     return (
-      <div>
-        <HeroBanner 
-          image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
-          alt="Concrete Series" 
-        />
+      <main className="relative">
+        <section className="relative h-[30vh] w-full overflow-hidden">
+          <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Concrete Series" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-black/30"></div>
+        </section>
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-lg text-red-600">Error loading products: {error}</p>
           </div>
         </section>
-      </div>
+      </main>
     )
   }
 
   return (
-    <div>
+    <main className="relative">
       {/* Hero Image */}
-      <HeroBanner 
-        image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
-        alt="Concrete Series" 
-      />
+      <section className="relative h-[30vh] w-full overflow-hidden">
+        <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Concrete Series" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-black/30"></div>
+      </section>
       
       {/* Title Section */}
-      <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-            Concrete Series
-          </h1>
-          <p className="mt-4 text-lg text-slate-600">
-            Industrial strength lighting with minimalist design and contemporary appeal
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Our Concrete Series Products</h1>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900">
-              Minimalist Design, Industrial Strength
-            </h2>
-            <p className="mt-6 text-lg text-slate-600">
-              Our Concrete Series combines minimalist design with industrial strength, creating lighting 
-              that's as stylish as it is durable. Perfect for both indoor and outdoor spaces, these 
-              fixtures seamlessly enhance modern and luxurious homes.
-            </p>
-            <p className="mt-4 text-lg text-slate-600">
-              Built to outlast trends, the Concrete Series offers superior quality, bold design, and 
-              a refined edge that sets it apart from standard residential lighting.
-            </p>
-          </div>
-          <div className="aspect-square overflow-hidden rounded-lg">
-            <img 
-              src="https://ik.imagekit.io/abnerlighting/products/concrete-series/1.png" 
-              alt="Concrete Series Detail" 
-              className="h-full w-full object-cover" 
-            />
-          </div>
+      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Abner Lighting's Concrete Series combines minimalist design with industrial strength, creating lighting that's as stylish as it is durable. Perfect for both indoor and outdoor spaces, these fixtures seamlessly enhance modern and luxurious homes with their raw textures and contemporary appeal. Built to outlast trends, the Concrete Series offers superior quality, bold design, and a refined edge that sets it apart from standard residential lighting.
+          </p>
         </div>
       </section>
 
@@ -76,12 +65,52 @@ const ConcreteSeries = () => {
           </div>
         </section>
       ) : (
-        <ProductGrid 
-          products={products} 
-          uppercaseNames={true} 
-        />
+        <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {products.map((product, index) => (
+              <div 
+                key={index}
+                className="group cursor-pointer"
+                role="button"
+                tabIndex={0}
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  handleProductClick(product)
+                }}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    handleProductClick(product)
+                  }
+                }}
+                onMouseEnter={() => setHoveredProduct(index)}
+                onMouseLeave={() => setHoveredProduct(null)}
+              >
+                <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+                  <img 
+                    src={hoveredProduct === index ? product['hover-image'] : product.image} 
+                    alt={product.name} 
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                  />
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{product.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
-    </div>
+
+      {/* Toast */}
+      <Toast 
+        message={toastMessage} 
+        isVisible={isToastVisible} 
+        onClose={closeToast} 
+      />
+    </main>
   )
 }
 

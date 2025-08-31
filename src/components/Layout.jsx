@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import WhatsAppButton from './WhatsAppButton'
 
 const Layout = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -50,10 +51,17 @@ const Layout = ({ children }) => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { 
+      name: 'Products', 
+      href: '#',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Stone Series', href: '/stone-series' },
+        { name: 'Architectural Series', href: '/architectural-series' },
+        { name: 'Concrete Series', href: '/concrete-series' },
+      ]
+    },
     { name: 'Projects', href: '/projects' },
-    { name: 'Concrete Series', href: '/concrete-series' },
-    { name: 'Stone Series', href: '/stone-series' },
-    { name: 'Architectural Series', href: '/architectural-series' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' },
   ]
@@ -147,16 +155,49 @@ const Layout = ({ children }) => {
               <X size={24} />
             </button>
           </div>
-          <nav className="grid gap-2 p-4 text-slate-700">
+          <nav className="space-y-0 p-2 text-slate-700">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="rounded-lg px-4 py-3 hover:bg-slate-100"
-                onClick={() => toggleDrawer(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name}>
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      className="w-full flex items-center justify-between rounded-lg px-4 py-3 hover:bg-slate-100 text-left"
+                      onClick={() => setIsProductsOpen(!isProductsOpen)}
+                    >
+                      {item.name}
+                      <ChevronDown 
+                        size={16} 
+                        className={`transition-transform ${isProductsOpen ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                    {isProductsOpen && (
+                      <div className="ml-4 space-y-0">
+                        {item.dropdownItems.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block rounded-lg px-4 py-3 hover:bg-slate-100"
+                            onClick={() => {
+                              toggleDrawer(false)
+                              setIsProductsOpen(false)
+                            }}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="block rounded-lg px-4 py-3 hover:bg-slate-100"
+                    onClick={() => toggleDrawer(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
         </div>
@@ -174,9 +215,11 @@ const Layout = ({ children }) => {
             <h3 className="text-white text-2xl">Address</h3>
             <div className="mt-4 space-y-6 text-slate-300">
               <div>
+                <p className="text-sm font-medium text-white mb-2">Worli Showroom</p>
                 <p className="text-sm">266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
               </div>
               <div>
+                <p className="text-sm font-medium text-white mb-2">Warehouse</p>
                 <p className="text-sm">Gala No.6, Ground Floor,<br/>Building No. B-1,<br/>Print World Industrial Complex,<br/>Mankoli Road, Vehele,<br/>Bhiwandi, Thane - 421302</p>
               </div>
             </div>

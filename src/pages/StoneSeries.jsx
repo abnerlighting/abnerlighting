@@ -35,49 +35,26 @@ const StoneSeries = () => {
   }
 
   return (
-    <div>
+    <main className="relative">
       {/* Hero Image */}
-      <HeroBanner 
-        image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
-        alt="Stone Series" 
-      />
+      <section className="relative h-[30vh] w-full overflow-hidden">
+        <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Stone Series" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-black/30"></div>
+      </section>
       
       {/* Title Section */}
-      <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-            Stone Series
-          </h1>
-          <p className="mt-4 text-lg text-slate-600">
-            Natural alabaster lighting that brings timeless elegance to your space
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Our Stone Series Products</h1>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900">
-              Crafted from Natural Alabaster
-            </h2>
-            <p className="mt-6 text-lg text-slate-600">
-              Our Stone Series features handcrafted lighting pieces made from the finest natural alabaster. 
-              Each piece is carefully selected and carved to showcase the unique veining and translucency 
-              that makes alabaster so special.
-            </p>
-            <p className="mt-4 text-lg text-slate-600">
-              These pieces provide soft, diffused lighting that creates a warm and inviting atmosphere 
-              in any room. Perfect for both modern and traditional interiors.
-            </p>
-          </div>
-          <div className="aspect-square overflow-hidden rounded-lg">
-            <img 
-              src="https://ik.imagekit.io/abnerlighting/products/stone-series/1.png" 
-              alt="Stone Series Detail" 
-              className="h-full w-full object-cover" 
-            />
-          </div>
+      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Abner Lighting's Stone Series brings the elegance of natural stone into premium lighting design. Suitable for both indoor and outdoor use, these fixtures are crafted to complement the refined aesthetics of modern and luxurious homes. With their unique textures, timeless appeal, and exceptional durability, Stone Series lights go beyond standard residential lighting—offering superior quality, distinctive design, and a statement of sophistication.
+          </p>
         </div>
       </section>
 
@@ -119,11 +96,8 @@ const StoneSeries = () => {
                   />
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {product.name}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
                   <p className="mt-2 text-sm text-slate-600">{product.description}</p>
-                  <p className="mt-1 text-xs text-slate-500 italic">Click to learn more</p>
                 </div>
               </div>
             ))}
@@ -137,7 +111,7 @@ const StoneSeries = () => {
         isVisible={isToastVisible} 
         onClose={closeToast} 
       />
-    </div>
+    </main>
   )
 }
 

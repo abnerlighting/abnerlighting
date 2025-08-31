@@ -1,8 +1,8 @@
 const AbnerNumbersSection = () => {
   const abnerNumbers = [
     { number: '10+', label: 'Years of Lighting' },
-    { number: '500+', label: 'Projects Delivered' },
-    { number: '1000+', label: 'Happy Customers' }
+    { number: '500+', label: 'Happy Customers' },
+    { number: '1000+', label: 'Projects Delivered' }
   ]
 
   return (
@@ -10,9 +10,8 @@ const AbnerNumbersSection = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-center text-4xl">Abner in Numbers</h2>
-          <div className="w-72 h-0.5 bg-black mx-auto mt-4"></div>
         </div>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {abnerNumbers.map((item, index) => (
             <div key={index} className="rounded-xl bg-white p-8 text-center shadow-sm">
               <div 

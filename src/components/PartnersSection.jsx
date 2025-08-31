@@ -13,8 +13,11 @@ const PartnersSection = () => {
   return (
     <section id="partners" className="py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
-        <h2 className="text-center text-4xl">Some of our Marquee Clients</h2>
-        <div className="w-72 h-0.5 bg-black mx-auto mt-4"></div>
+        <div className="text-center">
+          <div className="inline-block">
+            <h2 className="text-4xl">Some of our Marquee Clients</h2>
+          </div>
+        </div>
         <p className="mt-4 text-center text-lg text-slate-700 max-w-7xl mx-auto">
           At Abner, we are privileged to work with visionary organizations that share our commitment to advancing lighting solutions.<br /> While we've partnered with many, here are a few of our esteemed clients who have trusted us on this journey:
         </p>
@@ -28,6 +31,9 @@ const PartnersSection = () => {
               />
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <p className="text-sm text-slate-500 italic">... and many more</p>
         </div>
       </div>
     </section>

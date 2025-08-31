@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="bg-slate-50 py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-4xl font-bold">Testimonials</h2>
+        <h2 className="text-center text-4xl">Testimonials</h2>
         <div className="carousel mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="min-w-[85%] snap-center rounded-xl bg-white p-6 shadow sm:min-w-[45%] lg:min-w-[32%] flex flex-col h-48">

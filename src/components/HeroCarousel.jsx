@@ -109,7 +109,7 @@ const HeroCarousel = () => {
             </picture>
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="relative z-10 flex h-full items-end justify-end md:items-center md:justify-start">
-              <div className="w-full px-6 md:px-28 text-white pb-30 md:pb-0">
+              <div className="w-full px-6 md:px-28 text-white pb-8 md:pb-0">
                 <div className="max-w-3xl text-left">
                   <div className="subtitle opacity-90 mb-3">{slide.subtitle}</div>
                   <h2 className="mb-6 banner-heading text-4xl">{slide.title}</h2>

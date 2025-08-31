@@ -11,7 +11,7 @@ const AboutSection = () => {
           />
         </div>
         <div className="order-1 md:order-2">
-          <h2 className="tracking-tight text-4xl lg:text-7xl md:text-6xl sm:text-5xl font-bold text-center md:text-left">
+          <h2 className="tracking-tight text-4xl lg:text-7xl md:text-6xl sm:text-5xl text-center md:text-left">
             We're Abner
           </h2>
           {/* Mobile/Tablet image (visible only on mobile/tablet, hidden on desktop) */}
