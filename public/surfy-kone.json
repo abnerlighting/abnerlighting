@@ -1,0 +1,54 @@
+{
+  "title": "Surfy & Kone Series",
+  "description": "Modern architectural lighting designs for contemporary spaces",
+  "products": [
+    {
+      "id": "kone",
+      "name": "Kone",
+      "description": "Modern cone architectural light",
+      "image": "/assets/products/architectural-series/surfy-kone/kone.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "type": "Cone",
+        "style": "Modern"
+      }
+    },
+    {
+      "id": "surfy-10",
+      "name": "Surfy-10",
+      "description": "Surfy 10mm architectural light",
+      "image": "/assets/products/architectural-series/surfy-kone/surfy-10.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "10mm",
+        "type": "Surfy"
+      }
+    },
+    {
+      "id": "surfy-15",
+      "name": "Surfy-15",
+      "description": "Surfy 15mm architectural light",
+      "image": "/assets/products/architectural-series/surfy-kone/surfy-15.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "15mm",
+        "type": "Surfy"
+      }
+    },
+    {
+      "id": "surfy-20",
+      "name": "Surfy-20",
+      "description": "Surfy 20mm architectural light",
+      "image": "/assets/products/architectural-series/surfy-kone/surfy-20.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "20mm",
+        "type": "Surfy"
+      }
+    }
+  ]
+}

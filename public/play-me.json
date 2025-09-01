@@ -1,0 +1,54 @@
+{
+  "title": "Play-Me Series",
+  "description": "Versatile architectural lighting options for various applications",
+  "products": [
+    {
+      "id": "play-me-semi-recessed",
+      "name": "Play-Me Semi Recessed",
+      "description": "Semi-recessed architectural light",
+      "image": "/assets/products/architectural-series/play-me/play-me-semi-recessed.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "type": "Semi Recessed",
+        "installation": "Ceiling"
+      }
+    },
+    {
+      "id": "play-me-surface",
+      "name": "Play-Me Surface",
+      "description": "Surface mounted architectural light",
+      "image": "/assets/products/architectural-series/play-me/play-me-surface.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "type": "Surface Mount",
+        "installation": "Ceiling"
+      }
+    },
+    {
+      "id": "play-me-trim",
+      "name": "Play-Me Trim",
+      "description": "Trimmed architectural light",
+      "image": "/assets/products/architectural-series/play-me/play-me-trim.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "type": "Trim",
+        "installation": "Ceiling"
+      }
+    },
+    {
+      "id": "play-me-trimless",
+      "name": "Play-Me Trimless",
+      "description": "Trimless architectural light",
+      "image": "/assets/products/architectural-series/play-me/play-me-trimless.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "type": "Trimless",
+        "installation": "Ceiling"
+      }
+    }
+  ]
+}

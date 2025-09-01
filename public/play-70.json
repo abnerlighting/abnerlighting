@@ -1,0 +1,90 @@
+{
+  "title": "Play-70 Series",
+  "description": "70mm architectural lighting solutions for modern spaces",
+  "products": [
+    {
+      "id": "halo-70",
+      "name": "HALO 70",
+      "description": "70mm halo architectural light",
+      "image": "/assets/products/architectural-series/play-70/halo-70.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Architectural"
+      }
+    },
+    {
+      "id": "invi-70-adj",
+      "name": "Invi 70 Adj",
+      "description": "70mm adjustable invisible light",
+      "image": "/assets/products/architectural-series/play-70/invi-70-adj.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Adjustable"
+      }
+    },
+    {
+      "id": "invi-70-fx",
+      "name": "Invi 70 FX",
+      "description": "70mm fixed invisible light",
+      "image": "/assets/products/architectural-series/play-70/invi-70-fx.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Fixed"
+      }
+    },
+    {
+      "id": "invi-70-ww",
+      "name": "Invi 70 WW",
+      "description": "70mm warm white invisible light",
+      "image": "/assets/products/architectural-series/play-70/invi-70-ww.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Warm White"
+      }
+    },
+    {
+      "id": "play-70-trim-ring",
+      "name": "Play-70 Trim Ring",
+      "description": "70mm ring with trim",
+      "image": "/assets/products/architectural-series/play-70/play-70-trim-ring.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Ring Trim"
+      }
+    },
+    {
+      "id": "play-70-trimless-ring",
+      "name": "Play-70 Trimless Ring",
+      "description": "70mm ring without trim",
+      "image": "/assets/products/architectural-series/play-70/play-70-trimless-ring.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Ring Trimless"
+      }
+    },
+    {
+      "id": "sleek-70",
+      "name": "Sleek 70",
+      "description": "70mm sleek architectural light",
+      "image": "/assets/products/architectural-series/play-70/sleek-70.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "70mm",
+        "type": "Sleek"
+      }
+    }
+  ]
+}

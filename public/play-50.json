@@ -1,0 +1,102 @@
+{
+  "title": "Play-50 Series",
+  "description": "50mm architectural lighting solutions for modern spaces",
+  "products": [
+    {
+      "id": "halo-50",
+      "name": "HALO 50",
+      "description": "50mm halo architectural light",
+      "image": "/assets/products/architectural-series/play-50/halo-50.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Architectural"
+      }
+    },
+    {
+      "id": "invi-50-adj",
+      "name": "Invi 50 Adj",
+      "description": "50mm adjustable invisible light",
+      "image": "/assets/products/architectural-series/play-50/invi-50-adj.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Adjustable"
+      }
+    },
+    {
+      "id": "invi-50-fx",
+      "name": "Invi 50 FX",
+      "description": "50mm fixed invisible light",
+      "image": "/assets/products/architectural-series/play-50/invi-50-fx.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Fixed"
+      }
+    },
+    {
+      "id": "invi-50-pin",
+      "name": "Invi 50 Pin",
+      "description": "50mm pin spot invisible light",
+      "image": "/assets/products/architectural-series/play-50/invi-50-pin.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Pin Spot"
+      }
+    },
+    {
+      "id": "invi-50-ww",
+      "name": "Invi 50 WW",
+      "description": "50mm warm white invisible light",
+      "image": "/assets/products/architectural-series/play-50/invi-50-ww.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Warm White"
+      }
+    },
+    {
+      "id": "play-50-ring-trim",
+      "name": "Play-50 Ring Trim",
+      "description": "50mm ring with trim",
+      "image": "/assets/products/architectural-series/play-50/play-50-ring-trim.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Ring Trim"
+      }
+    },
+    {
+      "id": "play-50-ring-trimless",
+      "name": "Play-50 Ring Trimless",
+      "description": "50mm ring without trim",
+      "image": "/assets/products/architectural-series/play-50/play-50-ring-trimless.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Ring Trimless"
+      }
+    },
+    {
+      "id": "sleek-50",
+      "name": "Sleek 50",
+      "description": "50mm sleek architectural light",
+      "image": "/assets/products/architectural-series/play-50/sleek-50.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "50mm",
+        "type": "Sleek"
+      }
+    }
+  ]
+}

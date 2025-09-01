@@ -1,64 +1,48 @@
 {
-  "products": [
+  "title": "Architectural Series",
+  "description": "Premium architectural lighting solutions for modern spaces",
+  "series": [
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/1.png",
-      "name": "Mini Icon",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "play-50",
+      "name": "Play-50 Series",
+      "description": "50mm architectural lighting solutions",
+      "image": "/assets/products/architectural-series/play-50/halo-50.jpg",
+      "products": 8
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/2.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/2.png",
-      "name": "Arto-V",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "play-70",
+      "name": "Play-70 Series", 
+      "description": "70mm architectural lighting solutions",
+      "image": "/assets/products/architectural-series/play-70/halo-70.jpg",
+      "products": 7
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/3.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/3.png",
-      "name": "Surfy 15W BK",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "play-me",
+      "name": "Play-Me Series",
+      "description": "Versatile architectural lighting options",
+      "image": "/assets/products/architectural-series/play-me/play-me-surface.jpg",
+      "products": 4
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/4.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/4.png",
-      "name": "P13",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "mini-play-series",
+      "name": "Mini Play Series",
+      "description": "Compact architectural lighting solutions",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-5.jpg",
+      "products": 5
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/5.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/5.png",
-      "name": "P12-C",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "play-series",
+      "name": "Play Series",
+      "description": "Classic architectural lighting collection",
+      "image": "/assets/products/architectural-series/play-series/p-10.jpg",
+      "products": 5
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/6.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/architectural-series/6.png",
-      "name": "P19-BK",
-      "description": "",
-      "full-description": "",
-      "url": "#",
-      "material": "Aluminium",
-      "finish": "Textured"
+      "id": "surfy-kone",
+      "name": "Surfy & Kone Series",
+      "description": "Modern architectural lighting designs",
+      "image": "/assets/products/architectural-series/surfy-kone/kone.jpg",
+      "products": 4
     }
   ]
 }

@@ -1,0 +1,66 @@
+{
+  "title": "Play Series",
+  "description": "Classic architectural lighting collection for various applications",
+  "products": [
+    {
+      "id": "p-9",
+      "name": "P-9",
+      "description": "Play 9mm architectural light",
+      "image": "/assets/products/architectural-series/play-series/p-9.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "9mm",
+        "type": "Play"
+      }
+    },
+    {
+      "id": "p-10",
+      "name": "P-10",
+      "description": "Play 10mm architectural light",
+      "image": "/assets/products/architectural-series/play-series/p-10.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "10mm",
+        "type": "Play"
+      }
+    },
+    {
+      "id": "p-19",
+      "name": "P-19",
+      "description": "Play 19mm architectural light",
+      "image": "/assets/products/architectural-series/play-series/p-19.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "19mm",
+        "type": "Play"
+      }
+    },
+    {
+      "id": "p-19-mini",
+      "name": "P-19 Mini",
+      "description": "Play 19mm mini architectural light",
+      "image": "/assets/products/architectural-series/play-series/p-19-mini.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "19mm",
+        "type": "Play Mini"
+      }
+    },
+    {
+      "id": "p-20",
+      "name": "P-20",
+      "description": "Play 20mm architectural light",
+      "image": "/assets/products/architectural-series/play-series/p-20.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "20mm",
+        "type": "Play"
+      }
+    }
+  ]
+}

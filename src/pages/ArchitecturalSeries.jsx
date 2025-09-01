@@ -1,17 +1,38 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
-import useProducts from '../hooks/useProducts'
 
 const ArchitecturalSeries = () => {
-  const { products, loading, error } = useProducts('architectural-series')
+  const [series, setSeries] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
   const [toastMessage, setToastMessage] = useState('')
   const [isToastVisible, setIsToastVisible] = useState(false)
-  const [hoveredProduct, setHoveredProduct] = useState(null)
+  const navigate = useNavigate()
 
-  const handleProductClick = (product) => {
-    setToastMessage(product.toastMessage || 'Contact us to know more details')
-    setIsToastVisible(true)
+  useEffect(() => {
+    const fetchSeries = async () => {
+      try {
+        const response = await fetch('/architectural-series.json')
+        if (!response.ok) {
+          throw new Error('Failed to fetch architectural series')
+        }
+        const data = await response.json()
+        setSeries(data.series || [])
+      } catch (err) {
+        setError(err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchSeries()
+  }, [])
+
+  const handleSeriesClick = (seriesItem) => {
+    // Navigate to the specific series page
+    navigate(`/architectural-series/${seriesItem.id}`)
   }
 
   const closeToast = () => {
@@ -27,7 +48,7 @@ const ArchitecturalSeries = () => {
         />
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-lg text-red-600">Error loading products: {error}</p>
+            <p className="text-lg text-red-600">Error loading series: {error}</p>
           </div>
         </section>
       </div>
@@ -45,7 +66,8 @@ const ArchitecturalSeries = () => {
       {/* Title Section */}
       <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Our Architectural Series Products</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Architectural Series</h1>
+          <p className="mt-4 text-lg text-slate-600">Premium architectural lighting solutions for modern spaces</p>
         </div>
       </section>
 
@@ -53,56 +75,69 @@ const ArchitecturalSeries = () => {
       <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
-            Premium residency lights can be used both indoors and outdoors and are often designed to complement the aesthetic of modern and luxurious homes. These lights are typically more expensive than standard residential lighting options but offer superior quality and design features.
+            Discover our comprehensive range of architectural lighting solutions designed for modern spaces. 
+            Each series offers unique features and applications, from compact mini lights to powerful 
+            architectural fixtures that transform any environment.
           </p>
         </div>
       </section>
 
-      {/* Product Grid */}
+      {/* Series Grid with Alternating Layout */}
       {loading ? (
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-lg text-slate-600">Loading products...</p>
+            <p className="text-lg text-slate-600">Loading series...</p>
           </div>
         </section>
       ) : (
-        <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {products.map((product, index) => (
-              <div 
-                key={index}
-                className="group cursor-pointer"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleProductClick(product)
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    handleProductClick(product)
-                  }
-                }}
-                onMouseEnter={() => setHoveredProduct(index)}
-                onMouseLeave={() => setHoveredProduct(null)}
-              >
-                <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {series.map((seriesItem, index) => (
+            <div 
+              key={index} 
+              className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+            >
+              {/* Image */}
+              <div className="lg:w-1/2">
+                <div 
+                  className="cursor-pointer group"
+                  onClick={() => handleSeriesClick(seriesItem)}
+                >
                   <img 
-                    src={hoveredProduct === index ? product['hover-image'] : product.image} 
-                    alt={product.name} 
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                    src={seriesItem.image} 
+                    alt={seriesItem.name} 
+                    className="w-full h-96 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
                   />
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{product.description}</p>
-                </div>
               </div>
-            ))}
-          </div>
-        </section>
+              
+              {/* Content */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                  Series {index + 1}
+                </div>
+                
+                <h2 className="text-3xl font-bold text-gray-900">{seriesItem.name}</h2>
+                
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {seriesItem.description}
+                </p>
+                
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <span>{seriesItem.products} products</span>
+                  <span>•</span>
+                  <span>Architectural Lighting</span>
+                </div>
+                
+                <button 
+                  onClick={() => handleSeriesClick(seriesItem)}
+                  className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                >
+                  View Products
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
 
       {/* Toast */}

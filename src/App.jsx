@@ -8,6 +8,12 @@ import Contact from './pages/Contact'
 import ConcreteSeries from './pages/ConcreteSeries'
 import StoneSeries from './pages/StoneSeries'
 import ArchitecturalSeries from './pages/ArchitecturalSeries'
+import Play50 from './pages/Play50'
+import Play70 from './pages/Play70'
+import PlayMe from './pages/PlayMe'
+import MiniPlaySeries from './pages/MiniPlaySeries'
+import PlaySeries from './pages/PlaySeries'
+import SurfyKone from './pages/SurfyKone'
 import WallLights from './pages/WallLights'
 import FloorLights from './pages/FloorLights'
 import PathLights from './pages/PathLights'
@@ -39,6 +45,12 @@ function App() {
           <Route path="/concrete-series/step-lights/:id" element={<ProductDetail />} />
           <Route path="/stone-series" element={<StoneSeries />} />
           <Route path="/architectural-series" element={<ArchitecturalSeries />} />
+          <Route path="/architectural-series/play-50" element={<Play50 />} />
+          <Route path="/architectural-series/play-70" element={<Play70 />} />
+          <Route path="/architectural-series/play-me" element={<PlayMe />} />
+          <Route path="/architectural-series/mini-play-series" element={<MiniPlaySeries />} />
+          <Route path="/architectural-series/play-series" element={<PlaySeries />} />
+          <Route path="/architectural-series/surfy-kone" element={<SurfyKone />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<BlogPost />} />
           <Route path="/product/:id" element={<ProductDetail />} />

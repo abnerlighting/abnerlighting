@@ -1,0 +1,66 @@
+{
+  "title": "Mini Play Series",
+  "description": "Compact architectural lighting solutions for small spaces",
+  "products": [
+    {
+      "id": "mp-5",
+      "name": "MP-5",
+      "description": "Mini Play 5mm architectural light",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-5.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "5mm",
+        "type": "Mini Play"
+      }
+    },
+    {
+      "id": "mp-7",
+      "name": "MP-7",
+      "description": "Mini Play 7mm architectural light",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-7.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "7mm",
+        "type": "Mini Play"
+      }
+    },
+    {
+      "id": "mp-8",
+      "name": "MP-8",
+      "description": "Mini Play 8mm architectural light",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-8.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "8mm",
+        "type": "Mini Play"
+      }
+    },
+    {
+      "id": "mp-9",
+      "name": "MP-9",
+      "description": "Mini Play 9mm architectural light",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-9.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "9mm",
+        "type": "Mini Play"
+      }
+    },
+    {
+      "id": "mp-10",
+      "name": "MP-10",
+      "description": "Mini Play 10mm architectural light",
+      "image": "/assets/products/architectural-series/mini-play-series/mp-10.jpg",
+      "material": "Aluminium",
+      "finish": "Textured",
+      "specifications": {
+        "size": "10mm",
+        "type": "Mini Play"
+      }
+    }
+  ]
+}
