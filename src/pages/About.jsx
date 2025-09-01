@@ -19,7 +19,7 @@ const About = () => {
         title="About Us"
         image="https://ik.imagekit.io/abnerlighting/branding/abner-logo.jpg"
         imageAlt="About image"
-        imageOrder="left"
+        imageOrder="right"
       >
         <p>Founded in 2015, Lightworx—the force behind the Abner brand—specializes in high-impact, precision-engineered lighting solutions. We blend cutting-edge technology with timeless aesthetics to illuminate spaces with intention and artistry.</p>
         <p>At Abner, we believe lighting is more than function—it's emotion, mood, and experience. Every project we touch reflects our commitment to service, craftsmanship, and performance. From retail showrooms to luxury residences, we design lighting that transforms architecture into atmosphere.</p>
@@ -34,7 +34,7 @@ const About = () => {
         title="Our Mission"
         image="https://ik.imagekit.io/abnerlighting/branding/our-mission.jpg"
         imageAlt="About image"
-        imageOrder="left"
+        imageOrder="right"
       >
         <p className="mb-4">To deliver performance-driven, beautiful lighting tailored to Indian lifestyles and climates.</p>
         <div>
@@ -43,11 +43,11 @@ const About = () => {
         </div>
       </ContentSection>
 
-      {/* Chronoscope Timeline Section */}
-      <TimelineSection />
-
       {/* Founder's Desk Section */}
       <FoundersDeskSection />
+
+      {/* Chronoscope Timeline Section */}
+      <TimelineSection />
 
       {/* Company Infrastructure Section */}
       <TeamGridSection />
