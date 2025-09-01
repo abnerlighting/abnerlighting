@@ -1,0 +1,42 @@
+{
+  "title": "Wall Lamp",
+  "description": "Elegant stone wall lamp designs for sophisticated spaces",
+  "products": [
+    {
+      "id": "barley",
+      "name": "Barley",
+      "description": "Elegant barley stone wall lamp",
+      "image": "/assets/products/stone-series/wall-lamp/barley.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "plato",
+      "name": "Plato",
+      "description": "Philosophical Plato-inspired stone wall lamp",
+      "image": "/assets/products/stone-series/wall-lamp/plato.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "description": "Classic torch-inspired stone wall lamp",
+      "image": "/assets/products/stone-series/wall-lamp/torch.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Lamp",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

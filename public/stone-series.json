@@ -1,64 +1,83 @@
 {
-  "products": [
+  "title": "Stone Series",
+  "description": "Premium stone lighting solutions for elegant spaces",
+  "series": [
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/1.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/1.png",
-      "name": "Perl Family Pendant Lamp",
-      "description": "A graceful alabaster pendant lamp that brings timeless elegance to interiors.",
-      "full-description": "The Perl Family Pendant Lamp is crafted from natural alabaster, offering soft diffused light and timeless elegance for modern or classic interiors.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "maple-family",
+      "name": "Maple Family",
+      "description": "Elegant maple stone lighting collection",
+      "image": "/assets/products/stone-series/maple-family/maple-family.png",
+      "products": 1
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/2.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/2.png",
-      "name": "Pandav Family Pendant Lamp",
-      "description": "An alabaster pendant lamp designed to create warmth and sophistication.",
-      "full-description": "The Pandav Family Pendant Lamp, made from exquisite alabaster, provides warm illumination and refined presence, enhancing contemporary and traditional spaces alike.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "pandav-family",
+      "name": "Pandav Family",
+      "description": "Sophisticated pandav stone lighting designs",
+      "image": "/assets/products/stone-series/pandav-family/pandav-family.png",
+      "products": 1
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/3.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/3.png",
-      "name": "Alder Family Pendant Lamp",
-      "description": "An alabaster pendant lamp offering soft illumination with natural charm.",
-      "full-description": "The Alder Family Pendant Lamp showcases alabaster's natural beauty, delivering soft, diffused light to enrich living and hospitality environments.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "pearl-family",
+      "name": "Pearl Family",
+      "description": "Luxurious pearl stone lighting solutions",
+      "image": "/assets/products/stone-series/pearl-family/pearl-family.png",
+      "products": 1
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/4.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/4.png",
-      "name": "Sunrise Table Lamp",
-      "description": "An alabaster table lamp that radiates gentle light with timeless style.",
-      "full-description": "The Sunrise Table Lamp, carved from alabaster, creates a warm ambient glow that highlights the elegance of natural stone in a versatile table format.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "chandelier",
+      "name": "Chandelier",
+      "description": "Stunning stone chandelier designs",
+      "image": "/assets/products/stone-series/chandelier/aspen.png",
+      "products": 2
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/5.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/5.png",
-      "name": "Jade Table Lamp",
-      "description": "A refined alabaster table lamp blending sculptural form with subtle light.",
-      "full-description": "The Jade Table Lamp combines alabaster craftsmanship with sculptural presence, delivering soft ambient lighting ideal for side tables and consoles.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "floor-lamp",
+      "name": "Floor Lamp",
+      "description": "Elegant stone floor lamp collection",
+      "image": "/assets/products/stone-series/floor-lamp/liberts.png",
+      "products": 2
     },
     {
-      "image": "https://ik.imagekit.io/abnerlighting/products/stone-series/6.png",
-      "hover-image": "https://ik.imagekit.io/abnerlighting/products/stone-series/6.png",
-      "name": "Maple Family Pendant Lamp",
-      "description": "An alabaster pendant lamp that combines natural texture with modern appeal.",
-      "full-description": "The Maple Family Pendant Lamp, sculpted from alabaster, adds natural stone beauty to ceilings while casting a soft, warm light for inviting spaces.",
-      "url": "#",
-      "material": "Alabaster",
-      "finish": "Textured"
+      "id": "pendant-light",
+      "name": "Pendant Light",
+      "description": "Beautiful stone pendant lighting",
+      "image": "/assets/products/stone-series/pendant-light/apollo.png",
+      "products": 20
+    },
+    {
+      "id": "suspension",
+      "name": "Suspension",
+      "description": "Dramatic stone suspension lighting",
+      "image": "/assets/products/stone-series/suspension/apollo.png",
+      "products": 20
+    },
+    {
+      "id": "table-lamp",
+      "name": "Table Lamp",
+      "description": "Charming stone table lamp collection",
+      "image": "/assets/products/stone-series/table-lamp/aster.png",
+      "products": 20
+    },
+    {
+      "id": "wall-lamp",
+      "name": "Wall Lamp",
+      "description": "Elegant stone wall lamp designs",
+      "image": "/assets/products/stone-series/wall-lamp/barley.png",
+      "products": 3
+    },
+    {
+      "id": "wall-light",
+      "name": "Wall Light",
+      "description": "Sophisticated stone wall lighting",
+      "image": "/assets/products/stone-series/wall-light/beacon.png",
+      "products": 8
+    },
+    {
+      "id": "ceiling-mount",
+      "name": "Ceiling Mount",
+      "description": "Versatile stone ceiling mount lighting",
+      "image": "/assets/products/stone-series/ceiling-mount/ceiling-mount.png",
+      "products": 1
     }
   ]
 }

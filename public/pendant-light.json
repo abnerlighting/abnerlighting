@@ -1,0 +1,246 @@
+{
+  "title": "Pendant Light",
+  "description": "Beautiful stone pendant lighting for elegant spaces",
+  "products": [
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "description": "Elegant stone pendant light design",
+      "image": "/assets/products/stone-series/pendant-light/apollo.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "description": "Sophisticated stone pendant light",
+      "image": "/assets/products/stone-series/pendant-light/atlas.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "bubbles",
+      "name": "Bubbles",
+      "description": "Unique bubble-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/bubbles.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "cannes",
+      "name": "Cannes",
+      "description": "Elegant Cannes-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/cannes.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "dots",
+      "name": "Dots",
+      "description": "Modern dot-patterned stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/dots.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "eros",
+      "name": "Eros",
+      "description": "Romantic Eros-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/eros.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "fuji",
+      "name": "Fuji",
+      "description": "Japanese-inspired Fuji stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/fuji.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "description": "Exotic Java-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/java.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "lynx-pendant",
+      "name": "Lynx Pendant",
+      "description": "Wild lynx-inspired stone pendant design",
+      "image": "/assets/products/stone-series/pendant-light/lynx-pendant.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "description": "Planetary Mercury-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/mercury.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "milan",
+      "name": "Milan",
+      "description": "Italian Milan-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/milan.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "pegasus",
+      "name": "Pegasus",
+      "description": "Mythical Pegasus-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/pegasus.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "pluto",
+      "name": "Pluto",
+      "description": "Planetary Pluto-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/pluto.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "punto",
+      "name": "Punto",
+      "description": "Modern punto stone pendant design",
+      "image": "/assets/products/stone-series/pendant-light/punto.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-v",
+      "name": "Sara V",
+      "description": "Elegant Sara V stone pendant design",
+      "image": "/assets/products/stone-series/pendant-light/sara-v.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-w",
+      "name": "Sara W",
+      "description": "Sophisticated Sara W stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/sara-w.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "description": "Planetary Saturn-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/saturn.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "tango",
+      "name": "Tango",
+      "description": "Dance-inspired Tango stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/tango.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "titan",
+      "name": "Titan",
+      "description": "Mighty Titan-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/titan.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "description": "Planetary Venus-inspired stone pendant",
+      "image": "/assets/products/stone-series/pendant-light/venus.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Pendant Light",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Maple Family",
+  "description": "Elegant maple stone lighting collection for sophisticated spaces",
+  "products": [
+    {
+      "id": "maple-family",
+      "name": "Maple Family",
+      "description": "Elegant maple stone lighting design",
+      "image": "/assets/products/stone-series/maple-family/maple-family.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Family Series",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

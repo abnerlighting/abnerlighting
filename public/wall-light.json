@@ -1,0 +1,102 @@
+{
+  "title": "Wall Light",
+  "description": "Sophisticated stone wall lighting for elegant spaces",
+  "products": [
+    {
+      "id": "beacon",
+      "name": "Beacon",
+      "description": "Guiding beacon stone wall light",
+      "image": "/assets/products/stone-series/wall-light/beacon.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "jack",
+      "name": "Jack",
+      "description": "Classic Jack stone wall light design",
+      "image": "/assets/products/stone-series/wall-light/jack.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "jill",
+      "name": "Jill",
+      "description": "Companion Jill stone wall light",
+      "image": "/assets/products/stone-series/wall-light/jill.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "lynx-wall",
+      "name": "Lynx Wall",
+      "description": "Wild lynx-inspired stone wall light",
+      "image": "/assets/products/stone-series/wall-light/lynx-wall.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "oscar",
+      "name": "Oscar",
+      "description": "Award-winning Oscar stone wall light",
+      "image": "/assets/products/stone-series/wall-light/oscar.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "rover",
+      "name": "Rover",
+      "description": "Adventurous Rover stone wall light",
+      "image": "/assets/products/stone-series/wall-light/rover.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "siri",
+      "name": "Siri",
+      "description": "Modern Siri stone wall light design",
+      "image": "/assets/products/stone-series/wall-light/siri.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "tanzanite",
+      "name": "Tanzanite",
+      "description": "Precious tanzanite-inspired stone wall light",
+      "image": "/assets/products/stone-series/wall-light/tanzanite.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Wall Light",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

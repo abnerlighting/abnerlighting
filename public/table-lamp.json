@@ -1,0 +1,234 @@
+{
+  "title": "Table Lamp",
+  "description": "Charming stone table lamp collection for intimate spaces",
+  "products": [
+    {
+      "id": "aster",
+      "name": "Aster",
+      "description": "Elegant aster stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/aster.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "asteria",
+      "name": "ASTERIA",
+      "description": "Sophisticated asteria stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/asteria.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "bordeaux",
+      "name": "BORDEAUX",
+      "description": "French bordeaux-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/bordeaux.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "description": "Cherry-inspired stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/cherry.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "coral",
+      "name": "Coral",
+      "description": "Ocean coral-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/coral.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "globo",
+      "name": "Globo",
+      "description": "Globe-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/globo.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "hugo",
+      "name": "Hugo",
+      "description": "Classic Hugo stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/hugo.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "jade",
+      "name": "Jade",
+      "description": "Precious jade-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/jade.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "juno",
+      "name": "Juno",
+      "description": "Roman goddess Juno-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/juno.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "koko",
+      "name": "Koko",
+      "description": "Modern koko stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/koko.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "lynx-table",
+      "name": "Lynx Table",
+      "description": "Wild lynx-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/lynx-table.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "description": "Organic mushroom-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/mushroom.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "obris",
+      "name": "Obris",
+      "description": "Modern obris stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/obris.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "orino",
+      "name": "Orino",
+      "description": "Elegant orino stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/orino.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "orion-t",
+      "name": "ORION T",
+      "description": "Constellation Orion-inspired stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/orion-t.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sunrise",
+      "name": "Sunrise",
+      "description": "Dawn-inspired sunrise stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/sunrise.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "tigo",
+      "name": "Tigo",
+      "description": "Modern tigo stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/tigo.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "trevor",
+      "name": "Trevor",
+      "description": "Classic Trevor stone table lamp",
+      "image": "/assets/products/stone-series/table-lamp/trevor.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "zebbie",
+      "name": "Zebbie",
+      "description": "Zebra-inspired stone table lamp design",
+      "image": "/assets/products/stone-series/table-lamp/zebbie.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Table Lamp",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

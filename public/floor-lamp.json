@@ -1,0 +1,30 @@
+{
+  "title": "Floor Lamp",
+  "description": "Elegant stone floor lamp collection for statement pieces",
+  "products": [
+    {
+      "id": "liberts",
+      "name": "Liberts",
+      "description": "Elegant Liberts stone floor lamp",
+      "image": "/assets/products/stone-series/floor-lamp/liberts.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Floor Lamp",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "description": "Harmonious Unity stone floor lamp",
+      "image": "/assets/products/stone-series/floor-lamp/unity.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Floor Lamp",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

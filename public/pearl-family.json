@@ -1,0 +1,18 @@
+{
+  "title": "Pearl Family",
+  "description": "Luxurious pearl stone lighting solutions for premium spaces",
+  "products": [
+    {
+      "id": "pearl-family",
+      "name": "Pearl Family",
+      "description": "Luxurious pearl stone lighting design",
+      "image": "/assets/products/stone-series/pearl-family/pearl-family.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Family Series",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

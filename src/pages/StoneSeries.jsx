@@ -1,16 +1,65 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
-import useProducts from '../hooks/useProducts'
 
 const StoneSeries = () => {
-  const { products, loading, error } = useProducts('stone-series')
+  const [seriesData, setSeriesData] = useState([])
+  const [multiProductSeries, setMultiProductSeries] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
   const [toastMessage, setToastMessage] = useState('')
   const [isToastVisible, setIsToastVisible] = useState(false)
-  const [hoveredProduct, setHoveredProduct] = useState(null)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const fetchSeriesData = async () => {
+      try {
+        // Fetch all series data
+        const response = await fetch('/stone-series.json')
+        if (!response.ok) {
+          throw new Error('Failed to fetch stone series')
+        }
+        const data = await response.json()
+        
+        // Fetch products from each series
+        const seriesPromises = data.series.map(async (series) => {
+          try {
+            const seriesResponse = await fetch(`/${series.id}.json`)
+            if (seriesResponse.ok) {
+              const seriesData = await seriesResponse.json()
+              return {
+                ...series,
+                products: seriesData.products
+              }
+            }
+            return { ...series, products: [] }
+          } catch (err) {
+            console.error(`Error fetching ${series.id}:`, err)
+            return { ...series, products: [] }
+          }
+        })
+        
+        const allSeries = await Promise.all(seriesPromises)
+        
+        // Separate single product series from multi-product series
+        const singleProductSeries = allSeries.filter(series => series.products.length === 1)
+        const multiProductSeriesData = allSeries.filter(series => series.products.length > 1)
+        
+        setSeriesData(singleProductSeries)
+        setMultiProductSeries(multiProductSeriesData)
+      } catch (err) {
+        setError(err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchSeriesData()
+  }, [])
 
   const handleProductClick = (product) => {
-    setToastMessage(product.toastMessage || 'Contact us to know more details')
+    setToastMessage('Contact us to know more details about this product')
     setIsToastVisible(true)
   }
 
@@ -45,7 +94,8 @@ const StoneSeries = () => {
       {/* Title Section */}
       <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Our Stone Series Products</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Stone Series</h1>
+          <p className="mt-4 text-lg text-slate-600">Premium stone lighting solutions for elegant spaces</p>
         </div>
       </section>
 
@@ -53,12 +103,13 @@ const StoneSeries = () => {
       <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
-            Abner Lighting's Stone Series brings the elegance of natural stone into premium lighting design. Suitable for both indoor and outdoor use, these fixtures are crafted to complement the refined aesthetics of modern and luxurious homes. With their unique textures, timeless appeal, and exceptional durability, Stone Series lights go beyond standard residential lighting—offering superior quality, distinctive design, and a statement of sophistication.
+            Discover our comprehensive collection of stone lighting solutions crafted from natural materials. 
+            Each piece brings the beauty of stone into your living spaces, creating warm, inviting atmospheres 
+            with timeless elegance and sophisticated design.
           </p>
         </div>
       </section>
 
-      {/* Product Grid */}
       {loading ? (
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -66,43 +117,106 @@ const StoneSeries = () => {
           </div>
         </section>
       ) : (
-        <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {products.map((product, index) => (
-              <div 
-                key={index}
-                className="group cursor-pointer"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleProductClick(product)
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    handleProductClick(product)
-                  }
-                }}
-                onMouseEnter={() => setHoveredProduct(index)}
-                onMouseLeave={() => setHoveredProduct(null)}
-              >
-                <div className="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src={hoveredProduct === index ? product['hover-image'] : product.image} 
-                    alt={product.name} 
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  />
+        <>
+          {/* Multi-Product Series - Alternating Layout (FIRST) */}
+          {multiProductSeries.length > 0 && (
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              {multiProductSeries.map((series, index) => (
+                <div 
+                  key={index} 
+                  className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+                >
+                  {/* Image */}
+                  <div className="lg:w-1/2">
+                    <div 
+                      className="cursor-pointer group"
+                      onClick={() => handleProductClick(series.products[0])}
+                    >
+                      <img 
+                        src={series.products[0].image} 
+                        alt={series.products[0].name} 
+                        className="w-full h-96 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="lg:w-1/2 space-y-6">
+                    <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                      {series.name}
+                    </div>
+                    
+                    <h2 className="text-3xl font-bold text-gray-900">{series.name}</h2>
+                    
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      {series.description}
+                    </p>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                      <span>{series.products.length} products</span>
+                      <span>•</span>
+                      <span>Stone Lighting</span>
+                    </div>
+                    
+                    <button 
+                      onClick={() => navigate(`/stone-series/${series.id}`)}
+                      className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                    >
+                      View All Products
+                    </button>
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{product.description}</p>
-                </div>
+              ))}
+            </div>
+          )}
+
+          {/* More Products Section - Single Product Families in Grid (SECOND) */}
+          {seriesData.length > 0 && (
+            <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+              {/* Section Title */}
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">More Products</h2>
+                <p className="text-lg text-gray-600">Explore our family of stone lighting collections</p>
               </div>
-            ))}
-          </div>
-        </section>
+
+              {/* Family Products Grid */}
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {seriesData.map((series, index) => (
+                  <div 
+                    key={index}
+                    className="group cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      handleProductClick(series.products[0])
+                    }}
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        handleProductClick(series.products[0])
+                      }
+                    }}
+                  >
+                    <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+                      <img 
+                        src={series.products[0].image} 
+                        alt={series.products[0].name} 
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-lg font-semibold text-slate-900">{series.products[0].name}</h3>
+                      <p className="mt-2 text-sm text-slate-600">{series.description}</p>
+                      <p className="mt-2 text-xs text-gray-500">{series.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </>
       )}
 
       {/* Toast */}

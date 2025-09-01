@@ -1,0 +1,258 @@
+{
+  "title": "Suspension",
+  "description": "Dramatic stone suspension lighting for statement spaces",
+  "products": [
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "description": "Elegant stone suspension light design",
+      "image": "/assets/products/stone-series/suspension/apollo.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "aspen",
+      "name": "Aspen",
+      "description": "Sophisticated stone suspension light",
+      "image": "/assets/products/stone-series/suspension/aspen.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "description": "Mighty Atlas-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/atlas.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "bubbles",
+      "name": "Bubbles",
+      "description": "Unique bubble-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/bubbles.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "cannes",
+      "name": "Cannes",
+      "description": "Elegant Cannes-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/cannes.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "dots",
+      "name": "Dots",
+      "description": "Modern dot-patterned stone suspension",
+      "image": "/assets/products/stone-series/suspension/dots.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "eros",
+      "name": "Eros",
+      "description": "Romantic Eros-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/eros.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "fuji",
+      "name": "Fuji",
+      "description": "Japanese-inspired Fuji stone suspension",
+      "image": "/assets/products/stone-series/suspension/fuji.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "description": "Exotic Java-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/java.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "description": "Planetary Mercury-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/mercury.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "milan",
+      "name": "Milan",
+      "description": "Italian Milan-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/milan.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "pegasus",
+      "name": "Pegasus",
+      "description": "Mythical Pegasus-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/pegasus.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "pluto",
+      "name": "Pluto",
+      "description": "Planetary Pluto-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/pluto.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "punto",
+      "name": "Punto",
+      "description": "Modern punto stone suspension design",
+      "image": "/assets/products/stone-series/suspension/punto.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-h",
+      "name": "Sara H",
+      "description": "Elegant Sara H stone suspension design",
+      "image": "/assets/products/stone-series/suspension/sara-h.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-v",
+      "name": "Sara V",
+      "description": "Sophisticated Sara V stone suspension",
+      "image": "/assets/products/stone-series/suspension/sara-v.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-w",
+      "name": "Sara W",
+      "description": "Charming Sara W stone suspension",
+      "image": "/assets/products/stone-series/suspension/sara-w.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "description": "Planetary Saturn-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/saturn.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "tango",
+      "name": "Tango",
+      "description": "Dance-inspired Tango stone suspension",
+      "image": "/assets/products/stone-series/suspension/tango.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "titan",
+      "name": "Titan",
+      "description": "Mighty Titan-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/titan.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "description": "Planetary Venus-inspired stone suspension",
+      "image": "/assets/products/stone-series/suspension/venus.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Suspension",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Chandelier",
+  "description": "Stunning stone chandelier designs for dramatic spaces",
+  "products": [
+    {
+      "id": "aspen",
+      "name": "Aspen",
+      "description": "Elegant aspen stone chandelier design",
+      "image": "/assets/products/stone-series/chandelier/aspen.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Chandelier",
+        "category": "Stone Lighting"
+      }
+    },
+    {
+      "id": "sara-h",
+      "name": "Sara H",
+      "description": "Sophisticated Sara H stone chandelier",
+      "image": "/assets/products/stone-series/chandelier/sara-h.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Chandelier",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}

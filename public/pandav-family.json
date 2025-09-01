@@ -1,0 +1,18 @@
+{
+  "title": "Pandav Family",
+  "description": "Sophisticated pandav stone lighting designs for elegant interiors",
+  "products": [
+    {
+      "id": "pandav-family",
+      "name": "Pandav Family",
+      "description": "Sophisticated pandav stone lighting design",
+      "image": "/assets/products/stone-series/pandav-family/pandav-family.png",
+      "material": "Stone",
+      "finish": "Natural",
+      "specifications": {
+        "type": "Family Series",
+        "category": "Stone Lighting"
+      }
+    }
+  ]
+}
