@@ -37,6 +37,12 @@ const ProductDetail = () => {
         
         // Find the product by URL slug
         const foundProduct = data.products.find(p => {
+          // Try matching by URL first (for step lights, etc.)
+          const urlSlug = p.url.replace('./', '').replace('.html', '')
+          if (urlSlug === id) {
+            return true
+          }
+          // Fallback to name-based matching
           const productSlug = p.name.toLowerCase().replace(/\s+/g, '-')
           return productSlug === id
         })

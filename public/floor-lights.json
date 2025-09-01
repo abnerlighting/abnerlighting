@@ -29,7 +29,8 @@
       "url": "./kawa.html",
       "images": [
         "/assets/products/concrete-series/floor_lights/kawa/1.png",
-        "/assets/products/concrete-series/floor_lights/kawa/2.png"
+        "/assets/products/concrete-series/floor_lights/kawa/2.png",
+        "/assets/products/concrete-series/floor_lights/kawa/3.png"
       ],
       "dimensions": {
         "width": "180mm",
@@ -48,7 +49,8 @@
       "url": "./osaka.html",
       "images": [
         "/assets/products/concrete-series/floor_lights/osaka/1.png",
-        "/assets/products/concrete-series/floor_lights/osaka/2.png"
+        "/assets/products/concrete-series/floor_lights/osaka/2.png",
+        "/assets/products/concrete-series/floor_lights/osaka/3.png"
       ],
       "dimensions": {
         "width": "160mm",
@@ -67,7 +69,8 @@
       "url": "./saki.html",
       "images": [
         "/assets/products/concrete-series/floor_lights/saki/1.png",
-        "/assets/products/concrete-series/floor_lights/saki/2.png"
+        "/assets/products/concrete-series/floor_lights/saki/2.png",
+        "/assets/products/concrete-series/floor_lights/saki/3.png"
       ],
       "dimensions": {
         "width": "140mm",
@@ -85,7 +88,9 @@
       "full-description": "Sumo floor light provides powerful ground-level illumination with robust concrete construction. Designed for areas requiring substantial lighting output while maintaining aesthetic appeal.",
       "url": "./sumo.html",
       "images": [
-        "/assets/products/concrete-series/floor_lights/sumo/1.png"
+        "/assets/products/concrete-series/floor_lights/sumo/1.png",
+        "/assets/products/concrete-series/floor_lights/sumo/2.png",
+        "/assets/products/concrete-series/floor_lights/sumo/3.png"
       ],
       "dimensions": {
         "width": "200mm",
