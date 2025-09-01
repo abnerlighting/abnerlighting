@@ -106,12 +106,12 @@ const Projects = () => {
                   <span>{project.readTime}</span>
                 </div>
                 
-                <Link 
+                {/* <Link 
                   to={`/projects/${project.slug}`}
                   className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
                 >
                   Read Full Project
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
