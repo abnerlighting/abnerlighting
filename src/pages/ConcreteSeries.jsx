@@ -92,6 +92,7 @@ const ConcreteSeries = () => {
               <Link 
                 to={category.href}
                 className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 View {category.name}
               </Link>

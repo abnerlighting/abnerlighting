@@ -33,6 +33,8 @@ const ArchitecturalSeries = () => {
   const handleSeriesClick = (seriesItem) => {
     // Navigate to the specific series page
     navigate(`/architectural-series/${seriesItem.id}`)
+    // Scroll to top when navigating to series
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const closeToast = () => {

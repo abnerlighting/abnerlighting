@@ -42,11 +42,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/concrete-series" element={<ConcreteSeries />} />
-          <Route path="/concrete-series/wall-lights/:id" element={<ProductDetail />} />
-          <Route path="/concrete-series/floor-lights/:id" element={<ProductDetail />} />
-          <Route path="/concrete-series/path-lights/:id" element={<ProductDetail />} />
-          <Route path="/concrete-series/step-lights/:id" element={<ProductDetail />} />
+                  <Route path="/concrete-series" element={<ConcreteSeries />} />
+        <Route path="/concrete-series/wall-lights" element={<WallLights />} />
+        <Route path="/concrete-series/wall-lights/:id" element={<ProductDetail />} />
+        <Route path="/concrete-series/floor-lights" element={<FloorLights />} />
+        <Route path="/concrete-series/floor-lights/:id" element={<ProductDetail />} />
+        <Route path="/concrete-series/path-lights" element={<PathLights />} />
+        <Route path="/concrete-series/path-lights/:id" element={<ProductDetail />} />
+        <Route path="/concrete-series/step-lights" element={<StepLights />} />
+        <Route path="/concrete-series/step-lights/:id" element={<ProductDetail />} />
           <Route path="/stone-series" element={<StoneSeries />} />
           <Route path="/stone-series/maple-family" element={<MapleFamily />} />
           <Route path="/stone-series/pandav-family" element={<PandavFamily />} />

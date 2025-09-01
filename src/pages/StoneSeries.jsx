@@ -61,6 +61,8 @@ const StoneSeries = () => {
   const handleProductClick = (product) => {
     setToastMessage('Contact us to know more details about this product')
     setIsToastVisible(true)
+    // Scroll to top when viewing product
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const closeToast = () => {
@@ -159,7 +161,11 @@ const StoneSeries = () => {
                     </div>
                     
                     <button 
-                      onClick={() => navigate(`/stone-series/${series.id}`)}
+                      onClick={() => {
+                        navigate(`/stone-series/${series.id}`)
+                        // Scroll to top when navigating to series
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }}
                       className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
                     >
                       View All Products
@@ -191,11 +197,15 @@ const StoneSeries = () => {
                       e.preventDefault()
                       e.stopPropagation()
                       handleProductClick(series.products[0])
+                      // Scroll to top when clicking product
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                     onKeyPress={(e) => {
                       if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault()
                         handleProductClick(series.products[0])
+                        // Scroll to top when navigating with keyboard
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
                       }
                     }}
                   >

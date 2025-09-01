@@ -17,7 +17,7 @@ const About = () => {
       {/* About Us Section */}
       <ContentSection
         title="About Us"
-        image="https://ik.imagekit.io/abnerlighting/branding/worl-showroom-1.jpg"
+        image="https://ik.imagekit.io/abnerlighting/branding/worli-showroom-1.jpg"
         imageAlt="About image"
         imageOrder="right"
       >

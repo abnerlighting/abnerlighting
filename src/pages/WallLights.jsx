@@ -11,7 +11,7 @@ const WallLights = () => {
       try {
         const response = await fetch('/wall-lights.json')
         const data = await response.json()
-        setProducts(data.products)
+        setProducts(data.products || [])
       } catch (error) {
         console.error('Error fetching wall lights:', error)
       } finally {
@@ -30,8 +30,12 @@ const WallLights = () => {
     )
   }
 
+
+
   return (
     <main className="relative">
+
+
       {/* Hero Section */}
       <section className="relative h-[30vh] w-full overflow-hidden">
         <img
@@ -65,7 +69,14 @@ const WallLights = () => {
       {/* Products Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
-          <ProductGrid products={products} routePrefix="/concrete-series/wall-lights" />
+          {products && products.length > 0 ? (
+            <ProductGrid products={products} routePrefix="/concrete-series/wall-lights" />
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-lg text-gray-600">No products found</p>
+              <p className="text-sm text-gray-500">Products array: {JSON.stringify(products)}</p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -83,12 +94,14 @@ const WallLights = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 Contact Us
               </Link>
               <Link
                 to="/concrete-series"
                 className="inline-flex items-center px-8 py-3 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 View All Concrete Series
               </Link>

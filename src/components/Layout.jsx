@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import WhatsAppButton from './WhatsAppButton'
+import ScrollToTop from './ScrollToTop'
 
 const Layout = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -68,6 +69,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-full bg-white text-slate-900">
+      <ScrollToTop />
       {/* Header */}
       <header 
         id="navbar" 
@@ -88,7 +90,7 @@ const Layout = ({ children }) => {
             </button>
 
             {/* DESKTOP/TABLET: centered logo */}
-            <Link to="/" className="hidden sm:inline-flex absolute left-1/2 -translate-x-1/2 items-center gap-2 p-2">
+            <Link to="/" className="hidden sm:inline-flex absolute left-1/2 -translate-x-1/2 items-center gap-2 p-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
                 src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" 
                 alt="Abner Lighting" 
@@ -101,12 +103,13 @@ const Layout = ({ children }) => {
               to="/contact"
               className="hidden sm:block absolute right-4 sm:right-6 border px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-base font-medium text-white hover:bg-white hover:text-slate-900 transition-colors"
               style={{ borderColor: 'rgba(255,255,255,.8)' }}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Contact Us
             </Link>
 
             {/* MOBILE: logo (left) */}
-            <Link to="/" className="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 px-2 py-4">
+            <Link to="/" className="sm:hidden inline-flex absolute left-3 top-1 items-center gap-2 px-2 py-4" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
                 src="https://ik.imagekit.io/abnerlighting/branding/abner-lighting-logo-white.png" 
                 alt="Abner Lighting" 
@@ -180,6 +183,7 @@ const Layout = ({ children }) => {
                             onClick={() => {
                               toggleDrawer(false)
                               setIsProductsOpen(false)
+                              window.scrollTo({ top: 0, behavior: 'smooth' })
                             }}
                           >
                             {dropdownItem.name}
@@ -192,7 +196,10 @@ const Layout = ({ children }) => {
                   <Link
                     to={item.href}
                     className="block rounded-lg px-4 py-3 hover:bg-slate-100"
-                    onClick={() => toggleDrawer(false)}
+                    onClick={() => {
+                      toggleDrawer(false)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
                   >
                     {item.name}
                   </Link>
@@ -227,14 +234,14 @@ const Layout = ({ children }) => {
           <div className="text-center">
             <h3 className="text-white text-2xl">Content</h3>
             <div className="mt-4 space-y-3 text-slate-300">
-              <p className="text-sm"><Link to="/" className="hover:underline">Home</Link></p>
-              <p className="text-sm"><Link to="/about" className="hover:underline">About</Link></p>
-              <p className="text-sm"><Link to="/projects" className="hover:underline">Projects</Link></p>
-              <p className="text-sm"><Link to="/concrete-series" className="hover:underline">Concrete Series</Link></p>
-              <p className="text-sm"><Link to="/stone-series" className="hover:underline">Stone Series</Link></p>
-              <p className="text-sm"><Link to="/architectural-series" className="hover:underline">Architectural Series</Link></p>
-              <p className="text-sm"><Link to="/blogs" className="hover:underline">Blogs</Link></p>
-              <p className="text-sm"><Link to="/contact" className="hover:underline">Contact Us</Link></p>
+              <p className="text-sm"><Link to="/" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link></p>
+              <p className="text-sm"><Link to="/about" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>About</Link></p>
+              <p className="text-sm"><Link to="/projects" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Projects</Link></p>
+              <p className="text-sm"><Link to="/concrete-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Concrete Series</Link></p>
+              <p className="text-sm"><Link to="/stone-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Stone Series</Link></p>
+              <p className="text-sm"><Link to="/architectural-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Architectural Series</Link></p>
+              <p className="text-sm"><Link to="/blogs" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Blogs</Link></p>
+              <p className="text-sm"><Link to="/contact" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Contact Us</Link></p>
             </div>
           </div>
           <div className="text-center">

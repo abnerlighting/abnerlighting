@@ -10,6 +10,8 @@ const NavigableProductCard = ({ product, index, hoveredProduct, setHoveredProduc
     try {
       const productName = product.url.replace('./', '').replace('.html', '')
       navigate(`${routePrefix}/${productName}`)
+      // Scroll to top when navigating to product detail
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch (error) {
       console.log('Navigation failed:', error)
     }
@@ -104,7 +106,7 @@ const ToastProductCard = ({ product, index, hoveredProduct, setHoveredProduct, u
 const ProductGrid = ({ products, uppercaseNames = true, onProductClick, routePrefix = '/product' }) => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
-  console.log('ProductGrid rendering with products:', products.map(p => ({ name: p.name, url: p.url })))
+
 
   return (
     <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
