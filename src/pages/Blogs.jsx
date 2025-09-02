@@ -5,6 +5,7 @@ import HeroBanner from '../components/HeroBanner'
 const Blogs = () => {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
+  const [hoveredBlog, setHoveredBlog] = useState(null)
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -56,7 +57,9 @@ const Blogs = () => {
             return {
               ...frontmatterObj,
               slug,
-              url: `/blogs/${slug}`
+              url: `/blogs/${slug}`,
+              // Use hoverImage from frontmatter if available, otherwise fallback to main image
+              hoverImage: frontmatterObj.hoverImage || frontmatterObj.image
             }
           } catch (error) {
             console.error(`Error loading blog ${slug}:`, error)
@@ -117,6 +120,8 @@ const Blogs = () => {
               <div 
                 key={index}
                 className="group cursor-pointer"
+                onMouseEnter={() => setHoveredBlog(blog.slug)}
+                onMouseLeave={() => setHoveredBlog(null)}
                 onClick={() => {
                   // Navigate to the blog URL
                   if (blog.url) {
@@ -124,11 +129,23 @@ const Blogs = () => {
                   }
                 }}
               >
-                <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-md">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg shadow-md relative">
+                  {/* Default Image */}
                   <img 
                     src={blog.image} 
                     alt={blog.title} 
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                    className={`h-full w-full object-cover transition-all duration-500 ${
+                      hoveredBlog === blog.slug ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
+                    }`}
+                  />
+                  
+                  {/* Hover Image */}
+                  <img 
+                    src={blog.hoverImage} 
+                    alt={blog.title} 
+                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 ${
+                      hoveredBlog === blog.slug ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+                    }`}
                   />
                 </div>
                 <div className="mt-4">

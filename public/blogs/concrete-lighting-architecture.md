@@ -1,8 +1,10 @@
 ---
 title: "Concrete Lighting: Architecture Carved in Stone and Light"
 excerpt: "Discover the beauty of outdoor concrete lighting, featuring durable and sculptural wall fixtures designed for Indian homes and architecture."
-image: "https://ik.imagekit.io/abnerlighting/banner/1.png"
-imageAlt: "Concrete Lighting Architecture"
+image: "/assets/products/concrete-series/wall_lights/casa/1.png"
+imageAlt: "Casa Concrete Wall Light - Modern Minimalist Design"
+hoverImage: "/assets/products/concrete-series/wall_lights/casa/2.png"
+hoverImageAlt: "Casa Concrete Wall Light - Modern Minimalist Design"
 author: "Abner Lighting Team"
 date: "2025-01-25"
 readTime: "5 min read"

@@ -6,9 +6,9 @@ const TeamGridSection = () => {
   ]
 
   const teamImages = [
-    { id: 1, src: 'https://ik.imagekit.io/abnerlighting/team/1.png', alt: 'Team Member 1' },
+    { id: 1, src: 'https://ik.imagekit.io/abnerlighting/team/1.png', alt: 'Ware House 1' },
     { id: 2, src: 'https://ik.imagekit.io/abnerlighting/team/2.png', alt: 'Team Member 2' },
-    { id: 3, src: 'https://ik.imagekit.io/abnerlighting/team/3.png', alt: 'Team Member 3' }
+    { id: 3, src: 'https://ik.imagekit.io/abnerlighting/team/3.png', alt: 'Office 3' }
   ]
 
   return (
@@ -63,7 +63,7 @@ const TeamGridSection = () => {
                 </div>
               </div>
               <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                Featured
+                Showroom
               </div>
             </div>
             
@@ -107,19 +107,7 @@ const TeamGridSection = () => {
                   className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-700">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                    <h3 className="text-white font-bold text-xl">Team Member</h3>
-                  </div>
-                  <p className="text-white/90 text-base mb-4">Professional expertise & dedication</p>
-                </div>
-                <div className="absolute top-6 right-6 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-                  Expert
-                </div>
-                <div className="absolute top-6 left-6 bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-                  {index + 1}/3
-                </div>
+
               </div>
             ))}
           </div>
@@ -135,23 +123,6 @@ const TeamGridSection = () => {
                     className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-700">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                      <h3 className="text-white font-bold text-xl">Team Member</h3>
-                    </div>
-                    <p className="text-white/90 text-base mb-4">Professional expertise & dedication</p>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-1 h-1 bg-white/60 rounded-full"></div>
-                      <span className="text-white/70 text-sm">Design & Engineering</span>
-                    </div>
-                  </div>
-                  <div className="absolute top-6 right-6 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    Expert
-                  </div>
-                  <div className="absolute top-6 left-6 bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    {index + 1}/3
-                  </div>
                 </div>
               ))}
             </div>
