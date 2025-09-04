@@ -9,7 +9,7 @@ const Contact = () => {
     <main className="relative">
       {/* Hero Image */}
       <section className="relative h-[30vh] w-full overflow-hidden">
-        <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Contact Us" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/assets/C01_0232.jpg" alt="Contact Us" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
 

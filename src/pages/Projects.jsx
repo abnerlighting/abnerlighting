@@ -59,7 +59,7 @@ const Projects = () => {
     <div>
       {/* Hero Image */}
       <HeroBanner 
-        image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
+        image="/assets/C01_0232.jpg" 
         alt="Abner Projects" 
       />
 
@@ -80,7 +80,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={project.slug} className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
               {/* Image */}
-              <div className="lg:w-1/2">
+              <div className="lg:w-3/5">
                 <img 
                   src={project.image} 
                   alt={project.imageAlt || project.title}
@@ -89,7 +89,7 @@ const Projects = () => {
               </div>
               
               {/* Content */}
-              <div className="lg:w-1/2 space-y-6">
+              <div className="lg:w-2/5 space-y-6">
                 <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
                   Project {project.number}
                 </div>
@@ -99,12 +99,6 @@ const Projects = () => {
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {project.description}
                 </p>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{project.date}</span>
-                  <span>•</span>
-                  <span>{project.readTime}</span>
-                </div>
                 
                 {/* <Link 
                   to={`/projects/${project.slug}`}

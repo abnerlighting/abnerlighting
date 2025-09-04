@@ -34,14 +34,6 @@ const HeroCarousel = () => {
     },
     {
       id: 4,
-      desktopImage: '/assets/carousel/tanzanite-desktop.jpg',
-      mobileImage: '/assets/carousel/tanzanite-mobile.jpg',
-      title: 'Stone Series',
-      subtitle: 'Exquisite Collection',
-      link: '/stone-series'
-    },
-    {
-      id: 5,
       desktopImage: '/assets/carousel/durban-desktop.jpg',
       mobileImage: '/assets/carousel/durban-mobile.jpg',
       title: 'Explore the Texture',
@@ -49,7 +41,23 @@ const HeroCarousel = () => {
       link: '/concrete-series'
     },
     {
+      id: 5,
+      desktopImage: '/assets/carousel/tanzanite-desktop.jpg',
+      mobileImage: '/assets/carousel/tanzanite-mobile.jpg',
+      title: 'Stone Series',
+      subtitle: 'Exquisite Collection',
+      link: '/stone-series'
+    },
+    {
       id: 6,
+      desktopImage: '/assets/carousel/fluid-bar-desktop.jpg',
+      mobileImage: '/assets/carousel/fluid-bar-mobile.jpg',
+      title: 'Architectural Series',
+      subtitle: 'Exquisite Collection',
+      link: '/architectural-series'
+    },
+    {
+      id: 7,
       desktopImage: '/assets/carousel/studio-desktop.jpg',
       mobileImage: '/assets/carousel/studio-mobile.jpg',
       title: 'Worli Studio',

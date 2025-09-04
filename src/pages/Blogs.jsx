@@ -83,7 +83,7 @@ const Blogs = () => {
     <div>
       {/* Hero Image */}
       <HeroBanner 
-        image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
+        image="/assets/C01_0232.jpg" 
         alt="Abner Blogs" 
       />
 

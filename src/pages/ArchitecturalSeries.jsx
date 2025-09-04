@@ -59,7 +59,7 @@ const ArchitecturalSeries = () => {
     return (
       <div>
         <HeroBanner 
-          image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
+          image="https://ik.imagekit.io/abnerlighting/architectural-series/header.jpg" 
           alt="Architectural Series" 
         />
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ const ArchitecturalSeries = () => {
     <main className="relative">
       {/* Hero Image */}
       <section className="relative h-[30vh] w-full overflow-hidden">
-        <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Architectural Series" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/assets/architectural-series-header.png" alt="Architectural Series" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
       
@@ -98,7 +98,7 @@ const ArchitecturalSeries = () => {
         </div>
       </section>
 
-      {/* Series Grid with Alternating Layout */}
+      {/* Series Grid - Desktop: Grid with Hover, Mobile: Alternating */}
       {loading ? (
         <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -107,54 +107,101 @@ const ArchitecturalSeries = () => {
         </section>
       ) : (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {series.map((seriesItem, index) => (
-            <div 
-              key={index} 
-              className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
-            >
-              {/* Image */}
-              <div className="lg:w-1/2">
-                <div 
-                  className="cursor-pointer group"
-                  onClick={() => handleSeriesClick(seriesItem)}
-                >
-                  <img 
-                    src={seriesItem.image} 
-                    alt={seriesItem.name} 
-                    className="w-full h-96 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
-                  />
+          {/* Desktop: Grid Layout with Hover Text */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8">
+            {series.map((seriesItem, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
+                <img 
+                  src={seriesItem.image} 
+                  alt={seriesItem.name} 
+                  className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105" 
+                />
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                    <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-4">
+                      Series {index + 1}
+                    </div>
+                    
+                    <h2 className="text-3xl font-bold mb-4">{seriesItem.name}</h2>
+                    
+                    <p className="text-lg leading-relaxed mb-6 max-w-md">
+                      {seriesItem.description}
+                    </p>
+                    
+                    <div className="flex items-center gap-4 text-sm mb-6 justify-center">
+                      <span className="bg-white/20 px-3 py-1 rounded-full">{seriesItem.products} products</span>
+                      <span>•</span>
+                      <span>Architectural Lighting</span>
+                    </div>
+                    
+                    <button 
+                      onClick={() => handleSeriesClick(seriesItem)}
+                      className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                    >
+                      View Products
+                    </button>
+                  </div>
                 </div>
               </div>
-              
-              {/* Content */}
-              <div className="lg:w-1/2 space-y-6">
-                <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-                  Series {index + 1}
+            ))}
+          </div>
+
+          {/* Mobile/Tablet: Alternating Layout */}
+          <div className="lg:hidden">
+            {series.map((seriesItem, index) => (
+              <div 
+                key={index} 
+                className={`flex flex-col items-center gap-12 py-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              >
+                {/* Image */}
+                <div className="md:w-1/2">
+                  <div 
+                    className="cursor-pointer group"
+                    onClick={() => handleSeriesClick(seriesItem)}
+                  >
+                    <img 
+                      src={seriesItem.image} 
+                      alt={seriesItem.name} 
+                      className="w-full h-96 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105" 
+                    />
+                  </div>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-gray-900">{seriesItem.name}</h2>
-                
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {seriesItem.description}
-                </p>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{seriesItem.products} products</span>
-                  <span>•</span>
-                  <span>Architectural Lighting</span>
+                {/* Content */}
+                <div className="md:w-1/2 space-y-6">
+                  <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                    Series {index + 1}
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900">{seriesItem.name}</h2>
+                  
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {seriesItem.description}
+                  </p>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <span>{seriesItem.products} products</span>
+                    <span>•</span>
+                    <span>Architectural Lighting</span>
+                  </div>
+                  
+                  <button 
+                    onClick={() => handleSeriesClick(seriesItem)}
+                    className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                  >
+                    View Products
+                  </button>
                 </div>
-                
-                <button 
-                  onClick={() => handleSeriesClick(seriesItem)}
-                  className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
-                >
-                  View Products
-                </button>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
+
+      {/* Bottom Spacing */}
+      <div className="pb-20"></div>
 
       {/* Toast */}
       <Toast 

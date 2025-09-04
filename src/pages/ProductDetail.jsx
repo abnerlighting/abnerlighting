@@ -190,6 +190,70 @@ const ProductDetail = () => {
             {/* Why Choose Us Section */}
 
             
+            {/* Dimension Table */}
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              {Array.isArray(product.dimensions) ? (
+                // Multiple dimensions (array)
+                <div>
+                  {product.dimensions.map((dimension, index) => (
+                    <div key={index} className="mb-6">
+                      <h4 className="text-lg font-semibold text-slate-900 mb-3">
+                        {dimension.type ? dimension.type.charAt(0).toUpperCase() + dimension.type.slice(1) : `Dimensions ${index + 1}`}
+                      </h4>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr className="border-b border-slate-200">
+                              <th className="text-left py-2 font-semibold text-slate-900">Specification</th>
+                              <th className="text-left py-2 font-semibold text-slate-900">Value</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {Object.entries(dimension).map(([key, value]) => {
+                              if (key === 'size' || key === 'type') return null;
+                              return (
+                                <tr key={key} className="border-b border-slate-100">
+                                  <td className="py-2 text-slate-600">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                                  <td className="py-2 font-medium">{value}</td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : product.dimensions ? (
+                // Single dimensions object
+                <div>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-4">Dimensions</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-slate-200">
+                          <th className="text-left py-2 font-semibold text-slate-900">Specification</th>
+                          <th className="text-left py-2 font-semibold text-slate-900">Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {Object.entries(product.dimensions).map(([key, value]) => (
+                          <tr key={key} className="border-b border-slate-100">
+                            <td className="py-2 text-slate-600">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                            <td className="py-2 font-medium">{value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center text-slate-600">
+                  <p>Dimensions information not available</p>
+                </div>
+              )}
+            </div>
+            
             {/* Shades Section */}
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Available Shades</h3>
@@ -303,70 +367,6 @@ const ProductDetail = () => {
                   <strong>Note:</strong> Custom order shades require minimum quantity and may have longer lead times.
                 </p>
               </div>
-            </div>
-            
-            {/* Dimension Table */}
-            <div className="bg-white border border-slate-200 rounded-xl p-6">
-              {Array.isArray(product.dimensions) ? (
-                // Multiple dimensions (array)
-                <div>
-                  {product.dimensions.map((dimension, index) => (
-                    <div key={index} className="mb-6">
-                      <h4 className="text-lg font-semibold text-slate-900 mb-3">
-                        {dimension.type ? dimension.type.charAt(0).toUpperCase() + dimension.type.slice(1) : `Dimensions ${index + 1}`}
-                      </h4>
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-sm">
-                          <thead>
-                            <tr className="border-b border-slate-200">
-                              <th className="text-left py-2 font-semibold text-slate-900">Specification</th>
-                              <th className="text-left py-2 font-semibold text-slate-900">Value</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {Object.entries(dimension).map(([key, value]) => {
-                              if (key === 'size' || key === 'type') return null;
-                              return (
-                                <tr key={key} className="border-b border-slate-100">
-                                  <td className="py-2 text-slate-600">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
-                                  <td className="py-2 font-medium">{value}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : product.dimensions ? (
-                // Single dimensions object
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-4">Dimensions</h3>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b border-slate-200">
-                          <th className="text-left py-2 font-semibold text-slate-900">Specification</th>
-                          <th className="text-left py-2 font-semibold text-slate-900">Value</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {Object.entries(product.dimensions).map(([key, value]) => (
-                          <tr key={key} className="border-b border-slate-100">
-                            <td className="py-2 text-slate-600">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
-                            <td className="py-2 font-medium">{value}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center text-slate-600">
-                  <p>Dimensions information not available</p>
-                </div>
-              )}
             </div>
             
             {/* Action Buttons */}

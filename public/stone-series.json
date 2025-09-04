@@ -24,13 +24,6 @@
       "products": 1
     },
     {
-      "id": "chandelier",
-      "name": "Chandelier",
-      "description": "Stunning stone chandelier designs",
-      "image": "/assets/products/stone-series/chandelier/aspen.png",
-      "products": 2
-    },
-    {
       "id": "floor-lamp",
       "name": "Floor Lamp",
       "description": "Elegant stone floor lamp collection",

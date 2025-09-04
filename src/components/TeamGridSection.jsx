@@ -6,9 +6,9 @@ const TeamGridSection = () => {
   ]
 
   const teamImages = [
-    { id: 1, src: 'https://ik.imagekit.io/abnerlighting/team/1.png', alt: 'Ware House 1' },
+    { id: 1, src: '/assets/studio-1.jpg', alt: 'Studio 1' },
     { id: 2, src: 'https://ik.imagekit.io/abnerlighting/team/2.png', alt: 'Team Member 2' },
-    { id: 3, src: 'https://ik.imagekit.io/abnerlighting/team/3.png', alt: 'Office 3' }
+    { id: 3, src: '/assets/team-1.jpg', alt: 'Team 1' }
   ]
 
   return (
@@ -104,7 +104,7 @@ const TeamGridSection = () => {
                 <img 
                   src={member.src} 
                   alt={member.alt} 
-                  className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  className={`h-full w-full object-cover object-center transition-transform duration-1000 group-hover:scale-110 ${index === 2 ? 'object-top' : ''}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700"></div>
 
@@ -112,20 +112,18 @@ const TeamGridSection = () => {
             ))}
           </div>
 
-          {/* Desktop Layout - Masonry Style */}
-          <div className="hidden md:block">
-            <div className="columns-1 md:columns-3 gap-8 space-y-8">
-              {teamImages.map((member, index) => (
-                <div key={member.id} className={`group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-700 hover:shadow-3xl hover:scale-105 break-inside-avoid transform-gpu ${index === 1 ? 'md:mt-16' : ''} ${index === 2 ? 'md:mt-8' : ''}`}>
-                  <img 
-                    src={member.src} 
-                    alt={member.alt} 
-                    className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                </div>
-              ))}
-            </div>
+          {/* Desktop Layout - Uniform Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
+            {teamImages.map((member, index) => (
+              <div key={member.id} className="group relative aspect-square overflow-hidden rounded-3xl shadow-2xl transition-all duration-700 hover:shadow-3xl hover:scale-105 transform-gpu">
+                <img 
+                  src={member.src} 
+                  alt={member.alt} 
+                  className={`h-full w-full object-cover object-center transition-transform duration-1000 group-hover:scale-110 ${index === 2 ? 'object-top' : ''}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

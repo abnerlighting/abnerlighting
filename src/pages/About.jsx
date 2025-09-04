@@ -10,7 +10,7 @@ const About = () => {
     <div>
       {/* Hero Image */}
       <HeroBanner 
-        image="https://ik.imagekit.io/abnerlighting/banner/1.png" 
+        image="/assets/about-us-header.png" 
         alt="About Abner Lighting" 
       />
 

@@ -36,7 +36,7 @@ const ConcreteSeries = () => {
     <main className="relative">
       {/* Hero Image */}
       <section className="relative h-[30vh] w-full overflow-hidden">
-        <img src="https://ik.imagekit.io/abnerlighting/banner/1.png" alt="Concrete Series" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/assets/products/concrete-series/wall_lights/header.png" alt="Concrete Series" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
       
@@ -56,49 +56,96 @@ const ConcreteSeries = () => {
         </div>
       </section>
 
-      {/* Categories Grid - Alternating Layout */}
+      {/* Categories Grid - Desktop: Grid with Hover, Mobile: Alternating */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        {categories.map((category, index) => (
-          <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-            {/* Image */}
-            <div className="lg:w-1/2">
+        {/* Desktop: Grid Layout with Hover Text */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-8">
+          {categories.map((category, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
               <img 
                 src={category.image} 
                 alt={category.name}
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
               />
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center">
+                <div className="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-4">
+                    {index + 1} of {categories.length}
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold mb-4">{category.name}</h2>
+                  
+                  <p className="text-lg leading-relaxed mb-6 max-w-md">
+                    {category.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 justify-center mb-6">
+                    {category.features.map((feature, featureIndex) => (
+                      <span key={featureIndex} className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link 
+                    to={category.href}
+                    className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
+                    View {category.name}
+                  </Link>
+                </div>
+              </div>
             </div>
-            
-            {/* Content */}
-            <div className="lg:w-1/2 space-y-6">
-              <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-                {index + 1} of {categories.length}
+          ))}
+        </div>
+
+        {/* Mobile/Tablet: Alternating Layout */}
+        <div className="lg:hidden">
+          {categories.map((category, index) => (
+            <div key={index} className={`flex flex-col items-center gap-12 py-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              {/* Image */}
+              <div className="md:w-1/2">
+                <img 
+                  src={category.image} 
+                  alt={category.name}
+                  className="w-full h-96 object-cover rounded-lg shadow-lg"
+                />
               </div>
               
-              <h2 className="text-3xl font-bold text-gray-900">{category.name}</h2>
-              
-              <p className="text-lg text-gray-600 leading-relaxed">
-                {category.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2">
-                {category.features.map((feature, featureIndex) => (
-                  <span key={featureIndex} className="inline-block bg-gray-200 px-3 py-1 rounded-full text-sm text-gray-700">
-                    {feature}
-                  </span>
-                ))}
+              {/* Content */}
+              <div className="md:w-1/2 space-y-6">
+                <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                  {index + 1} of {categories.length}
+                </div>
+                
+                <h2 className="text-3xl font-bold text-gray-900">{category.name}</h2>
+                
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {category.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {category.features.map((feature, featureIndex) => (
+                    <span key={featureIndex} className="inline-block bg-gray-200 px-3 py-1 rounded-full text-sm text-gray-700">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+                
+                <Link 
+                  to={category.href}
+                  className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  View {category.name}
+                </Link>
               </div>
-              
-              <Link 
-                to={category.href}
-                className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                View {category.name}
-              </Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
     </main>
