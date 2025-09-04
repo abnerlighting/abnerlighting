@@ -1,0 +1,51 @@
+{
+  "product_model": "Surface (SF)",
+  "materials": {
+    "housing": "Aluminium Die Cast - ADC 12",
+    "heatsink": "Extruded Aluminium",
+    "optics": "PMMA & PC"
+  },
+  "led": {
+    "lamp_source": "COB LED (LM80 Certified)",
+    "binning": "One Bin",
+    "sdcm": "Macadam Step 3",
+    "led_life_hours": ">50,000 hrs @ L70/B10"
+  },
+  "general": {
+    "mounting": "Surface",
+    "heatsink_cooling": "Passive",
+    "environment": "Indoor",
+    "ingress_protection_rating": "IP20",
+    "photobiological_safety": "RG 0 (No Risk)",
+    "dimensions": {
+      "outer_dia": "60mm",
+      "height": "136mm"
+    }
+  },
+  "driver": {
+    "type": "Constant Current (Remote)",
+    "surge_protection_l_n": "2 KV",
+    "driver_pf": ">0.95",
+    "driver_thd": "<20%",
+    "driver_type": "Non-Dim"
+  },
+  "technical": {
+    "power_w": "6W",
+    "cct_k": ["2700k", "3000k", "4000k"],
+    "cri": [">90"],
+    "beam_angle": ["30°", "40°"],
+    "distribution": "Symmetric",
+    "input_voltage_v": "230V-240V"
+  },
+    "colour": {
+    "white/black": "Special RAL colours on request"
+  },
+  "beam_angle": ["30°", "40°"],
+  "net_lumen_90cri": {
+    "system_wattage": "6W",
+    "driving_current_voltage": "150mA/36V",
+    "2700k": "400",
+    "3000k": "425",
+    "4000k": "450"
+  }
+}

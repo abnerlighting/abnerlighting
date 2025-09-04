@@ -1,0 +1,102 @@
+{
+  "material": {
+    "housing": "Aluminium Die Cast - ADC 12",
+    "heatsink": "Extruded Aluminium",
+    "optics": "Lens: PMMA & PC, Reflector: PC (Vacuum Anodized)"
+  },
+  "led": {
+    "lamp_source": "COB LED (LM80 Certified)",
+    "binning": "One Bin",
+    "sdcm": "Macadam Step 2 and 3",
+    "led_life_hours": ">50,000 Hrs @ L70/B10"
+  },
+  "general": {
+    "mounting": "Ceiling Recessed",
+    "heatsink_cooling": "Passive",
+    "environment": "Indoor",
+    "ingress_protection_rating": "IP20",
+    "photobiological_safety": "RG 0 (No Risk)",
+    "dimensions": {
+      "cut_out_dia": "80mm",
+      "outer_dia": "82mm"
+    },
+    "height": {
+      "10W": "90mm",
+      "15W": "105mm",
+      "20W": "125mm"
+    }
+  },
+  "driver": {
+    "type": "Constant Current",
+    "surge_protection_L_N": "2 KV",
+    "driver_pf": ">0.95",
+    "ove_protection": "440VAC",
+    "driver_type": [
+      "Non-Dim",
+      "Dali",
+      "Dali DT-8 (TW)",
+      "Phase Cut",
+      "0-10V/1-10V Analogue",
+      "RF-Dim",
+      "DMX",
+      "Zigbee BLE Mesh"
+    ]
+  },
+  "technical": {
+    "power_w": ["6W", "9W", "12W", "15W", "17W", "20W"],
+    "cct_k": ["2700K", "3000K", "3500K", "4000K", "2700-6500K TW"],
+    "cct_special_request": ["1800-3000K TW", "1800-4000K TW"],
+    "cri": [80, 90, 97],
+    "beam_angle_deg": ["15°", "24°", "38°", "50°"],
+    "distribution": "Symmetric",
+    "input_voltage_v": "230V-240V"
+  },
+  "colour": {
+    "white/black": "Special RAL colours on request"
+  },
+  "ordering_options": [
+    "White (outer) + White (inner)",
+    "White (outer) + Black (inner)",
+    "Black (outer) + Black (inner)"
+  ],
+  "beam_angle": ["15°", "24°", "38°", "50°"],
+  "accessories": ["Honeycomb Filter"],
+  "model P19": [
+    {
+      "system_wattage": "6W",
+      "driving_current_mA_voltage": "200mA/36V",
+      "net_lumen_90CRI": { "2700K": 480, "3000K": 510, "4000K": 534 },
+      "net_lumen_80CRI": { "2700K": 546, "3000K": 570, "4000K": 600 }
+    },
+    {
+      "system_wattage": "9W",
+      "driving_current_mA_voltage": "250mA/36V",
+      "net_lumen_90CRI": { "2700K": 720, "3000K": 765, "4000K": 801 },
+      "net_lumen_80CRI": { "2700K": 819, "3000K": 855, "4000K": 900 }
+    },
+    {
+      "system_wattage": "12W",
+      "driving_current_mA_voltage": "300mA/36V",
+      "net_lumen_90CRI": { "2700K": 960, "3000K": 1020, "4000K": 1068 },
+      "net_lumen_80CRI": { "2700K": 1092, "3000K": 1140, "4000K": 1200 }
+    },
+    {
+      "system_wattage": "15W",
+      "driving_current_mA_voltage": "350mA/36V",
+      "net_lumen_90CRI": { "2700K": 1200, "3000K": 1275, "4000K": 1335 },
+      "net_lumen_80CRI": { "2700K": 1365, "3000K": 1425, "4000K": 1500 }
+    },
+    {
+      "system_wattage": "17W",
+      "driving_current_mA_voltage": "400mA/36V",
+      "net_lumen_90CRI": { "2700K": 1360, "3000K": 1445, "4000K": 1513 },
+      "net_lumen_80CRI": { "2700K": 1547, "3000K": 1615, "4000K": 1700 }
+    },
+    {
+      "system_wattage": "20W",
+      "driving_current_mA_voltage": "500mA/36V",
+      "net_lumen_90CRI": { "2700K": 1600, "3000K": 1700, "4000K": 1780 },
+      "net_lumen_80CRI": { "2700K": 1820, "3000K": 1900, "4000K": 2000 }
+    }
+  ]
+}

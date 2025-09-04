@@ -1,0 +1,56 @@
+{
+  "material": {
+    "housing": "Forged Aluminium",
+    "heatsink": "Extruded Aluminium",
+    "optics": "PMMA - TIR"
+  },
+  "led": {
+    "lamp_source": "COB LED (LM80 Certified)",
+    "binning": "One Bin",
+    "sdcm": "Macadam Step 2 & 3",
+    "led_life_hours": ">50,000 Hrs @ L70/B10"
+  },
+  "general": {
+    "mounting": "Surface",
+    "heatsink_cooling": "Passive",
+    "environment": "Outdoor",
+    "ingress_protection_rating": "IP65",
+    "photobiological_safety": "RG 0 (No Risk)",
+    "dimensions": {
+      "outer_dia": "75mm",
+      "height": "107mm"
+    }
+  },
+  "driver": {
+    "type": "Constant Current",
+    "surge_protection_L_N": "2 KV",
+    "driver_pf": ">0.95",
+    "driver_thd": "<20%",
+    "driver_type": ["Non Dim (IP-54)"]
+  },
+  "technical": {
+    "power_w": ["9W", "12W"],
+    "cct_k": ["2700k", "3000k", "4000k"],
+    "cri": [80, 90],
+    "beam_angle_deg": ["24°", "36°", "50°"],
+    "distribution": "Symmetric",
+    "input_voltage_v": "230V-240V"
+  },
+  "colour": {
+    "white/black": "Special RAL colours on request"
+  },
+  "beam_angle": ["24°", "36°", "50°"],
+  "accessories": ["Honeycomb Filter"],
+  "model surfy15ip65": [
+    {
+      "system_wattage": "9W",
+      "driving_current_mA_voltage": "200mA/36V",
+      "net_lumen_90cri": { "2700k": 675, "3000k": 720, "4000k": 765 }
+    },
+    {
+      "system_wattage": "12W",
+      "driving_current_mA_voltage": "300mA/36V",
+      "net_lumen_90cri": { "2700k": 900, "3000k": 960, "4000k": 1020 }
+    }
+  ]
+}

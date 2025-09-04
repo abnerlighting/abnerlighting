@@ -57,9 +57,9 @@ const Layout = ({ children }) => {
       href: '#',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Stone Series', href: '/stone-series' },
         { name: 'Architectural Series', href: '/architectural-series' },
         { name: 'Concrete Series', href: '/concrete-series' },
+        { name: 'Stone Series', href: '/stone-series' },
       ]
     },
     { name: 'Projects', href: '/projects' },
@@ -222,7 +222,7 @@ const Layout = ({ children }) => {
             <h3 className="text-white text-2xl">Address</h3>
             <div className="mt-4 space-y-6 text-slate-300">
               <div>
-                <p className="text-sm font-medium text-white mb-2">Worli Showroom</p>
+                <p className="text-sm font-medium text-white mb-2">Worli Studio / Head Office</p>
                 <p className="text-sm">266, 1ST FLR, Kanchwala,<br/>Mansion, Annie Besant RD,<br/>Worli Colony, Mumbai,<br/>Mumbai- 400030, Maharashtra</p>
               </div>
               <div>
@@ -237,9 +237,9 @@ const Layout = ({ children }) => {
               <p className="text-sm"><Link to="/" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link></p>
               <p className="text-sm"><Link to="/about" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>About</Link></p>
               <p className="text-sm"><Link to="/projects" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Projects</Link></p>
+              <p className="text-sm"><Link to="/architectural-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Architectural Series</Link></p>
               <p className="text-sm"><Link to="/concrete-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Concrete Series</Link></p>
               <p className="text-sm"><Link to="/stone-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Stone Series</Link></p>
-              <p className="text-sm"><Link to="/architectural-series" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Architectural Series</Link></p>
               <p className="text-sm"><Link to="/blogs" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Blogs</Link></p>
               <p className="text-sm"><Link to="/contact" className="hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Contact Us</Link></p>
             </div>

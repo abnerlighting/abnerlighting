@@ -1,0 +1,51 @@
+{
+  "material": {
+    "housing": "Forged Aluminium",
+    "heatsink": "Die Cast",
+    "optics": "PMMA - TIR"
+  },
+  "led": {
+    "lamp_source": "COB LED (LM80 Certified)",
+    "binning": "One Bin",
+    "sdcm": "Macadam Step 3 (2 on request)",
+    "led_life_hours": ">50,000 Hrs @ L70/B10"
+  },
+  "general": {
+    "mounting": "Surface",
+    "heatsink_cooling": "Passive",
+    "environment": "Indoor",
+    "ingress_protection_rating": "IP20",
+    "photobiological_safety": "RG 0 (No Risk)",
+    "dimensions": {
+      "outer_dia": "95mm",
+      "height": "106mm"
+    }
+  },
+  "driver": {
+    "type": "Constant Current",
+    "surge_protection_L_N": "2 KV",
+    "driver_pf": ">0.95",
+    "driver_thd": "<20%",
+    "driver_type": ["Non Dim", "Dali", "DT8"]
+  },
+  "technical": {
+    "power_w": ["20W"],
+    "cct_k": ["2700k", "3000k", "3500k", "4000k", "5000k", "6000k"],
+    "cri": [80, 90],
+    "beam_angle_deg": ["24°", "36°"],
+    "distribution": "Symmetric",
+    "input_voltage_v": "230V-240V"
+  },
+  "colour": {
+    "white/black": "Special RAL colours on request"
+  },
+  "beam_angle": ["24°", "36°"],
+  "accessories": ["Honeycomb Filter"],
+  "model surfy20w": [
+    {
+      "system_wattage": "20W",
+      "driving_current_mA_voltage": "500mA/36V",
+      "net_lumen_90cri": { "2700k": 1440, "3000k": 1540, "4000k": 1620 }
+    }
+  ]
+}

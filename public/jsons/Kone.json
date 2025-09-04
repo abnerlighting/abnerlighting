@@ -1,0 +1,50 @@
+{
+  "material": {
+    "housing": "Machined Aluminium",
+    "heatsink": "Extruded Aluminium",
+    "optics": "Polycarbonate Reflector (Vacuum Anodized)"
+  },
+  "led": {
+    "lamp_source": "AC DOB LED (LM80 Certified)",
+    "sdcm": "Macadam Step 3",
+    "led_life_hours": ">25,000 Hrs @ L70/B10"
+  },
+  "general": {
+    "mounting": "Surface",
+    "heatsink_cooling": "Passive",
+    "environment": "Indoor",
+    "ingress_protection_rating": "IP20",
+    "photobiological_safety": "RG 0 (No Risk)",
+    "dimensions": {
+      "outer_dia": "50mm",
+      "height": "75mm"
+    },
+    "beam_angle_options": ["15°", "25°", "38°", "60°", "Diffused"]
+  },
+  "driver": {
+    "type": "AC DOB Inbuilt Phase Cut Dim",
+    "surge_protection_l_n": "1.5 KV"
+  },
+  "technical": {
+    "power_w": "8W",
+    "cct_k": ["2700K", "3000K", "4000K"],
+    "cri": ">80",
+    "beam_angle_deg": ["15°", "25°", "38°", "60°", "Diffused"],
+    "distribution": "Symmetric",
+    "input_voltage_v": "230V-240V"
+  },
+  "colour": {
+    "white/black": "Special RAL colours on request"
+  },
+  "model Kone": [
+    {
+      "system_wattage": "8W",
+      "driving_current_ma_voltage": "200mA/36V",
+      "net_lumen_90cri": {
+        "2700K": "525 lm",
+        "3000K": "560 lm",
+        "4000K": "600 lm"
+      }
+    }
+  ]
+}

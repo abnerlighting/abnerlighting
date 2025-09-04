@@ -4,7 +4,7 @@ const ExploreCollectionSection = () => {
   return (
     <section id="explore" className="py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold">Explore by Collection</h2>
+        <h2 className="text-5xl font-extrabold">Explore by Collection</h2>
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
           {/* Left: Concrete big */}
           <Link 
@@ -13,12 +13,12 @@ const ExploreCollectionSection = () => {
           >
             <img 
               className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" 
-              src="https://ik.imagekit.io/abnerlighting/concrete-series/section.jpg" 
+              src="/assets/carousel/lima-concrete-section.jpg" 
               alt="Concrete" 
             />
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3>Concrete</h3>
+              <h3 className="text-2xl font-bold">Concrete</h3>
               <p className="opacity-90">Rugged, modern, minimal.</p>
             </div>
           </Link>
@@ -35,7 +35,7 @@ const ExploreCollectionSection = () => {
               />
               <div className="absolute inset-0 bg-black/25"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3>Stone</h3>
+                <h3 className="text-xl font-bold">Stone</h3>
                 <p className="opacity-90">Organic textures and depth.</p>
               </div>
             </Link>
@@ -50,7 +50,7 @@ const ExploreCollectionSection = () => {
               />
               <div className="absolute inset-0 bg-black/25"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3>Technical</h3>
+                <h3 className="text-xl font-bold">Technical</h3>
                 <p className="opacity-90">Engineered for performance.</p>
               </div>
             </Link>

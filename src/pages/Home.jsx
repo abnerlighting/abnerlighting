@@ -16,7 +16,7 @@ const Home = () => {
       <ExploreCollectionSection />
       <AbnerNumbersSection />
       <PartnersSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
     </div>
   )
 }

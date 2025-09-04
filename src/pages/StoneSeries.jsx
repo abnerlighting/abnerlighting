@@ -42,12 +42,25 @@ const StoneSeries = () => {
         
         const allSeries = await Promise.all(seriesPromises)
         
-        // Separate single product series from multi-product series
+        // Define the desired order for main categories
+        const categoryOrder = ['pendant-light', 'wall-light', 'table-lamp', 'floor-lamp']
+        
+        // Separate series by type
         const singleProductSeries = allSeries.filter(series => series.products.length === 1)
         const multiProductSeriesData = allSeries.filter(series => series.products.length > 1)
         
+        // Sort multi-product series by the defined order
+        const orderedMultiProductSeries = categoryOrder
+          .map(categoryId => multiProductSeriesData.find(series => series.id === categoryId))
+          .filter(Boolean)
+        
+        // Add any remaining multi-product series that weren't in the order
+        const remainingMultiProductSeries = multiProductSeriesData.filter(
+          series => !categoryOrder.includes(series.id)
+        )
+        
         setSeriesData(singleProductSeries)
-        setMultiProductSeries(multiProductSeriesData)
+        setMultiProductSeries([...orderedMultiProductSeries, ...remainingMultiProductSeries])
       } catch (err) {
         setError(err.message)
       } finally {

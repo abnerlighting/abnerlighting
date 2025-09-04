@@ -19,7 +19,21 @@ const ArchitecturalSeries = () => {
           throw new Error('Failed to fetch architectural series')
         }
         const data = await response.json()
-        setSeries(data.series || [])
+        
+        // Define the desired order for architectural series
+        const seriesOrder = ['play-50', 'play-70', 'play-100', 'play-me', 'surfy-kone']
+        
+        // Sort series by the defined order
+        const orderedSeries = seriesOrder
+          .map(seriesId => data.series.find(series => series.id === seriesId))
+          .filter(Boolean)
+        
+        // Add any remaining series that weren't in the order
+        const remainingSeries = data.series.filter(
+          series => !seriesOrder.includes(series.id)
+        )
+        
+        setSeries([...orderedSeries, ...remainingSeries])
       } catch (err) {
         setError(err.message)
       } finally {

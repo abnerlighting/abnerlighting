@@ -41,10 +41,9 @@ const TimelineSection = () => {
         </div>
     
         <div className="relative">
-          {/* center line: full height so it reaches the last (2025) item */}
           <div className="pointer-events-none hidden md:block absolute left-1/2 -translate-x-1/2 top-8 bottom-0 w-px bg-slate-300" />
     
-          <div className="space-y-6">
+          <div>
             {timelineData.map((item, index) => (
               <div key={index} className="relative md:grid md:grid-cols-2 md:items-start">
                 <span className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-4 h-4 rounded-full bg-white ring-4 ring-white shadow">
