@@ -27,7 +27,7 @@ const WhyChooseUsSection = () => {
           {/* card 3: Expertise and Infrastructure */}
           <div className="text-center">
             <img 
-              src="/assets/expertise.png" 
+              src="/assets/expertise-2.png" 
               alt="Expertise and Infrastructure" 
               className="h-32 w-32 mx-auto mb-4" 
             />
