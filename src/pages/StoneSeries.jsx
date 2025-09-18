@@ -42,8 +42,8 @@ const StoneSeries = () => {
         
         const allSeries = await Promise.all(seriesPromises)
         
-        // Define the desired order for main categories
-        const categoryOrder = ['pendant-light', 'wall-light', 'table-lamp', 'floor-lamp']
+  // Define the desired order for main categories (removed pendant & wall per request)
+  const categoryOrder = ['table-lamp', 'floor-lamp']
         
         // Separate series by type
         const singleProductSeries = allSeries.filter(series => series.products.length === 1 && series.id !== 'pearl-family')
