@@ -26,9 +26,7 @@ const ArchitecturalSeries = () => {
           'play-70',
           'play-100',
           'play-me',
-          'surfy-kone',
-          'magnetic-5mm',
-          'magnetic-26mm'
+          'surfy'
         ]
         
         // Sort series by the defined order
