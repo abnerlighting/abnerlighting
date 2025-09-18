@@ -130,10 +130,19 @@ const TimelineSection = () => {
             const isLastRow = rowIdx === rows.length - 1;
             const reversed = isLastRow ? false : (rowIdx % 2 === 1);
 
-            // For last row with 2 items, left-align them (fixes 2024/2025 swap on desktop/iPad)
-            const finalItems = isLastRow && rowItems.length === 2 
-              ? [...rowItems, null] // Put null at end to left-align
+            // For last row with 2 items, preserve original positions (right-align)
+            // but swap their content for desktop/tablet rendering only so the
+            // visual positions remain the same while the descriptions are swapped.
+            let finalItems = isLastRow && rowItems.length === 2
+              ? [null, ...rowItems] // original right-aligned positions
               : padded;
+
+            // If this is the last row with two items, swap the two content entries
+            // so desktop/tablet shows the swapped descriptions while mobile (which
+            // uses timelineData directly) remains unchanged.
+            if (isLastRow && rowItems.length === 2) {
+              finalItems = [null, rowItems[1], rowItems[0]];
+            }
 
             // Hardcoded vertical connections for snake pattern
             // Row 0 (2015-2017): connect down from 2017 (col 2)
