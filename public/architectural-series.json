@@ -17,11 +17,32 @@
       "products": 7
     },
     {
+      "id": "play-100",
+      "name": "Play-100 Series",
+      "description": "100mm high-output architectural lighting solutions",
+      "image": "/assets/products/architectural-series/play-100/halo-100.jpg",
+      "products": 6
+    },
+    {
       "id": "play-me",
       "name": "Play-Me Series",
       "description": "Versatile architectural lighting options",
       "image": "/assets/products/architectural-series/play-me/play-me-surface.jpg",
       "products": 4
+    },
+    {
+      "id": "magnetic-5mm",
+      "name": "Magnetic 5mm Series",
+      "description": "Slim 5mm magnetic mounting architectural lights",
+      "image": "/assets/products/architectural-series/magnetic-5mm/mag-5mm.jpg",
+      "products": 3
+    },
+    {
+      "id": "magnetic-26mm",
+      "name": "Magnetic 26mm Series",
+      "description": "26mm magnetic architectural lights",
+      "image": "/assets/products/architectural-series/magnetic-26mm/mag-26mm.jpg",
+      "products": 3
     },
     {
       "id": "mini-play-series",

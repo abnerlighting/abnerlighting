@@ -20,8 +20,16 @@ const ArchitecturalSeries = () => {
         }
         const data = await response.json()
         
-        // Define the desired order for architectural series
-        const seriesOrder = ['play-50', 'play-70', 'play-100', 'play-me', 'surfy-kone']
+        // Define the desired order for architectural series (user requested)
+        const seriesOrder = [
+          'play-50',
+          'play-70',
+          'play-100',
+          'play-me',
+          'surfy-kone',
+          'magnetic-5mm',
+          'magnetic-26mm'
+        ]
         
         // Sort series by the defined order
         const orderedSeries = seriesOrder
