@@ -130,9 +130,9 @@ const TimelineSection = () => {
             const isLastRow = rowIdx === rows.length - 1;
             const reversed = isLastRow ? false : (rowIdx % 2 === 1);
 
-            // For last row with 2 items, right-align them
+            // For last row with 2 items, left-align them (fixes 2024/2025 swap on desktop/iPad)
             const finalItems = isLastRow && rowItems.length === 2 
-              ? [null, ...rowItems] // Put null in first position to right-align
+              ? [...rowItems, null] // Put null at end to left-align
               : padded;
 
             // Hardcoded vertical connections for snake pattern
