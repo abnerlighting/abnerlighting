@@ -1,14 +1,17 @@
 const TeamGridSection = () => {
+  // Using infra images copied from /Volumes/offload
   const worliShowroomImages = [
-    { id: 1, src: 'https://ik.imagekit.io/abnerlighting/branding/worli-showroom-1.jpg', alt: 'Worli Showroom 1' },
-    { id: 2, src: 'https://ik.imagekit.io/abnerlighting/branding/worli-showroom-2.jpg', alt: 'Worli Showroom 2' },
-    { id: 3, src: 'https://ik.imagekit.io/abnerlighting/branding/worli-showroom-3.jpg', alt: 'Worli Showroom 3' }
+    // Top 3 (commented out in markup per request)
+    { id: 1, src: '/assets/infra/infra-1.jpg', alt: 'Infra 1' },
+    { id: 2, src: '/assets/infra/infra-2.jpg', alt: 'Infra 2' },
+    { id: 3, src: '/assets/infra/infra-3.jpg', alt: 'Infra 3' }
   ]
 
+  // Use the infra-1 image for the bottom three as requested
   const teamImages = [
-    { id: 1, src: '/assets/studio-1.jpg', alt: 'Studio 1' },
-    { id: 2, src: 'https://ik.imagekit.io/abnerlighting/team/2.png', alt: 'Team Member 2' },
-    { id: 3, src: '/assets/team-1.jpg', alt: 'Team 1' }
+    { id: 1, src: '/assets/infra/infra-1.jpg', alt: 'Infra Image' },
+    { id: 2, src: '/assets/infra/infra-1.jpg', alt: 'Infra Image' },
+    { id: 3, src: '/assets/infra/infra-1.jpg', alt: 'Infra Image' }
   ]
 
   return (
@@ -46,13 +49,13 @@ const TeamGridSection = () => {
 
           {/* Desktop Layout - Dynamic Grid */}
           <div className="hidden md:grid md:grid-cols-12 gap-4 md:gap-6 h-[500px] lg:h-[600px]">
-            {/* Large center image */}
+            {/* Large center image (top-3 are commented per request) */}
             <div className="md:col-span-6 md:col-start-4 group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-700 hover:shadow-3xl hover:scale-105 transform-gpu">
-              <img 
+              {/* <img 
                 src={worliShowroomImages[0].src} 
                 alt={worliShowroomImages[0].alt} 
                 className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-700">
                 <h3 className="text-white font-bold text-2xl mb-2">Worli Showroom</h3>
@@ -69,11 +72,11 @@ const TeamGridSection = () => {
             
             {/* Top left image */}
             <div className="md:col-span-3 md:col-start-1 md:row-start-1 group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105 transform-gpu">
-              <img 
+              {/* <img 
                 src={worliShowroomImages[1].src} 
                 alt={worliShowroomImages[1].alt} 
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 Showroom
@@ -82,11 +85,11 @@ const TeamGridSection = () => {
             
             {/* Top right image */}
             <div className="md:col-span-3 md:col-start-10 md:row-start-1 group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-105 transform-gpu">
-              <img 
+              {/* <img 
                 src={worliShowroomImages[2].src} 
                 alt={worliShowroomImages[2].alt} 
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" 
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 Experience
