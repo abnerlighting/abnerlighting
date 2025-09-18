@@ -126,7 +126,7 @@ const StoneSeries = () => {
       </section>
 
       {loading ? (
-        <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-lg text-slate-600">Loading products...</p>
           </div>
@@ -135,7 +135,7 @@ const StoneSeries = () => {
         <>
           {/* More Products Section - Single Product Families (moved to top) */}
           {seriesData.length > 0 && (
-            <section className="relative mx-auto max-w-7xl px-4 pt-8 pb-20 sm:px-6 lg:px-8">
+            <section className="relative mx-auto max-w-7xl px-4 pt-8 pb-8 sm:px-6 lg:px-8">
               {/* Section Title */}
               <div className="text-center mb-12">
                 <p className="text-lg text-gray-600">Explore our family of stone lighting collections</p>

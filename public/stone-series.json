@@ -30,13 +30,7 @@
       "image": "/assets/products/stone-series/floor-lamp/liberts.png",
       "products": 2
     },
-    {
-      "id": "pendant-light",
-      "name": "Pendant Light",
-      "description": "Beautiful stone pendant lighting",
-      "image": "/assets/products/stone-series/pendant-light/apollo.png",
-      "products": 20
-    },
+    
     {
       "id": "suspension",
       "name": "Suspension",
@@ -57,13 +51,6 @@
       "description": "Elegant stone wall lamp designs",
       "image": "/assets/products/stone-series/wall-lamp/barley.png",
       "products": 3
-    },
-    {
-      "id": "wall-light",
-      "name": "Wall Light",
-      "description": "Sophisticated stone wall lighting",
-      "image": "/assets/products/stone-series/wall-light/beacon.png",
-      "products": 8
     },
     {
       "id": "ceiling-mount",
