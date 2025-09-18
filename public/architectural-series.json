@@ -6,35 +6,35 @@
       "id": "play-50",
       "name": "Play-50 Series",
       "description": "50mm architectural lighting solutions",
-      "image": "/assets/products/the-architectural-series/play-50/halo-50.jpg",
+  "image": "/assets/products/the-architectural-series/play-50/play-50.jpg",
       "products": 8
     },
     {
       "id": "play-70",
       "name": "Play-70 Series", 
       "description": "70mm architectural lighting solutions",
-      "image": "/assets/products/the-architectural-series/play-70/halo-70.jpg",
+  "image": "/assets/products/the-architectural-series/play-70/sleek-70.jpg",
       "products": 7
     },
     {
       "id": "play-100",
       "name": "Play-100 Series",
       "description": "100mm high-output architectural lighting solutions",
-      "image": "/assets/products/the-architectural-series/play-100/play-100-ag.jpg",
+  "image": "/assets/products/the-architectural-series/play-100/collage.jpg",
       "products": 6
     },
     {
       "id": "play-me",
       "name": "Play-Me Series",
       "description": "Versatile architectural lighting options",
-      "image": "/assets/products/the-architectural-series/play-me/play-me-surface.jpg",
+  "image": "/assets/products/the-architectural-series/play-me/play-me-semi-recessed.jpg",
       "products": 4
     },
     {
       "id": "surfy",
       "name": "Surfy Series",
       "description": "Modern architectural lighting designs",
-      "image": "/assets/products/the-architectural-series/surfy/surfy-10.jpg",
+  "image": "/assets/products/the-architectural-series/surfy/kone.jpg",
       "products": 4
     }
   ]
