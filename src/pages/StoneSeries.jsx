@@ -106,8 +106,8 @@ const StoneSeries = () => {
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
       
-      {/* Title Section */}
-      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+  {/* Title Section */}
+  <section className="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Stone Series</h1>
           <p className="mt-4 text-lg text-slate-600">Premium stone lighting solutions for elegant spaces</p>
@@ -135,9 +135,9 @@ const StoneSeries = () => {
         <>
           {/* More Products Section - Single Product Families (moved to top) */}
           {seriesData.length > 0 && (
-            <section className="relative mx-auto max-w-7xl px-4 pt-8 pb-8 sm:px-6 lg:px-8">
+            <section className="relative mx-auto max-w-7xl px-4 pt-4 pb-8 sm:px-6 lg:px-8">
               {/* Section Title */}
-              <div className="text-center mb-12">
+              <div className="text-center mb-8">
                 <p className="text-lg text-gray-600">Explore our family of stone lighting collections</p>
               </div>
 
@@ -185,7 +185,7 @@ const StoneSeries = () => {
 
           {/* Multi-Product Series - Desktop: Grid with Hover, Mobile: Alternating */}
           {multiProductSeries.length > 0 && (
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12">
               {/* Desktop: Grid Layout with Hover Text */}
               <div className="hidden lg:grid lg:grid-cols-2 gap-8">
                 {multiProductSeries.map((series, index) => (
