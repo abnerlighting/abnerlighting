@@ -13,7 +13,7 @@ const ExploreCollectionSection = () => {
           >
             <img 
               className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" 
-              src="/assets/carousel/lima-concrete-section.jpg" 
+                src="/assets/lima.jpg" 
               alt="Concrete" 
             />
             <div className="absolute inset-0 bg-black/30"></div>
