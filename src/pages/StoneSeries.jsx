@@ -133,6 +133,57 @@ const StoneSeries = () => {
         </section>
       ) : (
         <>
+          {/* More Products Section - Single Product Families (moved to top) */}
+          {seriesData.length > 0 && (
+            <section className="relative mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 lg:px-8">
+              {/* Section Title */}
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">More Products</h2>
+                <p className="text-lg text-gray-600">Explore our family of stone lighting collections</p>
+              </div>
+
+              {/* Family Products Grid */}
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {seriesData.map((series, index) => (
+                  <div 
+                    key={index}
+                    className="group cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      handleProductClick(series.products[0])
+                      // Scroll to top when clicking product
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        handleProductClick(series.products[0])
+                        // Scroll to top when navigating with keyboard
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                      }
+                    }}
+                  >
+                    <div className="aspect-square overflow-hidden rounded-lg shadow-md">
+                      <img 
+                        src={series.products[0].image} 
+                        alt={series.products[0].name} 
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="text-lg font-semibold text-slate-900">{series.products[0].name}</h3>
+                      <p className="mt-2 text-sm text-slate-600">{series.description}</p>
+                      <p className="mt-2 text-xs text-gray-500">{series.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           {/* Multi-Product Series - Desktop: Grid with Hover, Mobile: Alternating */}
           {multiProductSeries.length > 0 && (
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
