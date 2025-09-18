@@ -114,8 +114,8 @@ const StoneSeries = () => {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+  {/* Content Section */}
+  <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
             Discover our comprehensive collection of stone lighting solutions crafted from natural materials. 
@@ -135,10 +135,9 @@ const StoneSeries = () => {
         <>
           {/* More Products Section - Single Product Families (moved to top) */}
           {seriesData.length > 0 && (
-            <section className="relative mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 lg:px-8">
+            <section className="relative mx-auto max-w-7xl px-4 pt-8 pb-20 sm:px-6 lg:px-8">
               {/* Section Title */}
               <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">More Products</h2>
                 <p className="text-lg text-gray-600">Explore our family of stone lighting collections</p>
               </div>
 
