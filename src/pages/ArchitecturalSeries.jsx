@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const ArchitecturalSeries = () => {
   const [series, setSeries] = useState([])
@@ -94,7 +95,7 @@ const ArchitecturalSeries = () => {
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
             Discover our comprehensive range of architectural lighting solutions designed for modern spaces. 
@@ -103,6 +104,9 @@ const ArchitecturalSeries = () => {
           </p>
         </div>
       </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {/* Series Grid - Desktop: Grid with Hover, Mobile: Alternating */}
       {loading ? (

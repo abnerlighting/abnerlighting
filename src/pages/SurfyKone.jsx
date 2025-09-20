@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const SurfyKone = () => {
   const [products, setProducts] = useState([])
@@ -71,7 +72,7 @@ const SurfyKone = () => {
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
             The Surfy & Kone series showcases modern architectural lighting designs that push the boundaries 
@@ -80,6 +81,9 @@ const SurfyKone = () => {
           </p>
         </div>
       </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {/* Product Grid */}
       {loading ? (

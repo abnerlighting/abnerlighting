@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const PearlFamily = () => {
   const [products, setProducts] = useState([])
@@ -70,7 +71,7 @@ const PearlFamily = () => {
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
             The Pearl Family collection showcases luxurious stone lighting designs that bring sophistication 
@@ -78,6 +79,9 @@ const PearlFamily = () => {
           </p>
         </div>
       </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {/* Product Grid */}
       {loading ? (

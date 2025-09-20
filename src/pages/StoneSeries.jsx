@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 import Toast from '../components/Toast'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const StoneSeries = () => {
   const [seriesData, setSeriesData] = useState([])
@@ -124,6 +125,9 @@ const StoneSeries = () => {
           </p>
         </div>
       </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {loading ? (
         <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">

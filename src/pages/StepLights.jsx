@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ProductGrid from '../components/ProductGrid'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const StepLights = () => {
   const [products, setProducts] = useState([])
@@ -48,19 +49,24 @@ const StepLights = () => {
       </section>
 
       {/* Title Section */}
-      <section className="py-10 bg-white">
-        <div className="container-custom">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6">
-              Our Step Lights Collection
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Enhance stair safety and aesthetics with our range of step lighting solutions. 
-              Designed to provide essential illumination while maintaining elegant design.
-            </p>
-          </div>
+      <section className="relative mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Our Step Lights Collection</h1>
         </div>
       </section>
+
+      {/* Content Section */}
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Enhance stair safety and aesthetics with our range of step lighting solutions. 
+            Designed to provide essential illumination while maintaining elegant design.
+          </p>
+        </div>
+      </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {/* Products Grid */}
       <section className="py-16 bg-gray-50">

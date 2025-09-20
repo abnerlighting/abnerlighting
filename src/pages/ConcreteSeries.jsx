@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
 
 const ConcreteSeries = () => {
   const categories = [
@@ -48,13 +49,16 @@ const ConcreteSeries = () => {
       </section>
 
       {/* Content Section */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-lg text-slate-600 leading-relaxed">
             Abner Lighting's Concrete Series combines minimalist design with industrial strength, creating lighting that's as stylish as it is durable. Perfect for both indoor and outdoor spaces, these fixtures seamlessly enhance modern and luxurious homes with their raw textures and contemporary appeal. Built to outlast trends, the Concrete Series offers superior quality, bold design, and a refined edge that sets it apart from standard residential lighting.
           </p>
         </div>
       </section>
+
+      {/* Product Series Navigation */}
+      <ProductSeriesNavigation />
 
       {/* Categories Grid - Desktop: Grid with Hover, Mobile: Alternating */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">

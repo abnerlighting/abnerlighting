@@ -13,6 +13,7 @@ import PlayMe from './pages/PlayMe'
 import MiniPlaySeries from './pages/MiniPlaySeries'
 import PlaySeries from './pages/PlaySeries'
 import SurfyKone from './pages/SurfyKone'
+import Surfy from './pages/Surfy'
 import FloorLights from './pages/FloorLights'
 import PathLights from './pages/PathLights'
 import StepLights from './pages/StepLights'
@@ -70,6 +71,7 @@ function App() {
           <Route path="/architectural-series/mini-play-series" element={<MiniPlaySeries />} />
           <Route path="/architectural-series/play-series" element={<PlaySeries />} />
           <Route path="/architectural-series/surfy-kone" element={<SurfyKone />} />
+          <Route path="/architectural-series/surfy" element={<Surfy />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<BlogPost />} />
           <Route path="/product/:id" element={<ProductDetail />} />
