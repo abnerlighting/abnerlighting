@@ -10,7 +10,7 @@ const Projects = () => {
     const loadProjects = async () => {
       try {
         // Load project data from markdown files
-        const projectSlugs = ['restaurants', 'workspaces', 'jewellery-stores']
+        const projectSlugs = ['restaurants', 'workspaces', 'jewellery-stores', 'residential']
         const projectPromises = projectSlugs.map(async (slug) => {
           try {
             const response = await fetch(`/projects/${slug}.md`)

@@ -78,20 +78,69 @@ export default function LocationsSection() {
           maxZoom: 19,
         }).addTo(map);
 
-        // custom black marker icon
+        // custom enhanced marker icon with ABNER branding
         const icon = L.divIcon({
           className: 'custom-marker',
-          html: '<div style="background-color: black; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>',
-          iconSize: [20, 20],
-          iconAnchor: [10, 10],
+          html: `
+            <div style="
+              position: relative;
+              width: 32px;
+              height: 32px;
+              background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+              border-radius: 50% 50% 50% 0;
+              transform: rotate(-45deg);
+              border: 3px solid white;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">
+              <div style="
+                transform: rotate(45deg);
+                color: white;
+                font-weight: bold;
+                font-size: 12px;
+                text-align: center;
+                line-height: 1;
+              ">A</div>
+            </div>
+          `,
+          iconSize: [32, 32],
+          iconAnchor: [16, 32],
         });
 
-        // add markers
+        // add markers with enhanced popups
         const bounds = L.latLngBounds([]);
         LOCATIONS.forEach((loc) => {
           const m = L.marker([loc.lat, loc.lng], { icon })
             .addTo(map)
-            .bindPopup(`<strong>${loc.name}</strong><br/>Abner Lighting`);
+            .bindPopup(`
+              <div style="
+                padding: 8px;
+                min-width: 200px;
+                text-align: center;
+              ">
+                <div style="
+                  font-size: 16px;
+                  font-weight: bold;
+                  color: #1a1a1a;
+                  margin-bottom: 4px;
+                ">${loc.name}</div>
+                <div style="
+                  font-size: 14px;
+                  color: #666;
+                  margin-bottom: 8px;
+                ">ABNER Lighting</div>
+                <div style="
+                  font-size: 12px;
+                  color: #888;
+                  font-style: italic;
+                ">Click for directions</div>
+              </div>
+            `, {
+              maxWidth: 250,
+              className: 'custom-popup'
+            });
           bounds.extend(m.getLatLng());
         });
 
@@ -122,6 +171,23 @@ export default function LocationsSection() {
 
   return (
     <section className="w-full">
+      {/* Custom styles for map popups */}
+      <style jsx>{`
+        :global(.custom-popup .leaflet-popup-content-wrapper) {
+          border-radius: 12px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+          border: 1px solid #e5e5e5;
+        }
+        :global(.custom-popup .leaflet-popup-tip) {
+          background: white;
+          border: 1px solid #e5e5e5;
+        }
+        :global(.custom-marker:hover) {
+          transform: scale(1.1);
+          transition: transform 0.2s ease;
+        }
+      `}</style>
+      
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Our Presence Across India</h2>
         <p className="text-gray-600">Find us in major cities across the country</p>
@@ -148,8 +214,8 @@ export default function LocationsSection() {
           "Ahmedabad",
           "Chennai",
         ].map((city) => (
-          <li key={city} className="flex items-center gap-3">
-            <span className="inline-block h-3 w-3 rounded-full bg-black" />
+          <li key={city} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+            <span className="inline-block h-4 w-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 border-2 border-white shadow-sm" />
             <span className="font-medium">{city}</span>
           </li>
         ))}

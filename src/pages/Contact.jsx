@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Phone, Mail } from 'lucide-react'
 import ContactForm from '../components/ContactForm'
 import LocationsSection from '../components/LocationsSection'
+import AbnerLocationMap from '../components/AbnerLocationMap'
 
 const Contact = () => {
 
@@ -37,12 +38,19 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Locations Section */}
-      <section className="py-20 bg-gray-50">
+      {/* ABNER Location Section */}
+      <section className="py-20">
+        <div className="container-custom">
+          <AbnerLocationMap />
+        </div>
+      </section>
+
+      {/* All Locations Section */}
+      {/* <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <LocationsSection />
         </div>
-      </section>
+      </section> */}
 
 
     </main>
