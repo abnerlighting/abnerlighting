@@ -31,7 +31,7 @@ export default function AbnerLocationMap() {
         <p className="text-gray-600 mb-8">Find us in major cities across the country</p>
         
         {/* City List */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
           {[
             "Mumbai",
             "Pune", 
@@ -42,9 +42,9 @@ export default function AbnerLocationMap() {
             "Raipur",
             "Bengaluru"
           ].map((city) => (
-            <div key={city} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-              <span className="inline-block h-4 w-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 border-2 border-white shadow-sm" />
-              <span className="font-medium text-gray-700">{city}</span>
+            <div key={city} className="flex items-center gap-2 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+              <span className="inline-block h-3 w-3 rounded-full bg-gray-700 flex-shrink-0" />
+              <span className="font-medium text-gray-700 text-sm">{city}</span>
             </div>
           ))}
         </div>
