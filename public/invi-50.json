@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "image": "/assets/products/invi-50/1.png",
+      "hover-image": "/assets/products/invi-50/2.png",
+      "name": "Invi-50 (Fx) Trim",
+      "description": "Invi-50 (Fx) Trim lighting fixture",
+      "full-description": "Invi-50 (Fx) Trim lighting fixture",
+      "url": "./invi-50-fx-trim.html",
+      "images": [
+        "/assets/products/invi-50/1.png",
+        "/assets/products/invi-50/2.png",
+        "/assets/products/invi-50/3.png",
+        "/assets/products/invi-50/4.png",
+        "/assets/products/invi-50/5.png",
+        "/assets/products/invi-50/6.png"
+      ],
+      "specifications": {
+        "power": {
+          "values": [6, 9, 12, 15],
+          "unit": "W"
+        },
+        "cct": {
+          "values": [2700, 3000, 3500, 4000, 5000],
+          "unit": "K"
+        },
+        "cri": 90,
+        "distribution": "Symmetric",
+        "input_voltage": "230V-240V",
+        "special_cct": "Available on request"
+      }
+    }
+  ]
+}

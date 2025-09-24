@@ -36,6 +36,7 @@ import FloorLamp from './pages/FloorLamp'
 import WallLamp from './pages/WallLamp'
 import WallLight from './pages/WallLight'
 import CeilingMount from './pages/CeilingMount'
+import Invi50 from './pages/Invi50'
 
 function App() {
   return (
@@ -82,6 +83,7 @@ function App() {
           <Route path="/projects/:category" element={<ProjectCategory />} />
           <Route path="/projects/:slug" element={<ProjectBlog />} />
           <Route path="/concrete-series-blog" element={<ConcreteSeriesBlog />} />
+          <Route path="/invi-50" element={<Invi50 />} />
         </Routes>
       </Layout>
     </Router>
