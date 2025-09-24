@@ -1,0 +1,32 @@
+{
+  "category": "residential",
+  "title": "Residential",
+  "description": "Luxury residential lighting design that transforms homes into comfortable sanctuaries with thoughtful illumination that enhances daily life and special moments.",
+  "projects": [
+    {
+      "id": "anupama-sharda",
+      "name": "Anupama Sharda",
+      "slug": "anupama-sharda",
+      "description": "Luxury residential lighting design featuring sophisticated layered lighting, smart controls, and elegant fixtures that create a warm and inviting home atmosphere.",
+      "images": [
+        "/projects/residential/anupama-sharda-1.jpg",
+        "/projects/residential/anupama-sharda-2.jpg",
+        "/projects/residential/anupama-sharda-3.jpg",
+        "/projects/residential/anupama-sharda-4.jpg",
+        "/projects/residential/anupama-sharda-5.jpg",
+        "/projects/residential/anupama-sharda-6.jpg",
+        "/projects/residential/anupama-sharda-7.jpg"
+      ],
+      "features": [
+        "Layered lighting design",
+        "Smart home integration",
+        "Energy-efficient LED technology",
+        "Luxury residential fixtures",
+        "Personalized lighting controls",
+        "Comfort and wellness optimization"
+      ],
+      "year": "2024",
+      "type": "Luxury Residence"
+    }
+  ]
+}

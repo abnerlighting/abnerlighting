@@ -1,0 +1,123 @@
+{
+  "category": "retail",
+  "title": "Retail",
+  "description": "Dynamic retail lighting solutions that enhance product visibility, create engaging shopping experiences, and drive customer engagement.",
+  "projects": [
+    {
+      "id": "stonex",
+      "name": "Stonex",
+      "slug": "stonex",
+      "description": "Modern retail space lighting featuring contemporary fixtures and strategic illumination to highlight products and create an inviting shopping atmosphere.",
+      "images": [
+        "/projects/retail/stonex-1.jpg"
+      ],
+      "features": [
+        "Contemporary LED fixtures",
+        "Strategic product highlighting",
+        "Energy-efficient lighting",
+        "Modern aesthetic design",
+        "Customer-friendly illumination"
+      ],
+      "year": "2024",
+      "type": "Retail Store"
+    },
+    {
+      "id": "jayalaxmi-silks",
+      "name": "Jayalaxmi Silks",
+      "slug": "jayalaxmi-silks",
+      "description": "Traditional textile store lighting design that enhances fabric colors and textures while maintaining the authentic shopping experience.",
+      "images": [
+        "/projects/retail/jayalaxmi-silks-1.jpg",
+        "/projects/retail/jayalaxmi-silks-2.jpg",
+        "/projects/retail/jayalaxmi-silks-3.jpg",
+        "/projects/retail/jayalaxmi-silks-4.jpg",
+        "/projects/retail/jayalaxmi-silks-5.jpg",
+        "/projects/retail/jayalaxmi-silks-6.jpg",
+        "/projects/retail/jayalaxmi-silks-7.jpg",
+        "/projects/retail/jayalaxmi-silks-8.jpg"
+      ],
+      "features": [
+        "High CRI lighting for accurate fabric colors",
+        "Flexible display lighting",
+        "Traditional aesthetic integration",
+        "Customer comfort optimization",
+        "Energy-efficient LED technology"
+      ],
+      "year": "2024",
+      "type": "Textile Store"
+    },
+    {
+      "id": "heritage-marble",
+      "name": "Heritage Marble",
+      "slug": "heritage-marble",
+      "description": "Luxury marble showroom lighting that showcases the natural beauty and intricate patterns of premium marble products.",
+      "images": [
+        "/projects/retail/heritage-marble-1.jpg",
+        "/projects/retail/heritage-marble-2.jpg",
+        "/projects/retail/heritage-marble-3.jpg",
+        "/projects/retail/heritage-marble-4.jpg",
+        "/projects/retail/heritage-marble-5.jpg"
+      ],
+      "features": [
+        "Natural stone highlighting",
+        "Premium showroom lighting",
+        "Pattern enhancement technology",
+        "Luxury atmosphere creation",
+        "Professional presentation lighting"
+      ],
+      "year": "2024",
+      "type": "Marble Showroom"
+    },
+    {
+      "id": "qbik",
+      "name": "Qbik",
+      "slug": "qbik",
+      "description": "Contemporary retail lighting solution featuring modern fixtures and innovative illumination techniques for enhanced product presentation.",
+      "images": [
+        "/projects/retail/qbik-1.jpg",
+        "/projects/retail/qbik-2.jpg",
+        "/projects/retail/qbik-3.jpg"
+      ],
+      "features": [
+        "Modern LED fixtures",
+        "Innovative lighting design",
+        "Product enhancement lighting",
+        "Contemporary aesthetic",
+        "Energy-efficient solutions"
+      ],
+      "year": "2024",
+      "type": "Retail Store"
+    },
+    {
+      "id": "revata",
+      "name": "Revata",
+      "slug": "revata",
+      "description": "Premium retail lighting design featuring sophisticated illumination systems and elegant fixtures to create an exceptional shopping experience.",
+      "images": [
+        "/projects/retail/revata-1.jpg",
+        "/projects/retail/revata-2.jpg",
+        "/projects/retail/revata-3.jpg",
+        "/projects/retail/revata-4.jpg",
+        "/projects/retail/revata-5.jpg",
+        "/projects/retail/revata-6.jpg",
+        "/projects/retail/revata-7.jpg",
+        "/projects/retail/revata-8.jpg",
+        "/projects/retail/revata-9.jpg",
+        "/projects/retail/revata-10.jpg",
+        "/projects/retail/revata-11.jpg",
+        "/projects/retail/revata-12.jpg",
+        "/projects/retail/revata-13.jpg",
+        "/projects/retail/revata-14.jpg"
+      ],
+      "features": [
+        "Premium lighting fixtures",
+        "Sophisticated illumination design",
+        "Customer experience enhancement",
+        "Elegant retail atmosphere",
+        "High-quality LED technology"
+      ],
+      "year": "2024",
+      "type": "Retail Store"
+    }
+  ]
+}

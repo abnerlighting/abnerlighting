@@ -45,9 +45,6 @@ const ProductSeriesNavigation = () => {
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   >
                     <span className="block leading-tight">{item.name}</span>
-                    <span className={`hidden sm:block text-xs mt-1 leading-tight ${isActive ? 'text-gray-300' : 'text-gray-500'}`}>
-                      {item.description}
-                    </span>
                   </Link>
                 )
               })}

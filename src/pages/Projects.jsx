@@ -3,56 +3,37 @@ import { Link } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 
 const Projects = () => {
-  const [projects, setProjects] = useState([])
+  const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const loadProjects = async () => {
+    const loadCategories = async () => {
       try {
-        // Load project data from markdown files
-        const projectSlugs = ['restaurants', 'workspaces', 'jewellery-stores', 'residential']
-        const projectPromises = projectSlugs.map(async (slug) => {
+        // Load category data from JSON files
+        const categorySlugs = ['jewellery', 'retail', 'commercial', 'residential']
+        const categoryPromises = categorySlugs.map(async (slug) => {
           try {
-            const response = await fetch(`/projects/${slug}.md`)
+            const response = await fetch(`/projects/${slug}.json`)
             if (!response.ok) return null
             
-            const markdownText = await response.text()
-            
-            // Parse frontmatter
-            const frontmatterMatch = markdownText.match(/^---\n([\s\S]*?)\n---/)
-            if (!frontmatterMatch) return null
-            
-            const frontmatter = frontmatterMatch[1]
-            const frontmatterObj = {}
-            
-            frontmatter.split('\n').forEach(line => {
-              const [key, ...valueParts] = line.split(': ')
-              if (key && valueParts.length > 0) {
-                const value = valueParts.join(': ').replace(/^"|"$/g, '')
-                frontmatterObj[key.trim()] = value
-              }
-            })
-            
-            return {
-              ...frontmatterObj,
-              slug
-            }
+            const data = await response.json()
+            return data
           } catch (error) {
-            console.error(`Error loading project ${slug}:`, error)
+            console.error(`Error loading category ${slug}:`, error)
             return null
           }
         })
         
-        const loadedProjects = (await Promise.all(projectPromises)).filter(Boolean)
-        setProjects(loadedProjects)
+        const loadedCategories = (await Promise.all(categoryPromises)).filter(Boolean)
+        setCategories(loadedCategories)
       } catch (error) {
-        console.error('Error loading projects:', error)
+        console.error('Error loading categories:', error)
       } finally {
         setLoading(false)
       }
     }
 
-    loadProjects()
+    loadCategories()
   }, [])
 
   return (
@@ -77,38 +58,56 @@ const Projects = () => {
         </div>
       ) : (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {projects.map((project, index) => (
-            <div key={project.slug} className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-              {/* Image */}
-              <div className="lg:w-3/5">
-                <img 
-                  src={project.image} 
-                  alt={project.imageAlt || project.title}
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              
-              {/* Content */}
-              <div className="lg:w-2/5 space-y-6">
-                <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-                  Project {project.number}
+          {categories.map((category, index) => {
+            // Determine the link destination based on number of projects
+            const linkDestination = category.projects.length === 1 
+              ? `/projects/${category.category}/${category.projects[0].slug}`
+              : `/projects/${category.category}`
+            
+            return (
+              <div key={category.category} className={`flex flex-col lg:flex-row items-center gap-12 py-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                {/* Image */}
+                <div className="lg:w-3/5">
+                  <Link to={linkDestination}>
+                    <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                      <img 
+                        src={category.projects[0]?.images[0] || "/assets/C01_0232.jpg"} 
+                        alt={category.title}
+                        className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white bg-opacity-90 px-6 py-3 rounded-lg">
+                          <span className="text-gray-800 font-medium">
+                            {category.projects.length === 1 ? 'View Project' : 'View Projects'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-gray-900">{project.title}</h2>
-                
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {project.description}
-                </p>
-                
-                {/* <Link 
-                  to={`/projects/${project.slug}`}
-                  className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
-                >
-                  Read Full Project
-                </Link> */}
+                {/* Content */}
+                <div className="lg:w-2/5 space-y-6">
+                  <div className="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
+                    {category.projects.length} Project{category.projects.length !== 1 ? 's' : ''}
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold text-gray-900">{category.title}</h2>
+                  
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {category.description}
+                  </p>
+                  
+                  <Link 
+                    to={linkDestination}
+                    className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                  >
+                    {category.projects.length === 1 ? 'View Project' : 'View Projects'}
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       )}
     </div>

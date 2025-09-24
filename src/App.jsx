@@ -20,6 +20,8 @@ import StepLights from './pages/StepLights'
 import ProductDetail from './pages/ProductDetail'
 import Projects from './pages/Projects'
 import ProjectBlog from './pages/ProjectBlog'
+import ProjectCategory from './pages/ProjectCategory'
+import ProjectDetail from './pages/ProjectDetail'
 import Blogs from './pages/Blogs'
 import BlogPost from './pages/BlogPost'
 import ConcreteSeriesBlog from './pages/ConcreteSeriesBlog'
@@ -76,6 +78,8 @@ function App() {
           <Route path="/blogs/:slug" element={<BlogPost />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:category/:projectSlug" element={<ProjectDetail />} />
+          <Route path="/projects/:category" element={<ProjectCategory />} />
           <Route path="/projects/:slug" element={<ProjectBlog />} />
           <Route path="/concrete-series-blog" element={<ConcreteSeriesBlog />} />
         </Routes>

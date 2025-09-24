@@ -1,0 +1,51 @@
+{
+  "category": "commercial",
+  "title": "Commercial",
+  "description": "Professional commercial lighting solutions for offices, entertainment venues, and corporate spaces that enhance productivity and create inspiring work environments.",
+  "projects": [
+    {
+      "id": "hdfc-ho",
+      "name": "HDFC HO",
+      "slug": "hdfc-ho",
+      "description": "Corporate headquarters lighting design featuring human-centric lighting principles to enhance employee productivity and well-being in a modern office environment.",
+      "images": [
+        "/projects/commercial/hdfc-ho-1.png",
+        "/projects/commercial/hdfc-ho-2.png",
+        "/projects/commercial/hdfc-ho-3.png",
+        "/projects/commercial/hdfc-ho-4.jpg"
+      ],
+      "features": [
+        "Human-centric lighting design",
+        "Circadian rhythm support",
+        "Energy-efficient LED technology",
+        "Smart lighting controls",
+        "Employee wellness optimization",
+        "Modern corporate aesthetic"
+      ],
+      "year": "2024",
+      "type": "Corporate Office"
+    },
+    {
+      "id": "excel-entertainment",
+      "name": "Excel Entertainment",
+      "slug": "excel-entertainment",
+      "description": "Entertainment venue lighting featuring dynamic illumination systems and atmospheric lighting to create engaging experiences for guests and visitors.",
+      "images": [
+        "/projects/commercial/excel-entertainment-1.jpg",
+        "/projects/commercial/excel-entertainment-2.jpg",
+        "/projects/commercial/excel-entertainment-3.jpg",
+        "/projects/commercial/excel-entertainment-4.jpg"
+      ],
+      "features": [
+        "Dynamic lighting systems",
+        "Atmospheric illumination",
+        "Entertainment-focused design",
+        "Flexible lighting controls",
+        "Guest experience enhancement",
+        "Modern venue aesthetics"
+      ],
+      "year": "2024",
+      "type": "Entertainment Venue"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "jewellery",
+  "title": "Jewellery",
+  "description": "Precision lighting for luxury jewellery stores that enhances the brilliance of precious stones and creates an atmosphere of elegance.",
+  "projects": [
+    {
+      "id": "bluestone",
+      "name": "Bluestone",
+      "slug": "bluestone",
+      "description": "Premium jewellery store lighting design featuring precision spotlights and elegant ambient lighting to showcase precious stones and metals.",
+      "images": [
+        "/projects/jewellery/bluestone-1.jpg",
+        "/projects/jewellery/bluestone-2.jpg",
+        "/projects/jewellery/bluestone-3.jpg",
+        "/projects/jewellery/bluestone-4.jpg",
+        "/projects/jewellery/bluestone-5.jpg",
+        "/projects/jewellery/bluestone-6.png"
+      ],
+      "features": [
+        "High CRI LED spotlights for accurate color rendering",
+        "Adjustable beam angles for different product types",
+        "Anti-glare technology for customer comfort",
+        "Energy-efficient LED technology",
+        "Smart dimming controls for mood adjustment"
+      ],
+      "year": "2024",
+      "type": "Jewellery Store"
+    }
+  ]
+}

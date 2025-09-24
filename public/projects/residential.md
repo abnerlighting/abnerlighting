@@ -2,7 +2,7 @@
 title: "Residential"
 number: "04"
 description: "Creating warm, inviting homes through thoughtful lighting design. Abner's residential projects transform living spaces into comfortable sanctuaries that enhance daily life and special moments."
-image: "https://ik.imagekit.io/abnerlighting/projects/4.png"
+image: "/projects/residential/anupama-sharda-main.jpg"
 imageAlt: "Residential Project"
 date: "2025-01-25"
 readTime: "4 min read"
