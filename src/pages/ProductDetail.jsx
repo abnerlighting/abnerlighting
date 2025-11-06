@@ -1,5 +1,5 @@
 import { useParams, Link, useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -8,39 +8,80 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true)
   const [selectedImage, setSelectedImage] = useState(0)
 
+  const { jsonFile, backLink, seriesButtonLabel, showShades } = useMemo(() => {
+    if (location.pathname.includes('/concrete-series/wall-lights/')) {
+      return {
+        jsonFile: '/wall-lights.json',
+        backLink: '/concrete-series/wall-lights',
+        seriesButtonLabel: 'View Wall Lights',
+        showShades: true
+      }
+    }
+
+    if (location.pathname.includes('/concrete-series/floor-lights/')) {
+      return {
+        jsonFile: '/floor-lights.json',
+        backLink: '/concrete-series/floor-lights',
+        seriesButtonLabel: 'View Floor Lights',
+        showShades: true
+      }
+    }
+
+    if (location.pathname.includes('/concrete-series/path-lights/')) {
+      return {
+        jsonFile: '/path-lights.json',
+        backLink: '/concrete-series/path-lights',
+        seriesButtonLabel: 'View Path Lights',
+        showShades: true
+      }
+    }
+
+    if (location.pathname.includes('/concrete-series/step-lights/')) {
+      return {
+        jsonFile: '/step-lights.json',
+        backLink: '/concrete-series/step-lights',
+        seriesButtonLabel: 'View Step Lights',
+        showShades: true
+      }
+    }
+
+    if (location.pathname.includes('/architectural-series/play-50/')) {
+      return {
+        jsonFile: '/play-50.json',
+        backLink: '/architectural-series/play-50',
+        seriesButtonLabel: 'View Play-50 Series',
+        showShades: false
+      }
+    }
+
+    return {
+      jsonFile: '/concrete-series.json',
+      backLink: '/concrete-series',
+      seriesButtonLabel: 'View Concrete Series',
+      showShades: true
+    }
+  }, [location.pathname])
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         setLoading(true)
-        
-        // Determine which JSON file to fetch based on the current path
-        let jsonFile = '/concrete-series.json'
-        let backLink = '/concrete-series'
-        
-        if (location.pathname.includes('/wall-lights/')) {
-          jsonFile = '/wall-lights.json'
-          backLink = '/concrete-series/wall-lights'
-        } else if (location.pathname.includes('/floor-lights/')) {
-          jsonFile = '/floor-lights.json'
-          backLink = '/concrete-series/floor-lights'
-        } else if (location.pathname.includes('/path-lights/')) {
-          jsonFile = '/path-lights.json'
-          backLink = '/concrete-series/path-lights'
-        } else if (location.pathname.includes('/step-lights/')) {
-          jsonFile = '/step-lights.json'
-          backLink = '/concrete-series/step-lights'
-        }
-        
-        // Fetch the appropriate JSON data
+
         const response = await fetch(jsonFile)
         const data = await response.json()
         
         // Find the product by URL slug
         const foundProduct = data.products.find(p => {
-          // Try matching by URL first (for step lights, etc.)
-          const urlSlug = p.url.replace('./', '').replace('.html', '')
-          if (urlSlug === id) {
+          if (p.id && p.id === id) {
             return true
+          }
+
+          // Try matching by URL first (for step lights, etc.)
+          if (p.url) {
+            const urlSlug = p.url.replace('./', '').replace('.html', '')
+            if (urlSlug === id) {
+              return true
+            }
           }
           // Fallback to name-based matching
           const productSlug = p.name.toLowerCase().replace(/\s+/g, '-')
@@ -58,7 +99,7 @@ const ProductDetail = () => {
     }
 
     fetchProduct()
-  }, [id, location.pathname])
+  }, [id, jsonFile])
 
   if (loading) {
     return (
@@ -69,18 +110,6 @@ const ProductDetail = () => {
   }
 
   if (!product) {
-    // Determine back link based on current path
-    let backLink = '/concrete-series'
-    if (location.pathname.includes('/wall-lights/')) {
-      backLink = '/concrete-series/wall-lights'
-    } else if (location.pathname.includes('/floor-lights/')) {
-      backLink = '/concrete-series/floor-lights'
-    } else if (location.pathname.includes('/path-lights/')) {
-      backLink = '/concrete-series/path-lights'
-    } else if (location.pathname.includes('/step-lights/')) {
-      backLink = '/concrete-series/step-lights'
-    }
-
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
@@ -255,6 +284,7 @@ const ProductDetail = () => {
             </div>
             
             {/* Shades Section */}
+            {showShades && (
             <div className="bg-white border border-slate-200 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Available Shades</h3>
               
@@ -368,6 +398,7 @@ const ProductDetail = () => {
                 </p>
               </div>
             </div>
+            )}
             
             {/* Action Buttons */}
             <div className="space-y-4">
@@ -378,10 +409,10 @@ const ProductDetail = () => {
                 Contact Us
               </Link>
               <Link 
-                to="/concrete-series"
+                to={backLink}
                 className="block w-full bg-white border-2 border-slate-900 text-slate-900 text-center py-4 px-6 rounded-xl font-semibold hover:bg-slate-50 transition-colors"
               >
-                View Concrete Series
+                {seriesButtonLabel}
               </Link>
             </div>
           </div>

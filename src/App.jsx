@@ -69,6 +69,7 @@ function App() {
           <Route path="/stone-series/ceiling-mount" element={<CeilingMount />} />
           <Route path="/architectural-series" element={<ArchitecturalSeries />} />
           <Route path="/architectural-series/play-50" element={<Play50 />} />
+          <Route path="/architectural-series/play-50/:id" element={<ProductDetail />} />
           <Route path="/architectural-series/play-70" element={<Play70 />} />
           <Route path="/architectural-series/play-me" element={<PlayMe />} />
           <Route path="/architectural-series/mini-play-series" element={<MiniPlaySeries />} />

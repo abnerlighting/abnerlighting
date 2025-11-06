@@ -6,96 +6,238 @@
       "id": "halo-50",
       "name": "HALO 50",
       "description": "50mm halo architectural light",
+      "full-description": "HALO 50 delivers a soft circular wash that accentuates architectural details while maintaining a minimal ceiling footprint.",
       "image": "/assets/products/architectural-series/play-50/halo-50.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/halo-50.jpg",
+      "url": "./halo-50.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/halo-50.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 52mm",
+        "Ceiling Recess": "45mm",
+        "Trim": "1.5mm",
+        "Weight": "0.45 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Architectural"
+        "Power": "8W",
+        "Light Source": "COB LED",
+        "Color Temperature": "2700K / 3000K / 4000K",
+        "CRI": ">90",
+        "Control": "Phase or DALI dimming"
       }
     },
     {
       "id": "invi-50-adj",
       "name": "Invi 50 Adj",
       "description": "50mm adjustable invisible light",
+      "full-description": "Invi 50 Adj provides a fully adjustable beam with a glare-controlled aperture ideal for accent lighting.",
       "image": "/assets/products/architectural-series/play-50/invi-50-adj.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/invi-50-adj.jpg",
+      "url": "./invi-50-adj.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/invi-50-adj.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 52mm",
+        "Ceiling Recess": "60mm",
+        "Tilt": "0° – 30°",
+        "Rotation": "355°"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Adjustable"
+        "Power": "12W",
+        "Light Source": "COB LED",
+        "Color Temperature": "2700K / 3000K / 4000K",
+        "CRI": ">90",
+        "Control": "Phase or DALI dimming"
       }
     },
     {
-      "id": "invi-50-fx",
-      "name": "Invi 50 FX",
-      "description": "50mm fixed invisible light",
-      "image": "/assets/products/architectural-series/play-50/invi-50-fx.jpg",
-      "material": "Aluminium",
-      "finish": "Textured",
-      "specifications": {
-        "size": "50mm",
-        "type": "Fixed"
-      }
+  "id": "invi-50-fx-trimless",
+  "name": "Invi-Fx 50",
+  "description": "Bottom openable anti-glare fixed LED downlight",
+  "full-description": "Bottom openable anti-glare fixed LED downlight",
+  "image": "/assets/products/architectural-series/play-50/Trim_Antiglare Fixed.jpg",
+  "hover-image": "/assets/products/architectural-series/play-50/Trim_Antiglare Fixed1.jpg",
+  "url": "./invi-50-fx-trimless.html",
+  "images": [
+
+    "/assets/products/architectural-series/play-50/Trim_Solo_Antiglare Fixed.jpg",
+"/assets/products/architectural-series/play-50/Module FX-50.png",
+    "/assets/products/architectural-series/play-50/module_dimensions.png"
+
+        
+      ],
+  "finish": "Titanium Black / Pearl White / Silver Chrome (Trimless outer-ring options)",
+  "dimensions": [
+    {
+      "type": "Technical",
+      "Wattage": "6W / 9W / 12W / 15 W",
+       "Input Voltage": "230V–240V AC",
+      "Lumens": "348 - 915lm @ 3000K (90CRI)",
+      "Beam Angle": "15°/ 24°/ 36°/ 50°",
+      "CCT": "2700K / 3000K / 3500K / 4000K / 5000K",
+      "CRI": "90 (97 on request)"
+
     },
+    {
+      "type": "General",
+      "Dia" : "50mm",
+      "Height": "10W - 81mm , 15W - 112mm",
+      "Mounting": "Ceiling Recessed ",
+      "IP-Rating": "IP20 (Front-IP44 Optional)",
+      "Environment": "Indoors"
+    }
+  ],
+  "specifications": {
+    "Driver": "Constant Current (Non-Dim, Flicker-Free) / Optional DALI, DT-8, Phase Cut, 0-10 V, RF, Zigbee & BLE Mesh",
+    "Input Voltage": "230 – 240 V AC",
+    "Power Factor": "> 0.97 / THD < 15 %",
+    "Surge Protection": "2 kV (L/N – PE)",
+    "LED Source": "COB LED (LM80 Certified, MacAdam Step 3)",
+    "Cooling": "Passive Heatsink",
+    "Distribution": "Symmetric",
+    "Accessories": "Honeycomb Filter, IP44 Glass Cover",
+    "Housing Colors": "White / Black / Special RAL on Request",
+    "Service Life": "Up to 50,000 h (L70/B10 @ Ta 60 °C) – 100,000 h with Driver Replacement"
+  },
+  "toastMessage": "Contact Abner for detailed specification sheets and photometric data of Invi-50 (Fx) Trimless."
+}
+
+    
+    ,
     {
       "id": "invi-50-pin",
       "name": "Invi 50 Pin",
       "description": "50mm pin spot invisible light",
+      "full-description": "Invi 50 Pin focuses light precisely where you need it with a tight beam and almost invisible presence.",
       "image": "/assets/products/architectural-series/play-50/invi-50-pin.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/invi-50-pin.jpg",
+      "url": "./invi-50-pin.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/invi-50-pin.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 40mm",
+        "Ceiling Recess": "55mm",
+        "Beam": "10° Pin Spot",
+        "Weight": "0.40 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Pin Spot"
+        "Power": "7W",
+        "Light Source": "COB LED",
+        "Color Temperature": "3000K",
+        "CRI": ">92"
       }
     },
     {
       "id": "invi-50-ww",
       "name": "Invi 50 WW",
       "description": "50mm warm white invisible light",
+      "full-description": "Invi 50 WW brings a welcoming warmth with perfect color rendering in hospitality and residential projects.",
       "image": "/assets/products/architectural-series/play-50/invi-50-ww.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/invi-50-ww.jpg",
+      "url": "./invi-50-ww.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/invi-50-ww.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 52mm",
+        "Ceiling Recess": "55mm",
+        "Trim": "Minimal trim",
+        "Weight": "0.42 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Warm White"
+        "Power": "10W",
+        "Light Source": "COB LED",
+        "Color Temperature": "2700K",
+        "CRI": ">95"
       }
     },
     {
       "id": "play-50-ring-trim",
       "name": "Play-50 Ring Trim",
       "description": "50mm ring with trim",
+      "full-description": "Play-50 Ring Trim offers a clean, defined bezel that complements contemporary ceiling designs.",
       "image": "/assets/products/architectural-series/play-50/play-50-ring-trim.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/play-50-ring-trim.jpg",
+      "url": "./play-50-ring-trim.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/play-50-ring-trim.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 60mm",
+        "Ceiling Recess": "50mm",
+        "Trim": "5mm decorative bezel",
+        "Weight": "0.48 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Ring Trim"
+        "Power": "10W",
+        "Light Source": "COB LED",
+        "Color Temperature": "3000K / 4000K",
+        "CRI": ">90"
       }
     },
     {
       "id": "play-50-ring-trimless",
       "name": "Play-50 Ring Trimless",
       "description": "50mm ring without trim",
+      "full-description": "Play-50 Ring Trimless disappears into the architecture leaving only the beam of light visible.",
       "image": "/assets/products/architectural-series/play-50/play-50-ring-trimless.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/play-50-ring-trimless.jpg",
+      "url": "./play-50-ring-trimless.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/play-50-ring-trimless.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 52mm",
+        "Ceiling Recess": "55mm",
+        "Trim": "Trimless",
+        "Weight": "0.44 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Ring Trimless"
+        "Power": "10W",
+        "Light Source": "COB LED",
+        "Color Temperature": "3000K",
+        "CRI": ">90"
       }
     },
     {
       "id": "sleek-50",
       "name": "Sleek 50",
       "description": "50mm sleek architectural light",
+      "full-description": "Sleek 50 is a versatile downlight that offers a uniform beam for general architectural illumination.",
       "image": "/assets/products/architectural-series/play-50/sleek-50.jpg",
+      "hover-image": "/assets/products/architectural-series/play-50/sleek-50.jpg",
+      "url": "./sleek-50.html",
+      "images": [
+        "/assets/products/architectural-series/play-50/sleek-50.jpg"
+      ],
       "material": "Aluminium",
-      "finish": "Textured",
+      "finish": "Textured Powder Coat",
+      "dimensions": {
+        "Cutout": "Ø 58mm",
+        "Ceiling Recess": "55mm",
+        "Trim": "3mm",
+        "Weight": "0.46 Kg"
+      },
       "specifications": {
-        "size": "50mm",
-        "type": "Sleek"
+        "Power": "12W",
+        "Light Source": "COB LED",
+        "Color Temperature": "3000K / 4000K",
+        "CRI": ">90"
       }
     }
   ]

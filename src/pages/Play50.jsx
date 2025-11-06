@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react'
 import HeroBanner from '../components/HeroBanner'
-import Toast from '../components/Toast'
 import ProductSeriesNavigation from '../components/ProductSeriesNavigation'
+import ProductGrid from '../components/ProductGrid'
 
 const Play50 = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [toastMessage, setToastMessage] = useState('')
-  const [isToastVisible, setIsToastVisible] = useState(false)
-  const [hoveredProduct, setHoveredProduct] = useState(null)
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,15 +26,6 @@ const Play50 = () => {
 
     fetchProducts()
   }, [])
-
-  const handleProductClick = (product) => {
-    setToastMessage(product.toastMessage || 'Contact us to know more details')
-    setIsToastVisible(true)
-  }
-
-  const closeToast = () => {
-    setIsToastVisible(false)
-  }
 
   if (error) {
     return (
@@ -93,51 +81,12 @@ const Play50 = () => {
           </div>
         </section>
       ) : (
-        <section className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {products.map((product, index) => (
-              <div 
-                key={index}
-                className="group cursor-pointer"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleProductClick(product)
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    handleProductClick(product)
-                  }
-                }}
-                onMouseEnter={() => setHoveredProduct(index)}
-                onMouseLeave={() => setHoveredProduct(null)}
-              >
-                <div className="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                  />
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-slate-900">{product.name}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{product.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProductGrid 
+          products={products} 
+          routePrefix="/architectural-series/play-50" 
+          uppercaseNames={false}
+        />
       )}
-
-      {/* Toast */}
-      <Toast 
-        message={toastMessage} 
-        isVisible={isToastVisible} 
-        onClose={closeToast} 
-      />
     </main>
   )
 }
